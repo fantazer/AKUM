@@ -1,37 +1,60 @@
 mixin header()
 	//block header
-	.main-section(style="background-image:url('https://static.pexels.com/photos/158607/cairn-fog-mystical-background-158607.jpeg')")
-		.main-section-filter
-		.header
-			.header-layer
-				.main-cont
-					.header-wrap
-						a(href="#").header-logo Logo
-							//img(src="img/logo-main.svg", alt="")
-						.header-nav
-							- var items = ['О нас','Декларация 3-НДФЛ','Налоги','Покупка жилья','Другие вычеты','Полезное'];
-							each item in items
-								.header-nav__el
-									.header-nav__el-link-wrap
-										a(href="#").header-nav__el-link #{item}
-										.header-nav__el-icon
-											+icon("arrow-down","icon-el")
-									.header-nav__sub
-										.coner-wrap
-											.window-coner-top
-											.header-nav__sub-wrap
-												a(href="#").header-nav__sub-el О компании
-												a(href="#").header-nav__sub-el Контакты
-												a(href="#").header-nav__sub-el Карьера
-												a(href="#").header-nav__sub-el Отзывы клиентов
-												a(href="#").header-nav__sub-el Преимущества
-												a(href="#").header-nav__sub-el Безопасность
-												a(href="#").header-nav__sub-el Новости и советы
-						.header-contact
-							.header-phone
-								a(href="tel:8(495)123-12-12") 8(495)123-12-12
-						.menu-toggle
-							+icon("menu","icon-el")
-		.main-section-cont
-			.main-section-title this is template
-	//block header end
+	.head
+		.head-top-wrap
+			.main-cont
+				.head-top
+					.head-location
+						.head-location-town Новосибирск
+						.head-location-numb +7 (383) 291 95-93
+					.head-top-nav
+						.head-top-nav__el.head-top-nav__el--sub
+							a(href="#") О компании
+							+icon("triangle","icon")
+							.head-top-nav__list
+								a(href="#").head-top-nav__list-el Новости
+								a(href="#").head-top-nav__list-el О компании
+								a(href="#").head-top-nav__list-el Бренды
+								a(href="#").head-top-nav__list-el Партнеры
+						a(href="#").head-top-nav__el Новости
+						a(href="#").head-top-nav__el Акции
+					.head-top-compare
+						.head-top-compare__icon
+							+icon("chart","icon")
+						.head-top-compare__text Товары в сравнении (0)
+					a(href="#").head-top-cart
+						.head-top-cart__icon
+							+icon("shopping-cart","icon")
+						.head-top-cart__val
+							span 5
+		.head-main-wrap
+			.main-cont
+				.head-main
+					a(href="/").logo
+						img(src="img/logo-main.svg", alt="")
+					.head-main-content
+						.head-main-nav
+							.head-main-nav-el.head-main-nav-el--sub
+								a(href="#") Каталог
+								+icon("triangle","icon")
+								.head-main-nav-list
+									-
+										var items = [
+											'Авто аккумуляторы',
+											'Мото аккумуляторы',
+											'Катерные аккумуляторы',
+											'Стационарные и промышленные АКБ',
+											'Товары для АКБ',
+											'Другие товары'
+											];
+									each item in items
+										.head-main-nav-list-el #{item}
+							a(href="#").head-main-nav-el Магазины
+						form(action="#").head-main-search
+							.head-main-search__input
+								input(type="text" placeholder="Поиск по сайту" class="input")
+								button
+									+icon("search","icon")
+
+
+//block header end

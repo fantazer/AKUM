@@ -14,10 +14,619 @@ body
 	font-family $v-font
 	line-height 1.2
 	letter-spacing 0.01em
-	color #54657e
+	//color #54657e
+
 
 .main-cont
 	center(1200px,10px)
 
+.head
+	margin-bottom: 20px
+.head-top-wrap
+	background: $gray
+//.main-cont
+.head-top
+	f()
+	align-items: center
+.head-location
+	f()
+	cp()
+	margin-right: 4%
+.head-location-town
+	color $blue
+	margin-right: 10px
+	border-bottom 1px dotted $blue
+	font-size: 13px
+.head-location-numb
+	color $blue
+	font-size: 13px
+.head-top-nav
+	flex(between)
+	width: 25%
+.head-top-nav__el
+	cp()
+	tr(all)
+	color #8493a8
+	padding: 15px 0
+	&:hover
+		color black
+		a
+			color black
+	a
+		tr(all)
+		color #8493a8
+.head-top-nav__el--sub
+	flex(mid)
+	position: relative
+	.icon
+		size 10px
+		fill #8493a8
+		margin-left: 7px
+		margin-top: 2px
+		tr(all)
+	&:hover
+		.head-top-nav__list
+			display: block
+		.icon
+			fill black
+.head-top-nav__list
+	display: none
+	background: white
+	width: 170px
+	br(5px)
+	position: absolute
+	top 100%
+	left 0
+	border 1px solid #cad3df
+	overflow: hidden
+	z-index 2
+.head-top-nav__list-el
+	background: white
+	display: block
+	padding: 25px 20px
+	color #54657e
+	position: relative
+	tr(all)
+	&:before
+		position: absolute
+		left 0
+		top 0
+		height: 100%
+		width: 2px
+		background: $blue
+		opacity:0
+	&:hover
+		background: $gray
+		color $blue
+		&:before
+			content ''
+			opacity:1
+
+.head-top-compare
+	margin-left: auto
+	f()
+	margin-right: 4%
+.head-top-compare__icon
+	.icon
+		size 14px
+		fill #8493a8
+		margin-right: 10px
+.head-top-compare__text
+	color #8493a8
+.head-top-cart
+	position: relative
+.head-top-cart__icon
+	.icon
+		size 25px
+		fill $blue
+.head-top-cart__val
+	position: absolute
+	size 15px
+	background: $red
+	flex(mid)
+	color white
+	font-size: 12px
+	round()
+	top -4px
+	right: -5px
+	span
+		display: inline-block
+		margin-top: -2px
 
 
+
+.head-main-wrap
+	border-bottom 1px solid #cad3df
+//.main-cont
+.head-main
+	f()
+.logo
+	display: block
+	padding: 8px 20px 8px 0
+	border-right 1px solid #cad3df
+	width: 18%
+	img
+		width: 100%
+.head-main-nav
+	f()
+	margin-left: 25px
+.head-main-nav-el
+	cp()
+	tr(all)
+	color #54657e
+	margin-right: 15px
+	padding: 12px 22px
+	up()
+	&:hover
+		color black
+		a
+			color black
+	a
+		tr(all)
+		color #54657e
+.head-main-nav-el--sub
+	flex(mid)
+	position: relative
+	.icon
+		size 10px
+		fill #54657e
+		margin-left: 7px
+		margin-top: 2px
+		tr(all)
+	&:hover
+		.head-top-nav__list
+			display: block
+		.icon
+			fill black
+.head-main-nav-el--sub
+	flex(mid)
+	position: relative
+	.icon
+		size 10px
+		fill #8493a8
+		margin-left: 7px
+		margin-top: 2px
+		tr(all)
+	&:hover
+		.head-main-nav-list
+			display: block
+		.icon
+			fill black
+
+.head-main-nav-list
+	display: none
+	background: white
+	width: 230px
+	br(5px)
+	position: absolute
+	top 40px
+	left 0
+	border 1px solid #cad3df
+	overflow: hidden
+.head-main-nav-list-el
+	display: block
+	padding: 25px 20px
+	color #54657e
+	position: relative
+	tr(all)
+	text-transform: none
+	border-bottom 1px solid #cad3df
+	font-size: 14px
+	&:last-child
+		border-bottom 0
+	&:hover
+		background: $gray
+		color $blue
+.head-main-search
+	margin-left: auto
+	width: 28%
+.head-main-search__input
+	f()
+	.input
+		border-radius 5px 0 0 5px
+		border 1px solid #cad3df
+		background-color #ffffff
+		padding: 12px 20px
+		margin-bottom: 0
+		width: calc(100% - 45px)
+		&::-webkit-input-placeholder
+			font-style italic
+			font-size: 14px
+			color #8493a8
+		&::-moz-placeholder
+			font-style italic
+			font-size: 14px
+			color #8493a8
+		&::-moz-placeholder
+			font-style italic
+			font-size: 14px
+			color #8493a8
+		&::-ms-input-placeholder
+			font-style italic
+			font-size: 14px
+			color #8493a8
+	button
+		background: none
+		border 0px
+		background: #344164
+		width: 45px
+		border-radius 0px 5px 5px 0
+		.icon
+			size 16px
+			fill white
+
+.head-main-content
+	flex(between)
+	width: 85%
+
+.banner-panel
+	f()
+	justify-content: space-between
+	margin-bottom: 20px
+.banner-panel-sm
+	width: 32%
+	flex(between)
+	background: $red
+	br(5px)
+	color white
+	padding: 10px
+.banner-panel-sm-img
+	margin-right: 20px
+//.banner-panel-sm-info
+.banner-panel-sm-title
+	up()
+	font-size: 24px
+	font-weight: 700
+.banner-panel-sm-text
+	font-size: 12px
+	up()
+.banner-panel-lg
+	width: 66%
+	background: $dark
+	color white
+	flex(between)
+	padding: 15px
+	br(5px)
+.banner-panel-lg-title
+	color white
+	up()
+	font-size: 24px
+	font-weight:700
+
+.banner-panel-lg-cont
+	flex(between)
+.banner-panel-lg-cont-icon
+	.icon
+		size 24px
+		fill white
+		margin-right: 20px
+.banner-panel-lg-cont-numb
+	font-size: 24px
+	color white
+	font-weight:700
+
+.banner
+	f()
+	justify-content: space-between
+	margin-bottom: 20px
+.banner-info
+	width: 32%
+.banner-info__el
+	bg-full()
+	br(5px)
+	position: relative
+	padding: 40px
+	&:first-child
+		margin-bottom: 20px
+.banner-info__el-filter
+	filter()
+	background: rgba(255, 255, 255, 0.7)
+.banner-info__list
+	position: relative
+.banner-info__list-el
+	f()
+	margin-bottom: 25px
+	&:last-child
+		margin-bottom: 0
+.banner-info__list-el-icon
+	margin-right: 20px
+	.icon
+		size 42px
+		fill #333333
+.banner-info__list-el-text
+	up()
+	width calc(100% - 60px)
+	line-height: 1.6
+.banner-info__el-title
+	up()
+	font-size: 18px
+	margin-bottom: 20px
+.banner-info__list--news
+	.banner-info__list-el
+		margin-bottom: 0
+	.banner-info__list-el-text
+		width: 100%
+		line-height: 1.4
+		font-size: 14px
+		text-transform: none
+		margin-bottom: 10px
+
+.banner-info__list-el-bottom
+	flex(between)
+.banner-info__list-el-bottom-date
+	color #666666
+	font-size: 12px
+	font-weight:300
+
+.banner-info__list-el-bottom-get
+	color $blue
+	font-size: 12px
+	font-weight:300
+.banner-map
+	width: 66%
+	flex(mid)
+	bg-full()
+	background-size: 90%
+.banner-map-content
+	width: 80%
+.banner-map__title
+	font-size: 36px
+	font-weight:700
+	up()
+	margin-bottom: 20px
+	color #303030
+.banner-map__list
+	font-size: 18px
+	font-weight:500
+	margin-bottom: 10%
+.banner-map__list-el
+	padding-left: 15px
+	margin-bottom: 5px
+	position: relative
+	color #333333
+	&:before
+		content ''
+		size 3px
+		background: #333333
+		position: absolute
+		left 0
+		top 50%
+.banner-map__get
+	@extend .btn--md
+	@extend .btn--mark
+	width: 180px
+
+.section-title
+	up()
+	text-align: center
+	font-size: 30px
+	font-weight:500
+	color $dark
+	margin-bottom: 40px
+.articles
+	background: $gray
+	padding: 40px
+
+.articles-title
+	@extend .section-title
+
+.articles-wrap
+	flex(between)
+.articles__el
+	width: 33%
+	color #54657e
+
+.articles__el-title
+	margin-bottom: 20px
+	font-weight: 500
+.articles__el-text
+	font-weight: 300
+	margin-bottom: 20px
+.articles__el-get
+	font-size 12px
+	font-weight 300
+	color $blue
+
+.location
+	padding: 60px 0
+	bg-full()
+	position: relative
+	background-color #006ac5
+//.main-cont
+.location-wrap
+	display: grid
+	grid-gap 20px
+	grid-template-columns repeat(4,1fr);
+.location-title
+	color white
+	margin-bottom: 40px
+	font-weight:500
+	font-size: 28px
+
+.location-col
+	color white
+	padding: 25px
+	border 1px solid
+	border 1px solid #6aa6da
+.location-el
+	f()
+	margin-bottom: 20px
+	a
+		color white
+		&:hover
+			text-decoration: underline
+	&:last-child
+		margin-bottom: 0
+.location-el__icon
+	.icon
+		fill white
+		size 20px
+		margin-right: 15px
+//.location-el__content
+.location-el__text
+	margin-bottom: 5px
+	&:last-child
+		margin-bottom: 0
+
+.location-col--mark
+	background: white
+	padding: 40px
+	&:hover
+		.location-col-text
+			text-decoration: underline
+			color $blue
+
+.location-col-icon
+	.icon
+		size 50px
+		margin-bottom: 40px
+
+.location-col-text
+	color black
+	font-weight: 700
+	line-height: 1.6
+	tr(all)
+
+.footer
+	background: $gray
+//.main-cont
+.footer-main
+	padding: 40px 0 65px 0
+	display: grid
+	grid-gap 20px
+	grid-template-columns repeat(4,1fr);
+//.footer-main__col
+.footer-main__title
+	font-weight:500
+	color #54657e
+	margin-bottom: 20px
+//.footer-main__list
+.footer-main__list-el
+	color #54657e
+	font-weight:300
+	display: block
+	margin-bottom: 5px
+
+.footer-main__town
+	font-size: 12px
+	color $blue
+	display: block
+	text-align: right
+	margin-bottom: 10px
+	span
+		border-bottom 1px dotted #006ac5
+		display: inline-block
+		margin-left: 3px
+.footer-main__phone
+	color $blue
+	text-align: right
+	font-weight: 700
+	display: block
+.footer-bottom
+	padding: 25px 0
+	border-top 1px solid #cad3df
+.footer-bottom-wrap
+	flex(between)
+.footer-bottom__info
+	color #54657e
+	font-weight: 300
+	a
+		color $blue
+		display: inline-block
+		margin-left: 5px
+.footer-bottom-soc
+	flex(between)
+.footer-bottom-soc__text
+	color #54657e
+	margin-right: 20px
+.footer-bottom-soc-list
+	f()
+.footer-bottom-soc-list__el
+	margin-left: 10px
+	.icon
+		size 30px
+
+
+//.filter
+//.main-cont
+.filter-head
+	flex(between)
+.filter-head__el
+	width: 49%
+	text-align: center
+	border-radius 5px 5px 0 0
+	border 1px solid #cad3df
+	border-bottom 0
+	color #54657e
+	font-size 24px
+	font-weight 500
+	text-transform uppercase
+	padding: 29px 20px 20px 20px
+	cp()
+.filter-head__el--active
+	background: $gray
+	border-color $gray
+.filter-tab-wrap
+	background: $gray
+.filter-tab
+	padding: 60px 0
+	display: none
+.filter-tab--active
+	display: block
+.filter-item-wrap
+	display: grid
+	grid-gap 20px
+	grid-template-columns repeat(4,1fr);
+	margin-bottom: 30px
+.filter-item
+	.input
+		width: 100%
+		margin-bottom: 0
+.filter-item__name
+	color #54657e
+	margin-bottom: 15px
+//.filter-item__el
+//.input
+.filter-item-footer
+	margin-top: 35px
+	flex(between)
+.filter-item-footer__info
+	color #8493a8
+	line-height: 1.4
+	width: 72%
+.filter-item-footer__get
+	@extend .btn--dark
+	@extend .btn--md
+	width: 32%
+	max-width 280px
+.filter-item__el--half
+	display: grid
+	grid-gap 10px
+	grid-template-columns 1fr 1fr;
+//.link--mark
+
+.filter-check
+	flex(between)
+
+.sytle-input-text
+	color #54657e
+	font-size: 14px
+
+.filter-item-extend
+	display: none
+
+.filter-toggle--open
+	display: none
+
+.filter-toggle--show
+	.filter-toggle--open
+		display: block
+	.filter-toggle--hide
+		display: none
+
+.filter-toggle__el
+	color $blue
+	cp()
+
+.filter
+	margin-bottom: 40px

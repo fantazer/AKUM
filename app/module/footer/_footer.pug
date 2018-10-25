@@ -1,35 +1,134 @@
 mixin footer()
 	//block footer
-	.modal-layer
-		.modal-filter
-		.modal-wrap
-			.modal(data-modal="order")
-				.modal-content
-					.modal-close
-						+icon("close","icon")
-					.modal-title Оставьте заявку
-					.modal-text Обращаетесь к нам впервые? <br> Оформите обращение с помощью этой формы, мы перезвоним Вам и проконсультируем по любому Вашему вопросу совершенно бесплатно!
-					form.validate-form( action="javascript:void(null);")
-						.input-row
-							input(type="text" name="name" placeholder="Ваше имя").input
-						.input-row
-							input(type="text" name="phone" placeholder="Ваш телефон").input
-						.input-row
-							textarea(name="info", cols="30", rows="5" placeholder="Сообщение").input
-						.agree-row
-							.check-el
-								label.style-label.style-label--checkbox
-									input(type="checkbox" name="agree").sytle-input
-									.sytle-input-element
-										+icon("checked","icon-check")
-									.sytle-input-text=text
-							.agree-row__text Согласен с
-								a(href="#") условиями обработки персональных данных
-						input(type="submit" value="Отправить заявку").modal-send
-			//success message
-			.modal(data-modal="truemessage")
-				.modal-content.modal-content--true
-					+icon("interface","icon")
-					.modal-text-true Ваша заявка принята
-	a(href="#" data-modal="order").modal-get Открыть модальное окно
+	//location
+	.location(style="background-image:url('img/banner-map.png')")
+		.location-filter
+		.main-cont
+			.location-title Наши магазины в Новосибирске
+			.location-wrap
+				.location-col
+					.location-el
+						.location-el__icon
+							+icon("location","icon")
+						.location-el__content
+							a(href="#").location-el__text Б. Богаткова, 264
+					.location-el
+						.location-el__icon
+							+icon("phone","icon")
+						.location-el__content
+							a(href="tel:+7 (383) 214-00-65").location-el__text +7 (383) 214-00-65
+					.location-el
+						.location-el__icon
+							+icon("time","icon")
+						.location-el__content
+							.location-el__text Пн–Пт: 8:00–21:00
+							.location-el__text Сб–Вс: 9:00–19:00
+				.location-col
+					.location-el
+						.location-el__icon
+							+icon("location","icon")
+						.location-el__content
+							a(href="#").location-el__text пр. Дзержинского, 5
+					.location-el
+						.location-el__icon
+							+icon("phone","icon")
+						.location-el__content
+							a(href="tel:+7 (383) 299-03-01").location-el__text +7 (383) 299-03-01
+					.location-el
+						.location-el__icon
+							+icon("time","icon")
+						.location-el__content
+							.location-el__text Пн–Пт: 8:00–21:00
+							.location-el__text Сб–Вс: 9:00–19:00
+				.location-col
+					.location-el
+						.location-el__icon
+							+icon("location","icon")
+						.location-el__content
+							a(href="#").location-el__text Железнодорожная, 17
+					.location-el
+						.location-el__icon
+							+icon("phone","icon")
+						.location-el__content
+							a(href="tel:++7 (383) 292-92-19").location-el__text ++7 (383) 292-92-19
+					.location-el
+						.location-el__icon
+							+icon("time","icon")
+						.location-el__content
+							.location-el__text Пн–Пт: 8:00–21:00
+							.location-el__text Сб–Вс: 9:00–19:00
+				a(href="#").location-col.location-col--mark
+					.location-col-icon
+						+icon("map","icon")
+					.location-col-text Посмотреть все магазины на карте
+	//footer section
+	.footer
+		.main-cont
+			.footer-main
+				.footer-main__col
+					.footer-main__title Каталог
+					.footer-main__list
+						-
+							var items = [
+								'Авто АКБ',
+								'Мото АКБ',
+								'Катерные АКБ',
+								'Товары для АКБ',
+								'Промышленные АКБ',
+								'Другие товары'
+							];
+						each item in items
+							a(href="#").footer-main__list-el #{item}
+				.footer-main__col
+					.footer-main__title Компания
+					.footer-main__list
+						-
+							var items = [
+								'О нас',
+								'Оптовым покупателям',
+								'Партнеры',
+								'Новости',
+								'Бренды',
+								'Отзывы'
+							];
+						each item in items
+							a(href="#").footer-main__list-el #{item}
+				.footer-main__col
+					.footer-main__title Помощь покупателю
+					.footer-main__list
+						-
+							var items = [
+								'Магазины',
+								'Сервисные центры',
+								'Акции',
+								'Услуги',
+								'Вопрос-Ответ'
+							];
+						each item in items
+							a(href="#").footer-main__list-el #{item}
+				.footer-main__col
+					a(href="#").footer-main__town Ваш город:
+						span Новосибирск
+					a(href="tel:+7 (383) 291-95-93").footer-main__phone +7 (383) 291-95-93
+
+		.footer-bottom
+			.main-cont
+				.footer-bottom-wrap
+					.footer-bottom__info 2018 © Автомотив. Продвижение сайта
+						a(href="#") Снайпер
+					.footer-bottom-soc
+						.footer-bottom-soc__text Мы в социальных сетях:
+						.footer-bottom-soc-list
+							a(href="#").footer-bottom-soc-list__el
+								+icon("vk--color","icon")
+							a(href="#").footer-bottom-soc-list__el
+								+icon("ok--color","icon")
+							a(href="#").footer-bottom-soc-list__el
+								+icon("youtube--color","icon")
 	//block footer end
+
+
+
+
+
+

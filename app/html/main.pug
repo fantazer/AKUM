@@ -3,4 +3,168 @@ include block_html/_include.pug
 
 +header()
 
+//main-banner
+.main-cont
+	.banner-panel
+		.banner-panel-sm
+			.banner-panel-sm-img
+				img(src="img/a-service.png", alt="")
+			.banner-panel-sm-info
+				.banner-panel-sm-title Бесплатная
+				.banner-panel-sm-text зарядка и диагностика
+		.banner-panel-lg
+			.banner-panel-lg-title подбор аккумулятора Специалистом
+			.banner-panel-lg-cont
+				.banner-panel-lg-cont-icon
+					+icon("phone-call","icon")
+				.banner-panel-lg-cont-numb 291-95-93
+	.banner
+		.banner-info
+			.banner-info__el(style="background-image:url('img/img-1.jpg')")
+				.banner-info__el-filter
+				.banner-info__list
+					.banner-info__list-el
+						.banner-info__list-el-icon
+							+icon("awrds","icon")
+						.banner-info__list-el-text 27 лет продаем аккумуляторы
+					.banner-info__list-el
+						.banner-info__list-el-icon
+							+icon("location-light","icon")
+						.banner-info__list-el-text 33 города и 94 магазина по всей России
+					.banner-info__list-el
+						.banner-info__list-el-icon
+							+icon("batary-polar","icon")
+						.banner-info__list-el-text 1 млн установленных и обслуженных акб
+			.banner-info__el(style="background-image:url('img/img-2.jpg')")
+				.banner-info__el-filter
+				.banner-info__list.banner-info__list--news
+					.banner-info__el-title Новости
+					.banner-info__list-el
+						.banner-info__list-el-icon
+							+icon("news","icon")
+						.banner-info__list-el-text-wrap
+							.banner-info__list-el-text
+								span Новый магазин в Тюменской области по адресу: Тобольск, 9 микрорайон, 34Б
+							.banner-info__list-el-bottom
+								.banner-info__list-el-bottom-date 10 Сентября 2018
+								a(href="#").banner-info__list-el-bottom-get Читать подробнее
+
+		.banner-map(style="background-image:url('img/map.png')")
+			.banner-map-content
+				.banner-map__title Аккумуляторы от профессионалов
+				.banner-map__list
+					.banner-map__list
+						.banner-map__list-el 25 лет успеха
+						.banner-map__list-el 13 регионов
+						.banner-map__list-el 94 магазина
+						.banner-map__list-el 94 магазина
+				a(href="#").banner-map__get Подробнее
+
+//filter-tabs
+.filter
+	.main-cont
+		.filter-head
+			.filter-head__el.filter-head__el--active Подбор АКБ по марке автомобиля
+			.filter-head__el Подбор по параметрам АКБ
+	.filter-tab-wrap
+		.main-cont
+			//tab content first
+			.filter-tab.filter-tab--active
+				.filter-item-wrap
+					.filter-item
+						.filter-item__name Марка автомобиля
+						.filter-item__el
+							input(type="text" class="input" placeholder="фильтр")
+					.filter-item
+						.filter-item__name Модель автомобиля
+						.filter-item__el
+							input(type="text" class="input" placeholder="фильтр")
+					.filter-item
+						.filter-item__name Год выпуска
+						.filter-item__el
+							input(type="text" class="input" placeholder="фильтр")
+					.filter-item
+						.filter-item__name Тип двигателя
+						.filter-item__el
+							input(type="text" class="input" placeholder="фильтр")
+				.filter-item-footer
+					.filter-item-footer__info * Подбор по марке автомобиля носит предварительный характер. Оптимальный вариант уточняйте по телефону <a href="tel:+7 (383) 291 95 93" class="link--mark">+7 (383) 291 95 93</a>. Либо у продавцов в  <a href="#" class="link--mark">наших магазинах.</a>
+					.filter-item-footer__get Подобрать
+			//tab content second
+			.filter-tab
+				.filter-item-wrap
+					.filter-item
+						.filter-item__name Бренд
+						.filter-item__el
+							input(type="text" class="input" placeholder="фильтр")
+					.filter-item
+						.filter-item__name Емкость
+						.filter-item__el.filter-item__el--half
+							input(type="text" class="input" placeholder="фильтр")
+							input(type="text" class="input" placeholder="фильтр")
+					.filter-item
+						.filter-item__name Полярность
+						.filter-item__el
+							input(type="text" class="input" placeholder="фильтр")
+					.filter-item
+						.filter-item__name Тип корпуса
+						.filter-item__el
+							input(type="text" class="input" placeholder="фильтр")
+				//filter extends
+				.filter-item-extend
+					.filter-item-wrap
+						.filter-item
+							.filter-item__name Пусковой ток А
+							.filter-item__el
+								input(type="text" class="input" placeholder="фильтр")
+						.filter-item
+							.filter-item__name Цена (рублей)
+							.filter-item__el.filter-item__el--half
+								input(type="text" class="input" placeholder="фильтр")
+								input(type="text" class="input" placeholder="фильтр")
+						.filter-item
+							.filter-item__name Технология
+							.filter-item__el
+								input(type="text" class="input" placeholder="фильтр")
+						.filter-item
+							.filter-item__name Габариты
+							.filter-item__el
+								input(type="text" class="input" placeholder="фильтр")
+					//filter-checkbox
+					.filter-check
+						+checkbox('Нижнее крепление')
+						+checkbox('Узкие клемы')
+						+checkbox('Груз. клемы под болт')
+						+checkbox('Низкий')
+						+checkbox('Боковык клемы (USA)')
+						+checkbox('Клеммы под гайку')
+						+checkbox('4 клеммы')
+				.filter-item-footer
+					.filter-item-footer__info
+						.filter-toggle
+							.filter-toggle__el.filter-toggle--hide Расширенный подбор
+							.filter-toggle__el.filter-toggle--open Скрыть параметры
+					.filter-item-footer__get Подобрать
+
+//services
+.service
+	.service-title
+	.service-title-sub
+		.service-title-sub__icon
+		.service-title-sub__text
+
+//articles
+.articles
+	.main-cont
+		.articles-title Статьи
+		.articles-wrap
+			- for (var i=0;i<3;i++)
+				//articles items
+				.articles__el
+					.articles__el-title Почему так важно проверить аккумулятор после морозов?
+					.articles__el-text При низких температурах аккумулятор в автомобиле сильно «истощается» из-за повышенного энергопотребления.
+					a(href="#").articles__el-get Читать подробнее
+
++footer()
+
 include ./block_html/_script.pug

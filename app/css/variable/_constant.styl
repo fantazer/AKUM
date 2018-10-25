@@ -162,9 +162,11 @@ btnStyleLight(br-btn,color-btn)
 	color white
 	background $red
 	&:hover
-		background-color darken($red,10)
+		background-color darken($red,5)
+		color white!important
 	&:active
-		background-color darken($red,10)
+		background-color darken($red,5)
+		color white!important
 	input[type="submit"]
 		border 0
 
@@ -173,13 +175,14 @@ btnStyleLight(br-btn,color-btn)
 	@extend .btn
 	color white
 	background $dark
-1&:hover
-		background-color darken($dark,10)
+	&:hover
+		color white!important
+		background-color darken($dark,5)
 	&:active
-		background-color darken($dark,10)
+		color white!important
+		background-color darken($dark,5)
 	input[type="submit"]
 		border 0
-
 
 .btn--disable
 	@extend .disabled
@@ -260,7 +263,7 @@ button
 
 .input,.textarea,.select
 	border 0px
-	padding 20px
+	padding 15px 20px
 	border 1px solid $border-color
 	resize: none
 	outline: 0 !important
@@ -288,14 +291,14 @@ button
 		top 0
 		left -9999px
 	.sytle-input-element
-		width 30px
-		height 30px
+		width 25px
+		height 25px
 		position relative
 		display inline-block
 		margin-right 10px
 		background white
-		border 1px solid #cfcfcf
-		br(8px)
+		border 1px solid #cad3df
+		br(5px)
 		cp()
 		tr(all)
 		&:hover
@@ -308,8 +311,8 @@ button
 			color white
 			.icon-check
 				display block
-				fill #000000
-				size 16px
+				fill $blue
+				size 14px
 
 .style-label--radio
 	input

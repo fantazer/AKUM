@@ -1,64 +1,18 @@
 $(document).ready(function () {
 
-	//modal
-	var modalState = {
-		"isModalShow": false, //state show modal
-		"scrollPos": 0
-	};
-	$('.modal-content').click(function (event) {
-		event.stopPropagation();
+	$('.filter-head__el').click(function(){
+		$('.filter-head__el').removeClass('filter-head__el--active');
+		$(this).addClass('filter-head__el--active');
+		var currentTab = $(this).index();
+		console.log(currentTab);
+		$('.filter-tab').removeClass('filter-tab--active');
+		$('.filter-tab').eq(currentTab).addClass('filter-tab--active');
 	});
 
-	var openModal = function () {
-		if (!$('.modal-layer').hasClass('modal-layer-show')) {
-			$('.modal-layer').addClass('modal-layer-show');
-			modalState.scrollPos = $(window).scrollTop();
-			$('body').css({
-				overflow: 'hidden',
-				position: 'fixed',
-				overflowY: 'scroll',
-				top: -modalState.scrollPos,
-				width: '100%'
-			});
-		}
-		modalState.isModalShow = true;
-	};
-
-	var closeModal = function () {
-		$('.modal-layer').removeClass('modal-layer-show');
-		$('body').css({
-			overflow: '',
-			position: '',
-			top: modalState.scrollPos
-		});
-		$(window).scrollTop(modalState.scrollPos);
-		$('.modal').removeClass('modal__show');
-		modalState.isModalShow = false;
-	};
-
-	var initModal = function (el) {
-		openModal();
-		$('.modal').each(function () {
-			if ($(this).data('modal') === el) {
-				$(this).addClass('modal__show')
-			} else {
-				$(this).removeClass('modal__show')
-			}
-		});
-		var modalHeightCont = $(window).height();
-		$('.modal-filter').height(modalHeightCont);
-
-	};
-
-	$('.modal-get').click(function () {
-		var currentModal = $(this).data("modal");
-		initModal(currentModal);
+	$('.filter-toggle').click(function(){
+		$('.filter-item-extend').slideToggle();
+		$(this).toggleClass('filter-toggle--show');
 	});
-
-	$('.modal-layer , .modal-close').click(function () {
-		closeModal();
-	});
-	//modals===end
 
 	function detectIE() {
 		var ua = window.navigator.userAgent;

@@ -34,9 +34,9 @@ mixin header()
 						img(src="img/logo-main.svg", alt="")
 					.head-main-content
 						.head-main-nav
-							.head-main-nav-el.head-main-nav-el--sub
-								a(href="#") Каталог
-								+icon("triangle","icon")
+							.head-main-nav-el.head-main-nav-el--sub.head-main-nav-cat-wrap
+								a(href="#").head-main-nav-cat Каталог
+									+icon("triangle","icon")
 								.head-main-nav-list
 									-
 										var items = [
@@ -48,7 +48,7 @@ mixin header()
 											'Другие товары'
 											];
 									each item in items
-										.head-main-nav-list-el #{item}
+										a(href="#").head-main-nav-list-el #{item}
 							a(href="#").head-main-nav-el Магазины
 						form(action="#").head-main-search
 							.head-main-search__input

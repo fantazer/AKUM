@@ -13,7 +13,8 @@ include block_html/_include.pug
 				.banner-panel-sm-title Бесплатная
 				.banner-panel-sm-text зарядка и диагностика
 		.banner-panel-lg
-			.banner-panel-lg-title подбор аккумулятора Специалистом
+			.banner-panel-lg-title подбор аккумулятора
+				span Специалистом
 			.banner-panel-lg-cont
 				.banner-panel-lg-cont-icon
 					+icon("phone-call","icon")
@@ -62,96 +63,239 @@ include block_html/_include.pug
 
 //filter-tabs
 .filter
-	.main-cont
-		.filter-head
-			.filter-head__el.filter-head__el--active Подбор АКБ по марке автомобиля
-			.filter-head__el Подбор по параметрам АКБ
-	.filter-tab-wrap
+	.tab-container
 		.main-cont
-			//tab content first
-			.filter-tab.filter-tab--active
-				.filter-item-wrap
-					.filter-item
-						.filter-item__name Марка автомобиля
-						.filter-item__el
-							input(type="text" class="input" placeholder="фильтр")
-					.filter-item
-						.filter-item__name Модель автомобиля
-						.filter-item__el
-							input(type="text" class="input" placeholder="фильтр")
-					.filter-item
-						.filter-item__name Год выпуска
-						.filter-item__el
-							input(type="text" class="input" placeholder="фильтр")
-					.filter-item
-						.filter-item__name Тип двигателя
-						.filter-item__el
-							input(type="text" class="input" placeholder="фильтр")
-				.filter-item-footer
-					.filter-item-footer__info * Подбор по марке автомобиля носит предварительный характер. Оптимальный вариант уточняйте по телефону <a href="tel:+7 (383) 291 95 93" class="link--mark">+7 (383) 291 95 93</a>. Либо у продавцов в  <a href="#" class="link--mark">наших магазинах.</a>
-					.filter-item-footer__get Подобрать
-			//tab content second
-			.filter-tab
-				.filter-item-wrap
-					.filter-item
-						.filter-item__name Бренд
-						.filter-item__el
-							input(type="text" class="input" placeholder="фильтр")
-					.filter-item
-						.filter-item__name Емкость
-						.filter-item__el.filter-item__el--half
-							input(type="text" class="input" placeholder="фильтр")
-							input(type="text" class="input" placeholder="фильтр")
-					.filter-item
-						.filter-item__name Полярность
-						.filter-item__el
-							input(type="text" class="input" placeholder="фильтр")
-					.filter-item
-						.filter-item__name Тип корпуса
-						.filter-item__el
-							input(type="text" class="input" placeholder="фильтр")
-				//filter extends
-				.filter-item-extend
+			.tab-head
+				.tab-head__el.tab-head__el--active Подбор АКБ по марке автомобиля
+				.tab-head__el Подбор по параметрам АКБ
+		.content-tab-wrap
+			.main-cont
+				//tab content first
+				.content-tab.content-tab--active
 					.filter-item-wrap
 						.filter-item
-							.filter-item__name Пусковой ток А
+							.filter-item__name Марка автомобиля
 							.filter-item__el
 								input(type="text" class="input" placeholder="фильтр")
 						.filter-item
-							.filter-item__name Цена (рублей)
+							.filter-item__name Модель автомобиля
+							.filter-item__el
+								input(type="text" class="input" placeholder="фильтр")
+						.filter-item
+							.filter-item__name Год выпуска
+							.filter-item__el
+								input(type="text" class="input" placeholder="фильтр")
+						.filter-item
+							.filter-item__name Тип двигателя
+							.filter-item__el
+								input(type="text" class="input" placeholder="фильтр")
+					.filter-item-footer
+						.filter-item-footer__info * Подбор по марке автомобиля носит предварительный характер. Оптимальный вариант уточняйте по телефону <a href="tel:+7 (383) 291 95 93" class="link--mark">+7 (383) 291 95 93</a>. Либо у продавцов в  <a href="#" class="link--mark">наших магазинах.</a>
+						.filter-item-footer__get Подобрать
+				//tab content second
+				.content-tab
+					.filter-item-wrap
+						.filter-item
+							.filter-item__name Бренд
+							.filter-item__el
+								input(type="text" class="input" placeholder="фильтр")
+						.filter-item
+							.filter-item__name Емкость
 							.filter-item__el.filter-item__el--half
 								input(type="text" class="input" placeholder="фильтр")
 								input(type="text" class="input" placeholder="фильтр")
 						.filter-item
-							.filter-item__name Технология
+							.filter-item__name Полярность
 							.filter-item__el
 								input(type="text" class="input" placeholder="фильтр")
 						.filter-item
-							.filter-item__name Габариты
+							.filter-item__name Тип корпуса
 							.filter-item__el
 								input(type="text" class="input" placeholder="фильтр")
-					//filter-checkbox
-					.filter-check
-						+checkbox('Нижнее крепление')
-						+checkbox('Узкие клемы')
-						+checkbox('Груз. клемы под болт')
-						+checkbox('Низкий')
-						+checkbox('Боковык клемы (USA)')
-						+checkbox('Клеммы под гайку')
-						+checkbox('4 клеммы')
-				.filter-item-footer
-					.filter-item-footer__info
-						.filter-toggle
-							.filter-toggle__el.filter-toggle--hide Расширенный подбор
-							.filter-toggle__el.filter-toggle--open Скрыть параметры
-					.filter-item-footer__get Подобрать
+					//filter extends
+					.filter-item-extend
+						.filter-item-wrap
+							.filter-item
+								.filter-item__name Пусковой ток А
+								.filter-item__el
+									input(type="text" class="input" placeholder="фильтр")
+							.filter-item
+								.filter-item__name Цена (рублей)
+								.filter-item__el.filter-item__el--half
+									input(type="text" class="input" placeholder="фильтр")
+									input(type="text" class="input" placeholder="фильтр")
+							.filter-item
+								.filter-item__name Технология
+								.filter-item__el
+									input(type="text" class="input" placeholder="фильтр")
+							.filter-item
+								.filter-item__name Габариты
+								.filter-item__el
+									input(type="text" class="input" placeholder="фильтр")
+						//filter-checkbox
+						.filter-check
+							+checkbox('Нижнее крепление')
+							+checkbox('Узкие клемы')
+							+checkbox('Груз. клемы под болт')
+							+checkbox('Низкий')
+							+checkbox('Боковык клемы (USA)')
+							+checkbox('Клеммы под гайку')
+							+checkbox('4 клеммы')
+					.filter-item-footer
+						.filter-item-footer__info
+							.filter-toggle
+								.filter-toggle__el.filter-toggle--hide Расширенный подбор
+								.filter-toggle__el.filter-toggle--open Скрыть параметры
+						.filter-item-footer__get Подобрать
 
 //services
-.service
-	.service-title
+.main-cont
+	.service-title А-сервис
 	.service-title-sub
 		.service-title-sub__icon
-		.service-title-sub__text
+			+icon("star","icon")
+		.service-title-sub__text Услуги для наших покупателей БЕСПЛАТНО
+	.service
+		.service__el
+			.service-head
+				.service-head__icon
+					+icon("tester","icon")
+				.service-head__text Диагностика АКБ
+			.service-text Рекомендуем проходить  диагностику 2 раза в год
+			a(href="#").service-link Подробнее
+		.service__el
+			.service-head
+				.service-head__icon
+					+icon("akum","icon")
+				.service-head__text Обслуживание АКБ
+			.service-text Увеличим срок службы АКБ до 2 раз
+			a(href="#").service-link Подробнее
+		.service__el
+			.service-head
+				.service-head__icon
+					+icon("tools","icon")
+				.service-head__text Диагностика электрооборудования автомобиля
+			.service-text Используем высокоточное сертифицированное диагностическое оборудование
+			a(href="#").service-link Подробнее
+		.service__el
+			.service-head
+				.service-head__icon
+					+icon("batary","icon")
+				.service-head__text Прием и обмен старых АКБ
+			.service-text Новый вместо старого. Утилизируем старый АКБ правильно и выгодно
+			a(href="#").service-link Подробнее
+
+//slider-items
+.slider-items-wrap.tab-container
+	.main-cont
+		.tab-head
+			.tab-head__el.tab-head__el--icon.tab-head__el--active.tab-head__el--unslider
+				span Акции
+				+icon("sale","icon")
+			.tab-head__el.tab-head__el--icon.tab-head__el--unslider
+				span Мы рекомендуем
+				+icon("like","icon")
+	.content-tab-wrap
+		.main-cont
+			//tab content first
+			.content-tab.content-tab--active
+				.slider-wrap
+					.slider-control.slider-control--left
+						+icon("arrow-left","icon")
+					.slider-control.slider-control--right
+						+icon("arrow-right","icon")
+					.item-slider.slider-item
+						- for (var i=0;i<8;i++)
+							.item
+								.item-sale
+									img(src="img/icon-sale.png", alt="")
+								a(href="#" style="background-image:url('img/product.png')").item-img
+								.item-title AlphaLINE AGM 60.0 L2 (AX 560680/56020) обр
+								.item-price
+									.item-price__text Цена:
+										.item-price__val 1 990 руб.
+								.item-footer
+									.item-footer__price-false 2 550 руб.
+									.item-footer__get
+										.item-footer__compare
+											+icon("chart","icon")
+										.item-footer__cart
+											+icon("shopping-cart","icon")
+			.content-tab
+				.slider-wrap
+					.slider-control.slider-control--left
+						+icon("arrow-left","icon")
+					.slider-control.slider-control--right
+						+icon("arrow-right","icon")
+					.slider-item
+						- for (var i=0;i<8;i++)
+							.item
+								.item-sale
+									img(src="img/icon-commend.png", alt="")
+								a(href="#" style="background-image:url('img/product.png')").item-img
+								.item-title AlphaLINE AGM 60.0 L2 (AX 560680/56020) обр
+								.item-price
+									.item-price__text Цена:
+										.item-price__val 1 990 руб.
+								.item-footer
+									.item-footer__price-false 2 550 руб.
+									.item-footer__get
+										.item-footer__compare
+											+icon("chart","icon")
+										.item-footer__cart
+											+icon("shopping-cart","icon")
+
+
+//cards
+.main-cont
+	.cards
+		.cards__el.cards__el--avto(style="background-image:url('img/img-3.jpg')")
+			.cards-filter
+			.cards-content
+				a(href="#").cards-content__title Авто <br>	аккумуляторы
+				.cards-content-size
+					a(href="#").cards-content-size__el 40-55 Ач
+					a(href="#").cards-content-size__el 55-70 Ач
+					a(href="#").cards-content-size__el 70-90 Ач
+					a(href="#").cards-content-size__el 90-110 Ач
+					a(href="#").cards-content-size__el AGM
+					a(href="#").cards-content-size__el EFB
+
+		a(href="#" style="background-image:url('img/img-4.jpg')").cards__el.cards__el--moto
+			.cards-filter
+			.cards-content
+				.cards-content__title Мото <br> аккумуляторы
+
+		a(href="#" style="background-image:url('img/img-5.jpg')").cards__el.cards__el--gruz
+			.cards-filter
+			.cards-content
+				.cards-content__title грузовые АКБ
+
+		a(href="#").cards__el.cards__el--all
+			.cards-filter
+			.cards-content
+				.cards-content__title Весь каталог АКБ
+				.cards-content__get Перейти в каталог
+
+		a(href="#" style="background-image:url('img/img-6.jpg')").cards__el.cards__el--stat
+			.cards-filter
+			.cards-content
+				.cards-content__title.cards-content__title--bottom Стационарные и промышненные акБ
+
+		a(href="#" style="background-image:url('img/img-7.jpg')").cards__el.cards__el--for
+			.cards-filter
+			.cards-content
+				.cards-content__title.cards-content__title--bottom Товары <br> для АКБ
+
+		a(href="#" style="background-image:url('img/img-8.jpg')").cards__el.cards__el--ship
+			.cards-filter
+			.cards-content
+				.cards-content__title.cards-content__title--bottom Катерные <br> аккумуляторы
+
+		a(href="#" style="background-image:url('img/img-9.jpg')").cards__el.cards__el--other
+			.cards-filter
+			.cards-content
+				.cards-content__title.cards-content__title--bottom Другие <br> товары
 
 //articles
 .articles

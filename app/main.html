@@ -67,17 +67,11 @@
 					<div class="head-main"><a class="logo" href="/"><img src="img/logo-main.svg" alt="" /></a>
 						<div class="head-main-content">
 							<div class="head-main-nav">
-								<div class="head-main-nav-el head-main-nav-el--sub"><a href="#">Каталог</a>
-									<svg class="icon">
-										<use xlink:href="#triangle"></use>
-									</svg>
-									<div class="head-main-nav-list">
-										<div class="head-main-nav-list-el">Авто аккумуляторы</div>
-										<div class="head-main-nav-list-el">Мото аккумуляторы</div>
-										<div class="head-main-nav-list-el">Катерные аккумуляторы</div>
-										<div class="head-main-nav-list-el">Стационарные и промышленные АКБ</div>
-										<div class="head-main-nav-list-el">Товары для АКБ</div>
-										<div class="head-main-nav-list-el">Другие товары</div>
+								<div class="head-main-nav-el head-main-nav-el--sub head-main-nav-cat-wrap"><a class="head-main-nav-cat" href="#">Каталог
+										<svg class="icon">
+											<use xlink:href="#triangle"></use>
+										</svg></a>
+									<div class="head-main-nav-list"><a class="head-main-nav-list-el" href="#">Авто аккумуляторы</a><a class="head-main-nav-list-el" href="#">Мото аккумуляторы</a><a class="head-main-nav-list-el" href="#">Катерные аккумуляторы</a><a class="head-main-nav-list-el" href="#">Стационарные и промышленные АКБ</a><a class="head-main-nav-list-el" href="#">Товары для АКБ</a><a class="head-main-nav-list-el" href="#">Другие товары</a>
 									</div>
 								</div><a class="head-main-nav-el" href="#">Магазины</a>
 							</div>
@@ -107,7 +101,7 @@
 					</div>
 				</div>
 				<div class="banner-panel-lg">
-					<div class="banner-panel-lg-title">подбор аккумулятора Специалистом</div>
+					<div class="banner-panel-lg-title">подбор аккумулятора<span>Специалистом</span></div>
 					<div class="banner-panel-lg-cont">
 						<div class="banner-panel-lg-cont-icon">
 							<svg class="icon">
@@ -186,205 +180,742 @@
 		</div>
 		<!--filter-tabs-->
 		<div class="filter">
-			<div class="main-cont">
-				<div class="filter-head">
-					<div class="filter-head__el filter-head__el--active">Подбор АКБ по марке автомобиля</div>
-					<div class="filter-head__el">Подбор по параметрам АКБ</div>
-				</div>
-			</div>
-			<div class="filter-tab-wrap">
+			<div class="tab-container">
 				<div class="main-cont">
-					<!--tab content first-->
-					<div class="filter-tab filter-tab--active">
-						<div class="filter-item-wrap">
-							<div class="filter-item">
-								<div class="filter-item__name">Марка автомобиля</div>
-								<div class="filter-item__el">
-									<input class="input" type="text" placeholder="фильтр" />
-								</div>
-							</div>
-							<div class="filter-item">
-								<div class="filter-item__name">Модель автомобиля</div>
-								<div class="filter-item__el">
-									<input class="input" type="text" placeholder="фильтр" />
-								</div>
-							</div>
-							<div class="filter-item">
-								<div class="filter-item__name">Год выпуска</div>
-								<div class="filter-item__el">
-									<input class="input" type="text" placeholder="фильтр" />
-								</div>
-							</div>
-							<div class="filter-item">
-								<div class="filter-item__name">Тип двигателя</div>
-								<div class="filter-item__el">
-									<input class="input" type="text" placeholder="фильтр" />
-								</div>
-							</div>
-						</div>
-						<div class="filter-item-footer">
-							<div class="filter-item-footer__info">* Подбор по марке автомобиля носит предварительный характер. Оптимальный вариант уточняйте по телефону <a href="tel:+7 (383) 291 95 93" class="link--mark">+7 (383) 291 95 93</a>. Либо у продавцов в <a href="#" class="link--mark">наших магазинах.</a></div>
-							<div class="filter-item-footer__get">Подобрать</div>
-						</div>
+					<div class="tab-head">
+						<div class="tab-head__el tab-head__el--active">Подбор АКБ по марке автомобиля</div>
+						<div class="tab-head__el">Подбор по параметрам АКБ</div>
 					</div>
-					<!--tab content second-->
-					<div class="filter-tab">
-						<div class="filter-item-wrap">
-							<div class="filter-item">
-								<div class="filter-item__name">Бренд</div>
-								<div class="filter-item__el">
-									<input class="input" type="text" placeholder="фильтр" />
-								</div>
-							</div>
-							<div class="filter-item">
-								<div class="filter-item__name">Емкость</div>
-								<div class="filter-item__el filter-item__el--half">
-									<input class="input" type="text" placeholder="фильтр" />
-									<input class="input" type="text" placeholder="фильтр" />
-								</div>
-							</div>
-							<div class="filter-item">
-								<div class="filter-item__name">Полярность</div>
-								<div class="filter-item__el">
-									<input class="input" type="text" placeholder="фильтр" />
-								</div>
-							</div>
-							<div class="filter-item">
-								<div class="filter-item__name">Тип корпуса</div>
-								<div class="filter-item__el">
-									<input class="input" type="text" placeholder="фильтр" />
-								</div>
-							</div>
-						</div>
-						<!--filter extends-->
-						<div class="filter-item-extend">
+				</div>
+				<div class="content-tab-wrap">
+					<div class="main-cont">
+						<!--tab content first-->
+						<div class="content-tab content-tab--active">
 							<div class="filter-item-wrap">
 								<div class="filter-item">
-									<div class="filter-item__name">Пусковой ток А</div>
+									<div class="filter-item__name">Марка автомобиля</div>
 									<div class="filter-item__el">
 										<input class="input" type="text" placeholder="фильтр" />
 									</div>
 								</div>
 								<div class="filter-item">
-									<div class="filter-item__name">Цена (рублей)</div>
+									<div class="filter-item__name">Модель автомобиля</div>
+									<div class="filter-item__el">
+										<input class="input" type="text" placeholder="фильтр" />
+									</div>
+								</div>
+								<div class="filter-item">
+									<div class="filter-item__name">Год выпуска</div>
+									<div class="filter-item__el">
+										<input class="input" type="text" placeholder="фильтр" />
+									</div>
+								</div>
+								<div class="filter-item">
+									<div class="filter-item__name">Тип двигателя</div>
+									<div class="filter-item__el">
+										<input class="input" type="text" placeholder="фильтр" />
+									</div>
+								</div>
+							</div>
+							<div class="filter-item-footer">
+								<div class="filter-item-footer__info">* Подбор по марке автомобиля носит предварительный характер. Оптимальный вариант уточняйте по телефону <a href="tel:+7 (383) 291 95 93" class="link--mark">+7 (383) 291 95 93</a>. Либо у продавцов в <a href="#" class="link--mark">наших магазинах.</a></div>
+								<div class="filter-item-footer__get">Подобрать</div>
+							</div>
+						</div>
+						<!--tab content second-->
+						<div class="content-tab">
+							<div class="filter-item-wrap">
+								<div class="filter-item">
+									<div class="filter-item__name">Бренд</div>
+									<div class="filter-item__el">
+										<input class="input" type="text" placeholder="фильтр" />
+									</div>
+								</div>
+								<div class="filter-item">
+									<div class="filter-item__name">Емкость</div>
 									<div class="filter-item__el filter-item__el--half">
 										<input class="input" type="text" placeholder="фильтр" />
 										<input class="input" type="text" placeholder="фильтр" />
 									</div>
 								</div>
 								<div class="filter-item">
-									<div class="filter-item__name">Технология</div>
+									<div class="filter-item__name">Полярность</div>
 									<div class="filter-item__el">
 										<input class="input" type="text" placeholder="фильтр" />
 									</div>
 								</div>
 								<div class="filter-item">
-									<div class="filter-item__name">Габариты</div>
+									<div class="filter-item__name">Тип корпуса</div>
 									<div class="filter-item__el">
 										<input class="input" type="text" placeholder="фильтр" />
 									</div>
 								</div>
 							</div>
-							<!--filter-checkbox-->
-							<div class="filter-check">
-								<div class="check-el">
-									<label class="style-label style-label--checkbox">
-										<input class="sytle-input" type="checkbox" />
-										<div class="sytle-input-element">
-											<svg class="icon-check">
-												<use xlink:href="#checked"></use>
-											</svg>
+							<!--filter extends-->
+							<div class="filter-item-extend">
+								<div class="filter-item-wrap">
+									<div class="filter-item">
+										<div class="filter-item__name">Пусковой ток А</div>
+										<div class="filter-item__el">
+											<input class="input" type="text" placeholder="фильтр" />
 										</div>
-										<div class="sytle-input-text">Нижнее крепление</div>
-									</label>
+									</div>
+									<div class="filter-item">
+										<div class="filter-item__name">Цена (рублей)</div>
+										<div class="filter-item__el filter-item__el--half">
+											<input class="input" type="text" placeholder="фильтр" />
+											<input class="input" type="text" placeholder="фильтр" />
+										</div>
+									</div>
+									<div class="filter-item">
+										<div class="filter-item__name">Технология</div>
+										<div class="filter-item__el">
+											<input class="input" type="text" placeholder="фильтр" />
+										</div>
+									</div>
+									<div class="filter-item">
+										<div class="filter-item__name">Габариты</div>
+										<div class="filter-item__el">
+											<input class="input" type="text" placeholder="фильтр" />
+										</div>
+									</div>
 								</div>
-								<div class="check-el">
-									<label class="style-label style-label--checkbox">
-										<input class="sytle-input" type="checkbox" />
-										<div class="sytle-input-element">
-											<svg class="icon-check">
-												<use xlink:href="#checked"></use>
-											</svg>
-										</div>
-										<div class="sytle-input-text">Узкие клемы</div>
-									</label>
-								</div>
-								<div class="check-el">
-									<label class="style-label style-label--checkbox">
-										<input class="sytle-input" type="checkbox" />
-										<div class="sytle-input-element">
-											<svg class="icon-check">
-												<use xlink:href="#checked"></use>
-											</svg>
-										</div>
-										<div class="sytle-input-text">Груз. клемы под болт</div>
-									</label>
-								</div>
-								<div class="check-el">
-									<label class="style-label style-label--checkbox">
-										<input class="sytle-input" type="checkbox" />
-										<div class="sytle-input-element">
-											<svg class="icon-check">
-												<use xlink:href="#checked"></use>
-											</svg>
-										</div>
-										<div class="sytle-input-text">Низкий</div>
-									</label>
-								</div>
-								<div class="check-el">
-									<label class="style-label style-label--checkbox">
-										<input class="sytle-input" type="checkbox" />
-										<div class="sytle-input-element">
-											<svg class="icon-check">
-												<use xlink:href="#checked"></use>
-											</svg>
-										</div>
-										<div class="sytle-input-text">Боковык клемы (USA)</div>
-									</label>
-								</div>
-								<div class="check-el">
-									<label class="style-label style-label--checkbox">
-										<input class="sytle-input" type="checkbox" />
-										<div class="sytle-input-element">
-											<svg class="icon-check">
-												<use xlink:href="#checked"></use>
-											</svg>
-										</div>
-										<div class="sytle-input-text">Клеммы под гайку</div>
-									</label>
-								</div>
-								<div class="check-el">
-									<label class="style-label style-label--checkbox">
-										<input class="sytle-input" type="checkbox" />
-										<div class="sytle-input-element">
-											<svg class="icon-check">
-												<use xlink:href="#checked"></use>
-											</svg>
-										</div>
-										<div class="sytle-input-text">4 клеммы</div>
-									</label>
+								<!--filter-checkbox-->
+								<div class="filter-check">
+									<div class="check-el">
+										<label class="style-label style-label--checkbox">
+											<input class="sytle-input" type="checkbox" />
+											<div class="sytle-input-element">
+												<svg class="icon-check">
+													<use xlink:href="#checked"></use>
+												</svg>
+											</div>
+											<div class="sytle-input-text">Нижнее крепление</div>
+										</label>
+									</div>
+									<div class="check-el">
+										<label class="style-label style-label--checkbox">
+											<input class="sytle-input" type="checkbox" />
+											<div class="sytle-input-element">
+												<svg class="icon-check">
+													<use xlink:href="#checked"></use>
+												</svg>
+											</div>
+											<div class="sytle-input-text">Узкие клемы</div>
+										</label>
+									</div>
+									<div class="check-el">
+										<label class="style-label style-label--checkbox">
+											<input class="sytle-input" type="checkbox" />
+											<div class="sytle-input-element">
+												<svg class="icon-check">
+													<use xlink:href="#checked"></use>
+												</svg>
+											</div>
+											<div class="sytle-input-text">Груз. клемы под болт</div>
+										</label>
+									</div>
+									<div class="check-el">
+										<label class="style-label style-label--checkbox">
+											<input class="sytle-input" type="checkbox" />
+											<div class="sytle-input-element">
+												<svg class="icon-check">
+													<use xlink:href="#checked"></use>
+												</svg>
+											</div>
+											<div class="sytle-input-text">Низкий</div>
+										</label>
+									</div>
+									<div class="check-el">
+										<label class="style-label style-label--checkbox">
+											<input class="sytle-input" type="checkbox" />
+											<div class="sytle-input-element">
+												<svg class="icon-check">
+													<use xlink:href="#checked"></use>
+												</svg>
+											</div>
+											<div class="sytle-input-text">Боковык клемы (USA)</div>
+										</label>
+									</div>
+									<div class="check-el">
+										<label class="style-label style-label--checkbox">
+											<input class="sytle-input" type="checkbox" />
+											<div class="sytle-input-element">
+												<svg class="icon-check">
+													<use xlink:href="#checked"></use>
+												</svg>
+											</div>
+											<div class="sytle-input-text">Клеммы под гайку</div>
+										</label>
+									</div>
+									<div class="check-el">
+										<label class="style-label style-label--checkbox">
+											<input class="sytle-input" type="checkbox" />
+											<div class="sytle-input-element">
+												<svg class="icon-check">
+													<use xlink:href="#checked"></use>
+												</svg>
+											</div>
+											<div class="sytle-input-text">4 клеммы</div>
+										</label>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="filter-item-footer">
-							<div class="filter-item-footer__info">
-								<div class="filter-toggle">
-									<div class="filter-toggle__el filter-toggle--hide">Расширенный подбор</div>
-									<div class="filter-toggle__el filter-toggle--open">Скрыть параметры</div>
+							<div class="filter-item-footer">
+								<div class="filter-item-footer__info">
+									<div class="filter-toggle">
+										<div class="filter-toggle__el filter-toggle--hide">Расширенный подбор</div>
+										<div class="filter-toggle__el filter-toggle--open">Скрыть параметры</div>
+									</div>
 								</div>
+								<div class="filter-item-footer__get">Подобрать</div>
 							</div>
-							<div class="filter-item-footer__get">Подобрать</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<!--services-->
-		<div class="service">
-			<div class="service-title"></div>
+		<div class="main-cont">
+			<div class="service-title">А-сервис</div>
 			<div class="service-title-sub">
-				<div class="service-title-sub__icon"></div>
-				<div class="service-title-sub__text"></div>
+				<div class="service-title-sub__icon">
+					<svg class="icon">
+						<use xlink:href="#star"></use>
+					</svg>
+				</div>
+				<div class="service-title-sub__text">Услуги для наших покупателей БЕСПЛАТНО</div>
+			</div>
+			<div class="service">
+				<div class="service__el">
+					<div class="service-head">
+						<div class="service-head__icon">
+							<svg class="icon">
+								<use xlink:href="#tester"></use>
+							</svg>
+						</div>
+						<div class="service-head__text">Диагностика АКБ</div>
+					</div>
+					<div class="service-text">Рекомендуем проходить диагностику 2 раза в год</div><a class="service-link" href="#">Подробнее</a>
+				</div>
+				<div class="service__el">
+					<div class="service-head">
+						<div class="service-head__icon">
+							<svg class="icon">
+								<use xlink:href="#akum"></use>
+							</svg>
+						</div>
+						<div class="service-head__text">Обслуживание АКБ</div>
+					</div>
+					<div class="service-text">Увеличим срок службы АКБ до 2 раз</div><a class="service-link" href="#">Подробнее</a>
+				</div>
+				<div class="service__el">
+					<div class="service-head">
+						<div class="service-head__icon">
+							<svg class="icon">
+								<use xlink:href="#tools"></use>
+							</svg>
+						</div>
+						<div class="service-head__text">Диагностика электрооборудования автомобиля</div>
+					</div>
+					<div class="service-text">Используем высокоточное сертифицированное диагностическое оборудование</div><a class="service-link" href="#">Подробнее</a>
+				</div>
+				<div class="service__el">
+					<div class="service-head">
+						<div class="service-head__icon">
+							<svg class="icon">
+								<use xlink:href="#batary"></use>
+							</svg>
+						</div>
+						<div class="service-head__text">Прием и обмен старых АКБ</div>
+					</div>
+					<div class="service-text">Новый вместо старого. Утилизируем старый АКБ правильно и выгодно</div><a class="service-link" href="#">Подробнее</a>
+				</div>
+			</div>
+		</div>
+		<!--slider-items-->
+		<div class="slider-items-wrap tab-container">
+			<div class="main-cont">
+				<div class="tab-head">
+					<div class="tab-head__el tab-head__el--icon tab-head__el--active tab-head__el--unslider"><span>Акции</span>
+						<svg class="icon">
+							<use xlink:href="#sale"></use>
+						</svg>
+					</div>
+					<div class="tab-head__el tab-head__el--icon tab-head__el--unslider"><span>Мы рекомендуем</span>
+						<svg class="icon">
+							<use xlink:href="#like"></use>
+						</svg>
+					</div>
+				</div>
+			</div>
+			<div class="content-tab-wrap">
+				<div class="main-cont">
+					<!--tab content first-->
+					<div class="content-tab content-tab--active">
+						<div class="slider-wrap">
+							<div class="slider-control slider-control--left">
+								<svg class="icon">
+									<use xlink:href="#arrow-left"></use>
+								</svg>
+							</div>
+							<div class="slider-control slider-control--right">
+								<svg class="icon">
+									<use xlink:href="#arrow-right"></use>
+								</svg>
+							</div>
+							<div class="item-slider slider-item">
+								<div class="item">
+									<div class="item-sale"><img src="img/icon-sale.png" alt="" /></div><a class="item-img" href="#" style="background-image:url('img/product.png')"></a>
+									<div class="item-title">AlphaLINE AGM 60.0 L2 (AX 560680/56020) обр</div>
+									<div class="item-price">
+										<div class="item-price__text">Цена:
+											<div class="item-price__val">1 990 руб.</div>
+										</div>
+									</div>
+									<div class="item-footer">
+										<div class="item-footer__price-false">2 550 руб.</div>
+										<div class="item-footer__get">
+											<div class="item-footer__compare">
+												<svg class="icon">
+													<use xlink:href="#chart"></use>
+												</svg>
+											</div>
+											<div class="item-footer__cart">
+												<svg class="icon">
+													<use xlink:href="#shopping-cart"></use>
+												</svg>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="item-sale"><img src="img/icon-sale.png" alt="" /></div><a class="item-img" href="#" style="background-image:url('img/product.png')"></a>
+									<div class="item-title">AlphaLINE AGM 60.0 L2 (AX 560680/56020) обр</div>
+									<div class="item-price">
+										<div class="item-price__text">Цена:
+											<div class="item-price__val">1 990 руб.</div>
+										</div>
+									</div>
+									<div class="item-footer">
+										<div class="item-footer__price-false">2 550 руб.</div>
+										<div class="item-footer__get">
+											<div class="item-footer__compare">
+												<svg class="icon">
+													<use xlink:href="#chart"></use>
+												</svg>
+											</div>
+											<div class="item-footer__cart">
+												<svg class="icon">
+													<use xlink:href="#shopping-cart"></use>
+												</svg>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="item-sale"><img src="img/icon-sale.png" alt="" /></div><a class="item-img" href="#" style="background-image:url('img/product.png')"></a>
+									<div class="item-title">AlphaLINE AGM 60.0 L2 (AX 560680/56020) обр</div>
+									<div class="item-price">
+										<div class="item-price__text">Цена:
+											<div class="item-price__val">1 990 руб.</div>
+										</div>
+									</div>
+									<div class="item-footer">
+										<div class="item-footer__price-false">2 550 руб.</div>
+										<div class="item-footer__get">
+											<div class="item-footer__compare">
+												<svg class="icon">
+													<use xlink:href="#chart"></use>
+												</svg>
+											</div>
+											<div class="item-footer__cart">
+												<svg class="icon">
+													<use xlink:href="#shopping-cart"></use>
+												</svg>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="item-sale"><img src="img/icon-sale.png" alt="" /></div><a class="item-img" href="#" style="background-image:url('img/product.png')"></a>
+									<div class="item-title">AlphaLINE AGM 60.0 L2 (AX 560680/56020) обр</div>
+									<div class="item-price">
+										<div class="item-price__text">Цена:
+											<div class="item-price__val">1 990 руб.</div>
+										</div>
+									</div>
+									<div class="item-footer">
+										<div class="item-footer__price-false">2 550 руб.</div>
+										<div class="item-footer__get">
+											<div class="item-footer__compare">
+												<svg class="icon">
+													<use xlink:href="#chart"></use>
+												</svg>
+											</div>
+											<div class="item-footer__cart">
+												<svg class="icon">
+													<use xlink:href="#shopping-cart"></use>
+												</svg>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="item-sale"><img src="img/icon-sale.png" alt="" /></div><a class="item-img" href="#" style="background-image:url('img/product.png')"></a>
+									<div class="item-title">AlphaLINE AGM 60.0 L2 (AX 560680/56020) обр</div>
+									<div class="item-price">
+										<div class="item-price__text">Цена:
+											<div class="item-price__val">1 990 руб.</div>
+										</div>
+									</div>
+									<div class="item-footer">
+										<div class="item-footer__price-false">2 550 руб.</div>
+										<div class="item-footer__get">
+											<div class="item-footer__compare">
+												<svg class="icon">
+													<use xlink:href="#chart"></use>
+												</svg>
+											</div>
+											<div class="item-footer__cart">
+												<svg class="icon">
+													<use xlink:href="#shopping-cart"></use>
+												</svg>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="item-sale"><img src="img/icon-sale.png" alt="" /></div><a class="item-img" href="#" style="background-image:url('img/product.png')"></a>
+									<div class="item-title">AlphaLINE AGM 60.0 L2 (AX 560680/56020) обр</div>
+									<div class="item-price">
+										<div class="item-price__text">Цена:
+											<div class="item-price__val">1 990 руб.</div>
+										</div>
+									</div>
+									<div class="item-footer">
+										<div class="item-footer__price-false">2 550 руб.</div>
+										<div class="item-footer__get">
+											<div class="item-footer__compare">
+												<svg class="icon">
+													<use xlink:href="#chart"></use>
+												</svg>
+											</div>
+											<div class="item-footer__cart">
+												<svg class="icon">
+													<use xlink:href="#shopping-cart"></use>
+												</svg>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="item-sale"><img src="img/icon-sale.png" alt="" /></div><a class="item-img" href="#" style="background-image:url('img/product.png')"></a>
+									<div class="item-title">AlphaLINE AGM 60.0 L2 (AX 560680/56020) обр</div>
+									<div class="item-price">
+										<div class="item-price__text">Цена:
+											<div class="item-price__val">1 990 руб.</div>
+										</div>
+									</div>
+									<div class="item-footer">
+										<div class="item-footer__price-false">2 550 руб.</div>
+										<div class="item-footer__get">
+											<div class="item-footer__compare">
+												<svg class="icon">
+													<use xlink:href="#chart"></use>
+												</svg>
+											</div>
+											<div class="item-footer__cart">
+												<svg class="icon">
+													<use xlink:href="#shopping-cart"></use>
+												</svg>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="item-sale"><img src="img/icon-sale.png" alt="" /></div><a class="item-img" href="#" style="background-image:url('img/product.png')"></a>
+									<div class="item-title">AlphaLINE AGM 60.0 L2 (AX 560680/56020) обр</div>
+									<div class="item-price">
+										<div class="item-price__text">Цена:
+											<div class="item-price__val">1 990 руб.</div>
+										</div>
+									</div>
+									<div class="item-footer">
+										<div class="item-footer__price-false">2 550 руб.</div>
+										<div class="item-footer__get">
+											<div class="item-footer__compare">
+												<svg class="icon">
+													<use xlink:href="#chart"></use>
+												</svg>
+											</div>
+											<div class="item-footer__cart">
+												<svg class="icon">
+													<use xlink:href="#shopping-cart"></use>
+												</svg>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="content-tab">
+						<div class="slider-wrap">
+							<div class="slider-control slider-control--left">
+								<svg class="icon">
+									<use xlink:href="#arrow-left"></use>
+								</svg>
+							</div>
+							<div class="slider-control slider-control--right">
+								<svg class="icon">
+									<use xlink:href="#arrow-right"></use>
+								</svg>
+							</div>
+							<div class="slider-item">
+								<div class="item">
+									<div class="item-sale"><img src="img/icon-commend.png" alt="" /></div><a class="item-img" href="#" style="background-image:url('img/product.png')"></a>
+									<div class="item-title">AlphaLINE AGM 60.0 L2 (AX 560680/56020) обр</div>
+									<div class="item-price">
+										<div class="item-price__text">Цена:
+											<div class="item-price__val">1 990 руб.</div>
+										</div>
+									</div>
+									<div class="item-footer">
+										<div class="item-footer__price-false">2 550 руб.</div>
+										<div class="item-footer__get">
+											<div class="item-footer__compare">
+												<svg class="icon">
+													<use xlink:href="#chart"></use>
+												</svg>
+											</div>
+											<div class="item-footer__cart">
+												<svg class="icon">
+													<use xlink:href="#shopping-cart"></use>
+												</svg>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="item-sale"><img src="img/icon-commend.png" alt="" /></div><a class="item-img" href="#" style="background-image:url('img/product.png')"></a>
+									<div class="item-title">AlphaLINE AGM 60.0 L2 (AX 560680/56020) обр</div>
+									<div class="item-price">
+										<div class="item-price__text">Цена:
+											<div class="item-price__val">1 990 руб.</div>
+										</div>
+									</div>
+									<div class="item-footer">
+										<div class="item-footer__price-false">2 550 руб.</div>
+										<div class="item-footer__get">
+											<div class="item-footer__compare">
+												<svg class="icon">
+													<use xlink:href="#chart"></use>
+												</svg>
+											</div>
+											<div class="item-footer__cart">
+												<svg class="icon">
+													<use xlink:href="#shopping-cart"></use>
+												</svg>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="item-sale"><img src="img/icon-commend.png" alt="" /></div><a class="item-img" href="#" style="background-image:url('img/product.png')"></a>
+									<div class="item-title">AlphaLINE AGM 60.0 L2 (AX 560680/56020) обр</div>
+									<div class="item-price">
+										<div class="item-price__text">Цена:
+											<div class="item-price__val">1 990 руб.</div>
+										</div>
+									</div>
+									<div class="item-footer">
+										<div class="item-footer__price-false">2 550 руб.</div>
+										<div class="item-footer__get">
+											<div class="item-footer__compare">
+												<svg class="icon">
+													<use xlink:href="#chart"></use>
+												</svg>
+											</div>
+											<div class="item-footer__cart">
+												<svg class="icon">
+													<use xlink:href="#shopping-cart"></use>
+												</svg>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="item-sale"><img src="img/icon-commend.png" alt="" /></div><a class="item-img" href="#" style="background-image:url('img/product.png')"></a>
+									<div class="item-title">AlphaLINE AGM 60.0 L2 (AX 560680/56020) обр</div>
+									<div class="item-price">
+										<div class="item-price__text">Цена:
+											<div class="item-price__val">1 990 руб.</div>
+										</div>
+									</div>
+									<div class="item-footer">
+										<div class="item-footer__price-false">2 550 руб.</div>
+										<div class="item-footer__get">
+											<div class="item-footer__compare">
+												<svg class="icon">
+													<use xlink:href="#chart"></use>
+												</svg>
+											</div>
+											<div class="item-footer__cart">
+												<svg class="icon">
+													<use xlink:href="#shopping-cart"></use>
+												</svg>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="item-sale"><img src="img/icon-commend.png" alt="" /></div><a class="item-img" href="#" style="background-image:url('img/product.png')"></a>
+									<div class="item-title">AlphaLINE AGM 60.0 L2 (AX 560680/56020) обр</div>
+									<div class="item-price">
+										<div class="item-price__text">Цена:
+											<div class="item-price__val">1 990 руб.</div>
+										</div>
+									</div>
+									<div class="item-footer">
+										<div class="item-footer__price-false">2 550 руб.</div>
+										<div class="item-footer__get">
+											<div class="item-footer__compare">
+												<svg class="icon">
+													<use xlink:href="#chart"></use>
+												</svg>
+											</div>
+											<div class="item-footer__cart">
+												<svg class="icon">
+													<use xlink:href="#shopping-cart"></use>
+												</svg>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="item-sale"><img src="img/icon-commend.png" alt="" /></div><a class="item-img" href="#" style="background-image:url('img/product.png')"></a>
+									<div class="item-title">AlphaLINE AGM 60.0 L2 (AX 560680/56020) обр</div>
+									<div class="item-price">
+										<div class="item-price__text">Цена:
+											<div class="item-price__val">1 990 руб.</div>
+										</div>
+									</div>
+									<div class="item-footer">
+										<div class="item-footer__price-false">2 550 руб.</div>
+										<div class="item-footer__get">
+											<div class="item-footer__compare">
+												<svg class="icon">
+													<use xlink:href="#chart"></use>
+												</svg>
+											</div>
+											<div class="item-footer__cart">
+												<svg class="icon">
+													<use xlink:href="#shopping-cart"></use>
+												</svg>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="item-sale"><img src="img/icon-commend.png" alt="" /></div><a class="item-img" href="#" style="background-image:url('img/product.png')"></a>
+									<div class="item-title">AlphaLINE AGM 60.0 L2 (AX 560680/56020) обр</div>
+									<div class="item-price">
+										<div class="item-price__text">Цена:
+											<div class="item-price__val">1 990 руб.</div>
+										</div>
+									</div>
+									<div class="item-footer">
+										<div class="item-footer__price-false">2 550 руб.</div>
+										<div class="item-footer__get">
+											<div class="item-footer__compare">
+												<svg class="icon">
+													<use xlink:href="#chart"></use>
+												</svg>
+											</div>
+											<div class="item-footer__cart">
+												<svg class="icon">
+													<use xlink:href="#shopping-cart"></use>
+												</svg>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="item-sale"><img src="img/icon-commend.png" alt="" /></div><a class="item-img" href="#" style="background-image:url('img/product.png')"></a>
+									<div class="item-title">AlphaLINE AGM 60.0 L2 (AX 560680/56020) обр</div>
+									<div class="item-price">
+										<div class="item-price__text">Цена:
+											<div class="item-price__val">1 990 руб.</div>
+										</div>
+									</div>
+									<div class="item-footer">
+										<div class="item-footer__price-false">2 550 руб.</div>
+										<div class="item-footer__get">
+											<div class="item-footer__compare">
+												<svg class="icon">
+													<use xlink:href="#chart"></use>
+												</svg>
+											</div>
+											<div class="item-footer__cart">
+												<svg class="icon">
+													<use xlink:href="#shopping-cart"></use>
+												</svg>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--cards-->
+		<div class="main-cont">
+			<div class="cards">
+				<div class="cards__el cards__el--avto" style="background-image:url('img/img-3.jpg')">
+					<div class="cards-filter"></div>
+					<div class="cards-content"><a class="cards-content__title" href="#">Авто <br> аккумуляторы</a>
+						<div class="cards-content-size"><a class="cards-content-size__el" href="#">40-55 Ач</a><a class="cards-content-size__el" href="#">55-70 Ач</a><a class="cards-content-size__el" href="#">70-90 Ач</a><a class="cards-content-size__el" href="#">90-110 Ач</a><a class="cards-content-size__el" href="#">AGM</a><a class="cards-content-size__el" href="#">EFB</a></div>
+					</div>
+				</div><a class="cards__el cards__el--moto" href="#" style="background-image:url('img/img-4.jpg')">
+					<div class="cards-filter"></div>
+					<div class="cards-content">
+						<div class="cards-content__title">Мото <br> аккумуляторы</div>
+					</div>
+				</a><a class="cards__el cards__el--gruz" href="#" style="background-image:url('img/img-5.jpg')">
+					<div class="cards-filter"></div>
+					<div class="cards-content">
+						<div class="cards-content__title">грузовые АКБ</div>
+					</div>
+				</a><a class="cards__el cards__el--all" href="#">
+					<div class="cards-filter"></div>
+					<div class="cards-content">
+						<div class="cards-content__title">Весь каталог АКБ</div>
+						<div class="cards-content__get">Перейти в каталог</div>
+					</div>
+				</a><a class="cards__el cards__el--stat" href="#" style="background-image:url('img/img-6.jpg')">
+					<div class="cards-filter"></div>
+					<div class="cards-content">
+						<div class="cards-content__title cards-content__title--bottom">Стационарные и промышненные акБ</div>
+					</div>
+				</a><a class="cards__el cards__el--for" href="#" style="background-image:url('img/img-7.jpg')">
+					<div class="cards-filter"></div>
+					<div class="cards-content">
+						<div class="cards-content__title cards-content__title--bottom">Товары <br> для АКБ</div>
+					</div>
+				</a><a class="cards__el cards__el--ship" href="#" style="background-image:url('img/img-8.jpg')">
+					<div class="cards-filter"></div>
+					<div class="cards-content">
+						<div class="cards-content__title cards-content__title--bottom">Катерные <br> аккумуляторы</div>
+					</div>
+				</a><a class="cards__el cards__el--other" href="#" style="background-image:url('img/img-9.jpg')">
+					<div class="cards-filter"></div>
+					<div class="cards-content">
+						<div class="cards-content__title cards-content__title--bottom">Другие <br> товары</div>
+					</div>
+				</a>
 			</div>
 		</div>
 		<!--articles-->

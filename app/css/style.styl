@@ -14,7 +14,7 @@ body
 	font-family $v-font
 	line-height 1.2
 	letter-spacing 0.01em
-	//color #54657e
+	color #54657e
 
 
 .main-cont
@@ -41,6 +41,8 @@ body
 	color $blue
 	font-size: 13px
 .head-top-nav
+	+below(1200px)
+		width: 35%
 	flex(between)
 	width: 25%
 .head-top-nav__el
@@ -141,6 +143,8 @@ body
 .head-main
 	f()
 .logo
+	+below(1200px)
+		width: 23%
 	display: block
 	padding: 8px 20px 8px 0
 	border-right 1px solid #cad3df
@@ -157,6 +161,7 @@ body
 	margin-right: 15px
 	padding: 12px 22px
 	up()
+	flex(mid)
 	&:hover
 		color black
 		a
@@ -192,17 +197,29 @@ body
 			display: block
 		.icon
 			fill black
-
+.head-main-nav-cat-wrap
+	padding-left: 0
+	&:hover
+		.head-main-nav-cat
+			border 1px solid #cad3df
+			background-color $gray
+.head-main-nav-cat
+	padding: 10px 20px
+	transtion none
+	border-radius 17px
+	border 1px solid white
 .head-main-nav-list
 	display: none
 	background: white
 	width: 230px
 	br(5px)
 	position: absolute
-	top 40px
+	top 66px
 	left 0
 	border 1px solid #cad3df
 	overflow: hidden
+	background: white
+	z-index 2
 .head-main-nav-list-el
 	display: block
 	padding: 25px 20px
@@ -218,6 +235,8 @@ body
 		background: $gray
 		color $blue
 .head-main-search
+	+below(1200px)
+		width: 35%
 	margin-left: auto
 	width: 28%
 .head-main-search__input
@@ -288,11 +307,19 @@ body
 	padding: 15px
 	br(5px)
 .banner-panel-lg-title
+	+below(1200px)
+		font-size: 20px
 	color white
 	up()
 	font-size: 24px
-	font-weight:700
-
+	font-weight:500
+	span
+		margin-left: 5px
+.slider-wrap
+	+below(1200px)
+		width: 90%
+		margin-left: auto
+		margin-right: auto
 .banner-panel-lg-cont
 	flex(between)
 .banner-panel-lg-cont-icon
@@ -312,6 +339,8 @@ body
 .banner-info
 	width: 32%
 .banner-info__el
+	+below(1200px)
+		padding: 30px 20px
 	bg-full()
 	br(5px)
 	position: relative
@@ -549,9 +578,9 @@ body
 
 //.filter
 //.main-cont
-.filter-head
+.tab-head
 	flex(between)
-.filter-head__el
+.tab-head__el
 	width: 49%
 	text-align: center
 	border-radius 5px 5px 0 0
@@ -563,16 +592,21 @@ body
 	text-transform uppercase
 	padding: 29px 20px 20px 20px
 	cp()
-.filter-head__el--active
+.tab-head__el--active
 	background: $gray
 	border-color $gray
-.filter-tab-wrap
+.content-tab-wrap
 	background: $gray
-.filter-tab
 	padding: 60px 0
-	display: none
-.filter-tab--active
-	display: block
+
+.content-tab
+	height: 0
+	overflow: hidden
+	transform:translateY(9999px)
+.content-tab--active
+	height: auto
+	overflow: initial
+	transform:translateY(0px)
 .filter-item-wrap
 	display: grid
 	grid-gap 20px
@@ -606,12 +640,19 @@ body
 //.link--mark
 
 .filter-check
+	+below(1024px)
+		fw()
+		justify-content: flex-start
 	flex(between)
+	.check-el
+		+below(1024px)
+			width: 25%
+			margin-bottom: 20px
 
 .sytle-input-text
 	color #54657e
 	font-size: 14px
-
+	width calc(100% - 35px)
 .filter-item-extend
 	display: none
 
@@ -630,3 +671,234 @@ body
 
 .filter
 	margin-bottom: 40px
+
+//.main-cont
+.service-title
+	@extend .section-title
+	margin-bottom: 20px
+.service-title-sub
+	flex(mid)
+	margin-bottom: 35px
+.service-title-sub__icon
+	.icon
+		size 14px
+		fill $red
+		margin-right: 5px
+.service-title-sub__text
+	color #8493a8
+	font-size 14px
+	font-weight 300
+.service
+	display: grid
+	grid-gap 35px
+	grid-template-columns repeat(4,1fr);
+	margin-bottom: 40px
+//.service__el
+.service-head
+	flex(between)
+	margin-bottom: 30px
+.service-head__icon
+	border-radius 5px
+	background-color $red
+	size 80px
+	flex(mid)
+	.icon
+		size 40px
+		fill white
+.service-head__text
+	width:calc(100% - 100px)
+.service-text
+	margin-bottom: 20px
+	font-size: 14px
+	line-height: 1.4
+.service-link
+	@extend .link--mark
+
+.tab-head__el--icon
+	flex(mid)
+	.icon
+		margin-left: 10px
+		margin-top: -3px
+		size 24px
+		fill #54657e
+
+//.item-slider
+.item
+	position: relative
+	background: white
+	border-radius 5px
+	border 1px solid #cad3df
+	background-color #ffffff
+	padding: 10px 25px 20px 25px
+.item-sale
+	position: absolute
+	top 0
+	left 10px
+.item-img
+	padding: 50% 20%
+	bg-full()
+	margin-bottom: 20px
+	display: block
+.item-title
+	text-align: center
+	margin-bottom: 15px
+.item-price
+	margin-bottom: 20px
+.item-price__text
+	f()
+	justify-content: center
+	align-items: flex-end
+	color #54657e
+	font-size: 14px
+.item-price__val
+	color $red
+	font-size: 20px
+	font-weight:500
+	margin: 0 3px
+
+.item-footer
+	flex(between)
+.item-footer__price-false
+	color #54657e
+	position: relative
+	&:before
+		content ''
+		position: absolute
+		top 50%
+		height: 1%
+		width: 100%
+		background: #54657e
+.item-footer__get
+	flex(between)
+	margin-left: auto
+.item-footer__compare
+	size 40px
+	flex(mid)
+	border-radius 5px
+	border 1px solid #8493a8
+	cp()
+	margin-right: 10px
+	.icon
+		size 14px
+		fill #8493a8
+.item-footer__cart
+	size 40px
+	flex(mid)
+	border-radius 5px
+	cp()
+	background-color #2ac35a
+	.icon
+		size 18px
+		fill white
+
+//for custom navigation
+.slider-control
+	round()
+	flex(mid)
+	tr(all)
+	position: absolute
+	top 50%
+	margin-top: -10px
+	z-index 10
+	cp()
+	.icon
+		size 20px
+
+.slider-control--left
+	+below(1200px)
+		left 0
+	left -30px
+.slider-control--right
+	+below(1200px)
+		right 0
+	right -30px
+
+.slick-slide
+		margin: 0 20px
+.slick-list
+	margin: 0 -20px
+
+.slider-items-wrap
+	margin-bottom: 20px
+
+.cards
+	display: grid
+	grid-gap 20px
+	grid-template-columns repeat(4,1fr)
+	grid-template-rows repeat(3,1fr)
+	margin-bottom: 20px
+.cards__el
+	&:hover
+		.cards-filter
+			background-color rgba(0, 0, 0, 0.5)
+	border-radius 5px
+	padding: 24% 10%
+	min-height 280px
+	bg-full()
+	position: relative
+	br(5px)
+	overflow: hidden
+
+
+.cards-filter
+	tr(all)
+	filter()
+	background-color rgba(0, 0, 0, 0.4)
+.cards-content
+	position: absolute
+	top 0
+	left 0
+	width: 100%
+	height: 100%
+	z-index 2
+	padding: 20px
+.cards-content__title
+	color white
+	font-size: 24px
+	font-weight:500
+	up()
+
+
+.cards__el--all
+	background: #344164
+	.cards-content
+		height: 100%
+		f()
+		fl()
+.cards-content__get
+	color white
+	margin-top: auto
+
+.cards-content__title--bottom
+	position: absolute
+	bottom 30px
+	left 20px
+
+.cards-content-size
+	display: grid
+	grid-gap 10px
+	grid-template-columns repeat(auto-fill,minmax(80px,1fr))
+.cards-content-size__el
+	border-radius 5px
+	border 2px solid #ffffff
+	color white!important
+	padding: 15px 5px
+	font-size: 14px
+	text-align: center
+
+
+.cards__el--avto
+	grid-row:1/3
+	grid-column:1/3
+	.cards-content
+		f()
+		fl()
+	.cards-content-size
+		margin-top: auto
+.cards__el--moto
+	 grid-column:3/5
+//.cards__el--gruz
+//.cards__el--stat
+//.cards__el--for
+//.cards__el--ship
+//.cards__el--other

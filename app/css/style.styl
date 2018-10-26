@@ -1011,7 +1011,7 @@ body
 		.cards-filter
 			background-color rgba(0, 0, 0, 0.5)
 	border-radius 5px
-	padding: 24% 10%
+	padding: 5% 10%
 	min-height 280px
 	bg-full()
 	position: relative
@@ -1054,6 +1054,7 @@ body
 	position: absolute
 	bottom 30px
 	left 20px
+	padding-right: 10px
 
 .cards-content-size
 	display: grid
@@ -1066,7 +1067,9 @@ body
 	padding: 15px 5px
 	font-size: 14px
 	text-align: center
-
+	tr(all)
+	&:hover
+		opacity:.7
 
 .cards__el--avto
 	grid-row:1/3

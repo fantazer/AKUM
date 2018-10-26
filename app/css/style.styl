@@ -21,11 +21,15 @@ body
 	center(1200px,10px)
 
 .head
+	+below(730px)
+		margin-bottom: 10px
 	margin-bottom: 20px
 .head-top-wrap
 	background: $gray
 //.main-cont
 .head-top
+	+below(730px)
+		padding: 10px 0
 	f()
 	align-items: center
 .head-location
@@ -43,9 +47,15 @@ body
 .head-top-nav
 	+below(1200px)
 		width: 35%
+	+below(940px)
+		width: 30%
+	+below(730px)
+		display: none
 	flex(between)
 	width: 25%
 .head-top-nav__el
+	+below(940px)
+		font-size: 12px
 	cp()
 	tr(all)
 	color #8493a8
@@ -58,6 +68,8 @@ body
 		tr(all)
 		color #8493a8
 .head-top-nav__el--sub
+	+below(940px)
+		font-size: 12px
 	flex(mid)
 	position: relative
 	.icon
@@ -105,8 +117,10 @@ body
 			opacity:1
 
 .head-top-compare
-	margin-left: auto
+	+below(730px)
+		margin-right: 10px
 	f()
+	margin-left: auto
 	margin-right: 4%
 .head-top-compare__icon
 	.icon
@@ -114,6 +128,10 @@ body
 		fill #8493a8
 		margin-right: 10px
 .head-top-compare__text
+	+below(940px)
+		font-size: 12px
+	+below(730px)
+		display: none
 	color #8493a8
 .head-top-cart
 	position: relative
@@ -145,6 +163,9 @@ body
 .logo
 	+below(1200px)
 		width: 23%
+		flex(mid)
+	+below(640px)
+		min-width 120px
 	display: block
 	padding: 8px 20px 8px 0
 	border-right 1px solid #cad3df
@@ -152,9 +173,16 @@ body
 	img
 		width: 100%
 .head-main-nav
+	+below(730px)
+		margin-left: auto
 	f()
 	margin-left: 25px
 .head-main-nav-el
+	+below(940px)
+		margin-right: 0
+	+below(640px)
+		padding: 20px 5px
+		font-size: 12px
 	cp()
 	tr(all)
 	color #54657e
@@ -198,17 +226,27 @@ body
 		.icon
 			fill black
 .head-main-nav-cat-wrap
+	+below(640px)
+		padding-left: 5px
 	padding-left: 0
 	&:hover
+
 		.head-main-nav-cat
+			+below(1024px)
+				border-color white
+				background: none
 			border 1px solid #cad3df
 			background-color $gray
 .head-main-nav-cat
+	+below(640px)
+		padding: 0
 	padding: 10px 20px
 	transtion none
 	border-radius 17px
 	border 1px solid white
 .head-main-nav-list
+	+below(1024px)
+		display: none !important
 	display: none
 	background: white
 	width: 230px
@@ -237,6 +275,10 @@ body
 .head-main-search
 	+below(1200px)
 		width: 35%
+	+below(940px)
+		width: 42%
+	+below(730px)
+		display: none
 	margin-left: auto
 	width: 28%
 .head-main-search__input
@@ -279,15 +321,24 @@ body
 	width: 85%
 
 .banner-panel
+	+below(730px)
+		fw()
+		margin-bottom: 0
 	f()
 	justify-content: space-between
 	margin-bottom: 20px
 .banner-panel-sm
+	+below(940px)
+		width: 49%
+	+below(730px)
+		width: 100%
+		margin-bottom: 10px
+		height: 75px
 	width: 32%
 	flex(between)
 	background: $red
 	br(5px)
-	color white
+	color white!important
 	padding: 10px
 .banner-panel-sm-img
 	margin-right: 20px
@@ -300,6 +351,12 @@ body
 	font-size: 12px
 	up()
 .banner-panel-lg
+	+below(940px)
+		width: 49%
+		height: 75px
+	+below(730px)
+		width: 100%
+
 	width: 66%
 	background: $dark
 	color white
@@ -309,6 +366,17 @@ body
 .banner-panel-lg-title
 	+below(1200px)
 		font-size: 20px
+	+below(940px)
+		f()
+		fl()
+		font-size: 16px
+		span
+			font-size: 24px
+			margin-left: 0!important
+	+below(640px)
+		font-size: 12px
+		span
+			font-size:18px
 	color white
 	up()
 	font-size: 24px
@@ -323,30 +391,51 @@ body
 .banner-panel-lg-cont
 	flex(between)
 .banner-panel-lg-cont-icon
+	+below(940px)
+		display: none
 	.icon
 		size 24px
 		fill white
 		margin-right: 20px
 .banner-panel-lg-cont-numb
+	+below(640px)
+		font-size: 18px
 	font-size: 24px
 	color white
 	font-weight:700
 
 .banner
+	+below(940px)
+		fw()
+	+below(730px)
+		margin-bottom: 10px
 	f()
 	justify-content: space-between
 	margin-bottom: 20px
 .banner-info
+	+below(940px)
+		order 2
+		width: 100%
+		f()
+		justify-content: space-between
+	+below(730px)
+		display: none
 	width: 32%
 .banner-info__el
 	+below(1200px)
 		padding: 30px 20px
+	+below(940px)
+		margin-bottom: 0!important
+		width: 49%
 	bg-full()
 	br(5px)
 	position: relative
 	padding: 40px
 	&:first-child
 		margin-bottom: 20px
+.banner-info__el--news
+	+below(940px)
+		flex(mid)
 .banner-info__el-filter
 	filter()
 	background: rgba(255, 255, 255, 0.7)
@@ -392,12 +481,20 @@ body
 	font-size: 12px
 	font-weight:300
 .banner-map
+	+below(940px)
+		order 1
+		width: 100%
+		margin-bottom: 20px
+	+below(730px)
+		display: none
 	width: 66%
 	flex(mid)
 	bg-full()
 	background-size: 90%
 .banner-map-content
 	width: 80%
+	+below(940px)
+		padding: 30px 0
 .banner-map__title
 	font-size: 36px
 	font-weight:700
@@ -433,16 +530,19 @@ body
 	color $dark
 	margin-bottom: 40px
 .articles
+	+below(940px)
+		display: none
 	background: $gray
 	padding: 40px
-
 .articles-title
 	@extend .section-title
 
 .articles-wrap
-	flex(between)
+
+	display: grid
+	grid-gap 20px
+	grid-template-columns repeat(3,1fr);
 .articles__el
-	width: 33%
 	color #54657e
 
 .articles__el-title
@@ -457,12 +557,16 @@ body
 	color $blue
 
 .location
+	+below(768px)
+		display: none
 	padding: 60px 0
 	bg-full()
 	position: relative
 	background-color #006ac5
 //.main-cont
 .location-wrap
+	+below(940px)
+		grid-template-columns repeat(2,1fr);
 	display: grid
 	grid-gap 20px
 	grid-template-columns repeat(4,1fr);
@@ -520,17 +624,26 @@ body
 	background: $gray
 //.main-cont
 .footer-main
+	+below(730px)
+		grid-template-columns repeat(2,1fr);
 	padding: 40px 0 65px 0
 	display: grid
 	grid-gap 20px
 	grid-template-columns repeat(4,1fr);
-//.footer-main__col
+.footer-main__col
+	+below(730px)
+		&:nth-child(2)
+			display: none
+		&:nth-child(3)
+			display: none
 .footer-main__title
 	font-weight:500
 	color #54657e
 	margin-bottom: 20px
 //.footer-main__list
 .footer-main__list-el
+	+below(640px)
+		font-size: 12px
 	color #54657e
 	font-weight:300
 	display: block
@@ -557,15 +670,22 @@ body
 .footer-bottom-wrap
 	flex(between)
 .footer-bottom__info
+	+below(640px)
+		font-size: 12px
+		line-height: 1.6
 	color #54657e
 	font-weight: 300
 	a
+		+below(640px)
+			margin-left: 0
 		color $blue
 		display: inline-block
 		margin-left: 5px
 .footer-bottom-soc
 	flex(between)
 .footer-bottom-soc__text
+	+below(730px)
+		display: none
 	color #54657e
 	margin-right: 20px
 .footer-bottom-soc-list
@@ -579,8 +699,18 @@ body
 //.filter
 //.main-cont
 .tab-head
-	flex(between)
+	f()
+	justify-content: space-between
 .tab-head__el
+	flex(mid)
+	+below(940px)
+		font-size: 18px
+		padding: 20px 5px
+	+below(730px)
+		font-size: 14px
+	+below(640px)
+		padding: 20px 3px
+		font-size: 12px
 	width: 49%
 	text-align: center
 	border-radius 5px 5px 0 0
@@ -596,6 +726,8 @@ body
 	background: $gray
 	border-color $gray
 .content-tab-wrap
+	+below(730px)
+		padding: 40px 0
 	background: $gray
 	padding: 60px 0
 
@@ -608,6 +740,10 @@ body
 	overflow: initial
 	transform:translateY(0px)
 .filter-item-wrap
+	+below(768px)
+		grid-template-columns repeat(2,1fr);
+	+below(730px)
+		grid-template-columns repeat(1,1fr);
 	display: grid
 	grid-gap 20px
 	grid-template-columns repeat(4,1fr);
@@ -622,13 +758,26 @@ body
 //.filter-item__el
 //.input
 .filter-item-footer
+	+below(730px)
+		margin-top: 30px
+		fl()
 	margin-top: 35px
 	flex(between)
 .filter-item-footer__info
+	+below(730px)
+		width: 100%
+		order 2
 	color #8493a8
 	line-height: 1.4
 	width: 72%
 .filter-item-footer__get
+	+below(730px)
+		order 1
+		width: 100%
+		margin-bottom: 20px
+	+below(640px)
+		width: 100%
+		max-width 100%
 	@extend .btn--dark
 	@extend .btn--md
 	width: 32%
@@ -643,11 +792,17 @@ body
 	+below(1024px)
 		fw()
 		justify-content: flex-start
+	+below(768px)
+		margin-left: -10px
 	flex(between)
 	.check-el
 		+below(1024px)
 			width: 25%
 			margin-bottom: 20px
+		+below(768px)
+			margin-left: 10px
+		+below(640px)
+			width: 100%
 
 .sytle-input-text
 	color #54657e
@@ -666,6 +821,8 @@ body
 		display: none
 
 .filter-toggle__el
+	+below(640px)
+		text-align: center
 	color $blue
 	cp()
 
@@ -685,16 +842,31 @@ body
 		fill $red
 		margin-right: 5px
 .service-title-sub__text
+	+below(640px)
+		font-size: 12px
+		text-align: center
 	color #8493a8
 	font-size 14px
 	font-weight 300
 .service
+	+below(940px)
+		grid-template-columns repeat(2,1fr);
+		max-width 768px
+		margin-left: auto
+		margin-right: auto
+	+below(768px)
+		max-width 640px
+	+below(730px)
+		grid-template-columns repeat(1,1fr);
+		max-width 380px
 	display: grid
 	grid-gap 35px
 	grid-template-columns repeat(4,1fr);
 	margin-bottom: 40px
 //.service__el
 .service-head
+	+below(730px)
+		margin-bottom: 15px
 	flex(between)
 	margin-bottom: 30px
 .service-head__icon
@@ -765,7 +937,7 @@ body
 		content ''
 		position: absolute
 		top 50%
-		height: 1%
+		height: 1px
 		width: 100%
 		background: #54657e
 .item-footer__get
@@ -820,14 +992,21 @@ body
 
 .slider-items-wrap
 	margin-bottom: 20px
-
+	+below(730px)
+		display: none
 .cards
+	+below(768px)
+		grid-template-columns repeat(3,1fr)
+	+below(730px)
+		display: none
 	display: grid
 	grid-gap 20px
 	grid-template-columns repeat(4,1fr)
 	grid-template-rows repeat(3,1fr)
 	margin-bottom: 20px
 .cards__el
+	+below(1024px)
+		min-height 220px
 	&:hover
 		.cards-filter
 			background-color rgba(0, 0, 0, 0.5)
@@ -853,6 +1032,8 @@ body
 	z-index 2
 	padding: 20px
 .cards-content__title
+	+below(1024px)
+		font-size: 18px
 	color white
 	font-size: 24px
 	font-weight:500
@@ -896,9 +1077,17 @@ body
 	.cards-content-size
 		margin-top: auto
 .cards__el--moto
-	 grid-column:3/5
+	 grid-column:1/3
+	 grid-row:3
 //.cards__el--gruz
 //.cards__el--stat
 //.cards__el--for
 //.cards__el--ship
 //.cards__el--other
+
+.banner-info__el--mobile
+	+above(640px)
+		display: none
+	width: 100%
+	margin-bottom: 20px!important
+	padding: 10px

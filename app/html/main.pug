@@ -6,13 +6,13 @@ include block_html/_include.pug
 //main-banner
 .main-cont
 	.banner-panel
-		.banner-panel-sm
+		a(href="#").banner-panel-sm
 			.banner-panel-sm-img
 				img(src="img/a-service.png", alt="")
 			.banner-panel-sm-info
 				.banner-panel-sm-title Бесплатная
 				.banner-panel-sm-text зарядка и диагностика
-		.banner-panel-lg
+		a(href="#").banner-panel-lg
 			.banner-panel-lg-title подбор аккумулятора
 				span Специалистом
 			.banner-panel-lg-cont
@@ -36,7 +36,7 @@ include block_html/_include.pug
 						.banner-info__list-el-icon
 							+icon("batary-polar","icon")
 						.banner-info__list-el-text 1 млн установленных и обслуженных акб
-			.banner-info__el(style="background-image:url('img/img-2.jpg')")
+			.banner-info__el.banner-info__el--news(style="background-image:url('img/img-2.jpg')")
 				.banner-info__el-filter
 				.banner-info__list.banner-info__list--news
 					.banner-info__el-title Новости
@@ -184,6 +184,21 @@ include block_html/_include.pug
 				.service-head__text Прием и обмен старых АКБ
 			.service-text Новый вместо старого. Утилизируем старый АКБ правильно и выгодно
 			a(href="#").service-link Подробнее
+
+//mobile-news
+.banner-info__el.banner-info__el--mobile.banner-info__el--news(style="background-image:url('img/img-2.jpg')")
+	.banner-info__el-filter
+	.banner-info__list.banner-info__list--news
+		.banner-info__el-title Новости
+		.banner-info__list-el
+			.banner-info__list-el-icon
+				+icon("news","icon")
+			.banner-info__list-el-text-wrap
+				.banner-info__list-el-text
+					span Новый магазин в Тюменской области по адресу: Тобольск, 9 микрорайон, 34Б
+				.banner-info__list-el-bottom
+					.banner-info__list-el-bottom-date 10 Сентября 2018
+					a(href="#").banner-info__list-el-bottom-get Читать подробнее
 
 //slider-items
 .slider-items-wrap.tab-container

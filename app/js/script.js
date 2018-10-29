@@ -50,6 +50,24 @@ $(document).ready(function () {
 		$(this).toggleClass('filter-toggle--show');
 	});
 
+	//range-slider
+	//range slider simple
+	$(".range").each(function(){
+		var rangeMin = $(this).data('min') * 1;
+		var rangeMax = $(this).data('max') * 1;
+		var rangeFrom = $(this).data('from') * 1;
+		var rangeTo = $(this).data('to') * 1;
+		$(this).ionRangeSlider({
+			type: "double",
+			grid: false,
+			min: rangeMin,
+			max: rangeMax,
+			from: rangeFrom,
+			to: rangeTo
+		});
+	});
+
+	//range-slider===end
 
 	//tabs control ===end
 

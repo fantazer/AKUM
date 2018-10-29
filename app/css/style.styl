@@ -14,7 +14,7 @@ body
 	font-family $v-font
 	line-height 1.2
 	letter-spacing 0.01em
-	color #54657e
+	color $main-text
 
 
 .main-cont
@@ -1072,6 +1072,8 @@ body
 		opacity:.7
 
 .cards__el--avto
+	+below(768px)
+		order 1
 	grid-row:1/3
 	grid-column:1/3
 	.cards-content
@@ -1080,13 +1082,30 @@ body
 	.cards-content-size
 		margin-top: auto
 .cards__el--moto
-	 grid-column:1/3
-	 grid-row:3
-//.cards__el--gruz
-//.cards__el--stat
-//.cards__el--for
-//.cards__el--ship
-//.cards__el--other
+	+below(768px)
+		order 2
+		grid-column:1/3
+		grid-row:3
+	grid-column:3/5
+	grid-row:1
+.cards__el--stat
+	+below(768px)
+		order 3
+.cards__el--for
+	+below(768px)
+		order 4
+.cards__el--ship
+	+below(768px)
+		order 5
+.cards__el--all
+	+below(768px)
+		order 6
+.cards__el--other
+	+below(768px)
+		order 8
+.cards__el--gruz
+	+below(768px)
+		order 7
 
 .banner-info__el--mobile
 	+above(640px)
@@ -1094,3 +1113,291 @@ body
 	width: 100%
 	margin-bottom: 20px!important
 	padding: 10px
+
+.bread
+	margin-bottom: 30px
+.bread__el
+	color #54657e
+	display: inline-block
+	margin-right: 30px
+	margin-bottom: 10px
+	position: relative
+	&:before
+		content ''
+		width: 10px
+		height: 1px
+		border-left:1px solid #54657e
+		border-top:1px solid #54657e
+		right: -17px
+		position: absolute
+		transform rotate(135deg)
+		top: 50%
+		size 5px
+	&:last-child
+		&:before
+			content ''
+			display: none
+
+.toggle-type
+	display: grid
+	grid-gap 20px
+	grid-template-columns repeat(6,1fr)
+	margin-bottom: 40px
+	margin-bottom: 40px
+
+.toggle-type__el
+	text-align: center
+	padding: 15px
+	border-radius 5px
+	border 1px solid #54657e
+	color $main-text
+	tr(all)
+	&:hover
+		background: #54657e
+		color white
+
+.toggle-type__el--active
+	background: #54657e
+	color white
+
+.cat-title
+	@extend .type--lg
+	font-weight: 500
+	margin-bottom: 35px
+
+.cat-text
+	margin-bottom: 40px
+
+.cat
+	f()
+	justify-content: space-between
+	align-items: flex-start
+.cat-nav
+	width 285px
+
+//.cat-nav__el
+.cat-content
+	width calc(100% - 305px)
+.cat-head
+	flex(between)
+	margin-bottom: 40px
+.cat-head-order
+	f()
+.cat-head-order__el
+	margin-right: 20px
+	color $main-text
+	cp()
+	tr(all)
+	opacity:.8
+	&:hover
+		color black
+	.icon
+		display: none
+		margin-left: 10px
+		size 12px
+		fill $main-text
+.cat-head-order__el--active
+	opacity:1
+	.icon
+		display: inline-block
+.cat-head-toggle
+	f()
+	overflow: hidden
+.cat-head-toggle__el
+	&:first-child
+		border-radius 5px 0 0 5px
+		border: 1px solid $dark
+	&:nth-child(2)
+		border-radius 0 5px 5px 0
+		margin-left: -1px
+	&:hover
+		border: 1px solid #cad3df
+		background: darken(#eceff4,5)
+		.icon
+			fill #7e94aa
+	tr(all)
+	cp()
+	border: 1px solid #cad3df
+	height 45px
+	width 48px
+	flex(mid)
+	background: #eceff4
+	.icon
+		size 16px
+		fill #7e94aa
+.cat-head-toggle__el--active
+	background: $dark
+	.icon
+		fill white
+
+.goods
+	position: relative
+	background: white
+	border-radius 5px
+	border 1px solid #cad3df
+	padding: 10px 20px 20px 20px
+.goods-sale
+	position: absolute
+	top 0
+	left 10px
+.goods-img
+	padding: 50% 20%
+	bg-full()
+	margin-bottom: 20px
+	display: block
+.goods-title
+	text-align: center
+	margin-bottom: 15px
+.goods-price
+	margin-bottom: 20px
+.goods-price__text
+	flex(mid)
+	color #54657e
+	font-size: 14px
+	span
+		color #4b6580
+.goods-price__val
+	color #ff1820
+	font-size: 20px
+	font-weight:500
+	margin: 0 5px
+.goods-price__text-add
+	color #7e94aa
+
+.goods-footer
+	flex(between)
+.goods-footer__price-false
+	color #54657e
+	position: relative
+	margin: 4px
+	font-size: 12px
+	text-decoration: line-through
+.goods-footer__price-true
+	font-size: 16px
+.goods-footer__get
+	flex(between)
+	margin-left: auto
+.goods-footer__compare
+	flex(mid)
+	cp()
+	tr(all)
+	size 40px
+	border-radius 5px
+	border 1px solid #8493a8
+	margin-right: 10px
+	&:hover
+		background: darken(#8493a8,10)
+		border 1px solid darken(#8493a8,10)
+		.icon
+			fill white
+	.icon
+		tr(all)
+		size 14px
+		fill #8493a8
+.goods-footer__cart
+	flex(mid)
+	cp()
+	tr(all)
+	size 40px
+	border-radius 5px
+	background-color #2ac35a
+	&:hover
+		background-color lighten(#2ac35a,10)
+
+	.icon
+		size 18px
+		fill white
+
+.cat-list
+	display: grid
+	grid-gap 20px
+	grid-template-columns repeat(3,1fr);
+
+.book-row
+	margin-bottom: 7px
+	f()
+.book-row__title
+	display table-cell
+	white-space nowrap
+	@extend .type--xs
+	font-weight:300
+
+.book-row__dot
+	display table-cell
+	border-bottom 1px dashed #8493a8
+	width 100%
+.book-row__value
+	display table-cell
+	white-space nowrap
+	max-width 100px
+	font-weight: 500
+	@extend .type--xs
+
+.goods-descr
+	margin-bottom: 20px
+
+.goods-footer__price
+	flex(mid)
+
+.cat-nav
+	border-radius 5px
+	border 1px solid #cad3df
+	background-color $gray
+	overflow: hidden
+.cat-nav__el
+	padding: 25px 10px
+	border-bottom 1px solid #cad3df
+	cp()
+	margin-bottom: -1px
+.cat-nav__el-title
+	f()
+	align-items: center
+.cat-nav__el-icon
+	flex(mid)
+	round()
+	border 1px solid #cad3df
+	background-color #ffffff
+	size 25px
+	margin-right: 10px
+	.icon
+		size 11px
+		fill #8493a8
+
+.cat-nav__el-text
+	color $main-text
+	font-weight: 500
+	margin-top: -3px
+
+//range-slider
+.irs-from, .irs-to, .irs-single
+	top 45px
+	background: none
+	color $main-text
+.irs-min, .irs-max
+	display: none
+.irs-line-mid
+	background: white
+
+.irs-line-right
+	background: white
+	border-radius 3px 0 0 3px
+
+.irs-line-left
+	background: white
+	border-radius 0 3px 3px 0
+
+.irs-line
+	border-radius 5px
+	border 1px solid #c8d4e0
+.irs-bar
+	background: #006ac9
+.irs-slider
+	background: #006ac9
+	width: 5px
+	height: 19px
+	border-radius 4px
+	top 20px
+//range-slider===end
+
+.cat-nav__el-content
+	padding-bottom: 25px

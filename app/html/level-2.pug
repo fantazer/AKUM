@@ -1,0 +1,112 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++header()
+
+.main-cont
+	.banner-panel
+		a(href="#").banner-panel-sm
+			.banner-panel-sm-img
+				img(src="img/a-service.png", alt="")
+			.banner-panel-sm-info
+				.banner-panel-sm-title Бесплатная
+				.banner-panel-sm-text зарядка и диагностика
+		a(href="#").banner-panel-lg
+			.banner-panel-lg-title подбор аккумулятора
+				span Специалистом
+			.banner-panel-lg-cont
+				.banner-panel-lg-cont-icon
+					+icon("phone-call","icon")
+				.banner-panel-lg-cont-numb 291-95-93
+	.bread
+		a(href="#").bread__el Главная
+		a(href="#").bread__el Каталог
+		a(href="#").bread__el Авто аккумуляторы
+		.bread__el Авто аккумуляторы
+
+	.cat-title Авто аккумуляторы
+	.toggle-type
+		-
+			var items = [
+				'40-55 Ач',
+				'55-70 Ач',
+				'70-90 Ач',
+				'90-110 Ач',
+				'AGM',
+				'EFB'
+				];
+		each item in items
+			a(href="#" class=item=='70-90 Ач'?'toggle-type__el--active':'').toggle-type__el #{item}
+
+	.cat-text
+		p Мы работаем напрямую с ведущими производителями и у нас в ассортименте только качественные, проверенные аккумуляторы. По большинству продаваемых нами АКБ соотношение "Цена –Качество" лучшее на рынке.
+		p В этом разделе представлены стартерные аккумуляторные батареи для легковых и грузовых автомобилей емкостью от 38 до 240 А*ч, в том числе AGM и EFB, различных типов корпусов, полярностей и видов клемм.
+		p Напоминаем, что для аккумуляторов, купленных в наших магазинах, мы бесплатно предоставляем полный пакет услуг А-сервис по обслуживанию АКБ.
+
+	.cat
+		.cat-nav
+			- for (var i=0;i<3;i++)
+				.cat-nav__el
+					.cat-nav__el-title
+						.cat-nav__el-icon
+							+icon("arrow-down","icon")
+						.cat-nav__el-text Емкость (АЧ)
+					.cat-nav__el-content
+						input(type="text" class="range range-control" data-min='10' data-max='1000' data-from='100' data-to='800')
+		.cat-content
+			.cat-head
+				.cat-head-order
+					.cat-head-order__el.cat-head-order__el--active
+						span По цене
+						+icon("arrow-down","icon")
+					.cat-head-order__el
+						span По акциям
+						+icon("arrow-down","icon")
+					.cat-head-order__el
+						span По рекомендованным товарам
+						+icon("arrow-down","icon")
+				.cat-head-toggle
+					.cat-head-toggle__el.cat-head-toggle__el--active
+						+icon("sort-squer","icon")
+					.cat-head-toggle__el
+						+icon("sorl-line","icon")
+			.cat-list
+				- for (var i=0;i<12;i++)
+					.goods
+						.goods-sale
+							img(src="img/icon-sale.png", alt="")
+						a(href="#" style="background-image:url('img/product.png')").goods-img
+						.goods-title AlphaLINE AGM 60.0 L2 (AX 560680/56020) обр
+
+						.goods-descr
+							- for (var j=0;j<2;j++)
+								.book-row
+									.book-row__title Емкость (А/ч)
+									.book-row__dot
+									.book-row__value 50
+								.book-row
+									.book-row__title Характеристики
+									.book-row__dot
+									.book-row__value 410
+								.book-row
+									.book-row__title Габариты (ДхШхВ)
+									.book-row__dot
+									.book-row__value 237 х 128 х 222 мм
+						.goods-price
+							.goods-price__text
+								span Цена:
+								.goods-price__val 1 990 руб.
+								.goods-price__text-add *При обмене
+						.goods-footer
+							.goods-footer__price
+								.goods-footer__price-false 2 550 руб.
+								.goods-footer__price-true 2 550 руб.
+							.goods-footer__get
+								.goods-footer__compare
+									+icon("chart","icon")
+								.goods-footer__cart
+									+icon("shopping-cart","icon")
+
++footer()
+
+include ./block_html/_script.pug

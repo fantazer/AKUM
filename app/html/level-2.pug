@@ -42,18 +42,138 @@ include block_html/_include.pug
 		p Мы работаем напрямую с ведущими производителями и у нас в ассортименте только качественные, проверенные аккумуляторы. По большинству продаваемых нами АКБ соотношение "Цена –Качество" лучшее на рынке.
 		p В этом разделе представлены стартерные аккумуляторные батареи для легковых и грузовых автомобилей емкостью от 38 до 240 А*ч, в том числе AGM и EFB, различных типов корпусов, полярностей и видов клемм.
 		p Напоминаем, что для аккумуляторов, купленных в наших магазинах, мы бесплатно предоставляем полный пакет услуг А-сервис по обслуживанию АКБ.
-
+	.cat-filter фильтр
 	.cat
+		//toolbar
 		.cat-nav
-			- for (var i=0;i<3;i++)
-				.cat-nav__el
-					.cat-nav__el-title
-						.cat-nav__el-icon
-							+icon("arrow-down","icon")
-						.cat-nav__el-text Емкость (АЧ)
-					.cat-nav__el-content
-						input(type="text" class="range range-control" data-min='10' data-max='1000' data-from='100' data-to='800')
+			//Range емкость
+			.cat-nav__el
+				.cat-nav__el-title
+					.cat-nav__el-icon
+						+icon("arrow-down","icon")
+					.cat-nav__el-text Емкость (АЧ)
+				.cat-nav__el-content
+					input(type="text" class="range range-control" data-min='10' data-max='1000' data-from='200' data-to='800')
+			//Range cтартовый ток
+			.cat-nav__el
+				.cat-nav__el-title
+					.cat-nav__el-icon
+						+icon("arrow-down","icon")
+					.cat-nav__el-text Стартовый ток (А)
+				.cat-nav__el-content
+					input(type="text" class="range range-control" data-min='10' data-max='1000' data-from='200' data-to='800')
+			//Radio полярность
+			.cat-nav__el
+				.cat-nav__el-title
+					.cat-nav__el-icon
+						+icon("arrow-down","icon")
+					.cat-nav__el-text Полярность
+				.cat-nav__el-content
+					.cat-nav__el-radio-wrap
+						.cat-nav__el-radio
+							+radio('Прямая','group-1')
+						.cat-nav__el-radio
+							+radio('Обратная','group-1')
+						.cat-nav__el-radio
+							+radio('Универсальная','group-1')
+			//Radio Тип корпуса
+			.cat-nav__el
+				.cat-nav__el-title
+					.cat-nav__el-icon
+						+icon("arrow-down","icon")
+					.cat-nav__el-text Тип корпуса
+				.cat-nav__el-content
+					.cat-nav__el-radio-wrap
+						.cat-nav__el-radio
+							+radio('Азия','group-2')
+						.cat-nav__el-radio
+							+radio('Евро','group-2')
+						.cat-nav__el-radio
+							+radio('США','group-2')
+			//Select Технология
+			.cat-nav__el
+				.cat-nav__el-title
+					.cat-nav__el-icon
+						+icon("arrow-down","icon")
+					.cat-nav__el-text Тип корпуса
+				.cat-nav__el-content
+					.cat-nav__el-select
+						select.select-beauty
+							option(data-display="Веберите из списка") не выбрано
+							option корпус 1
+							option корпус 2
+							option корпус 3
+			//Radio Тип клемм
+			.cat-nav__el
+				.cat-nav__el-title
+					.cat-nav__el-icon
+						+icon("arrow-down","icon")
+					.cat-nav__el-text Тип клемм
+				.cat-nav__el-content
+					.cat-nav__el-radio-wrap
+						.cat-nav__el-radio
+							+radio('Тонкие','group-3')
+						.cat-nav__el-radio
+							+radio('Стандарт','group-3')
+						.cat-nav__el-radio
+							+radio('Боковые','group-3')
+			//Checkbox Тип крепления
+			.cat-nav__el
+				.cat-nav__el-title
+					.cat-nav__el-icon
+						+icon("arrow-down","icon")
+					.cat-nav__el-text Тип крепления
+				.cat-nav__el-content
+					.cat-nav__el-radio-wrap
+						.cat-nav__el-radio.cat-nav__el-radio--full
+							+checkbox('Нижнее крепление')
+			//Input Габариты
+			.cat-nav__el
+				.cat-nav__el-title
+					.cat-nav__el-icon
+						+icon("arrow-down","icon")
+					.cat-nav__el-text Габариты
+				.cat-nav__el-content
+					.cat-nav__el-input
+						.cat-nav__el-input-text Длина (мм)
+						.cat-nav__el-input-el
+							input(type="text" placeholder="0" class="input")
+					.cat-nav__el-input
+						.cat-nav__el-input-text Ширина (мм)
+						.cat-nav__el-input-el
+							input(type="text" placeholder="0" class="input")
+					.cat-nav__el-input
+						.cat-nav__el-input-text Высота (мм)
+						.cat-nav__el-input-el
+							input(type="text" placeholder="0" class="input")
+						
+
+
+			//Checkbox Бренд
+			.cat-nav__el
+				.cat-nav__el-title
+					.cat-nav__el-icon
+						+icon("arrow-down","icon")
+					.cat-nav__el-text Бренд
+				.cat-nav__el-content
+					.cat-nav__el-radio-wrap
+						- for (var i=0;i<10;i++)
+							.cat-nav__el-radio
+								+checkbox('AC/DC')
+							.cat-nav__el-radio
+								+checkbox('AlphaLine')
+							.cat-nav__el-radio
+								+checkbox('AutoUS')
+							.cat-nav__el-radio
+								+checkbox('Baren')
+			.cat-nav__el
+				.cat-nav-btn-wrap
+					a(href="#").cat-nav-btn.cat-nav-btn--show Показать
+					a(href="#").cat-nav-btn.cat-nav-btn--clear Сбросить фильтр
+
+		//content
 		.cat-content
+			//sort by
 			.cat-head
 				.cat-head-order
 					.cat-head-order__el.cat-head-order__el--active
@@ -66,15 +186,17 @@ include block_html/_include.pug
 						span По рекомендованным товарам
 						+icon("arrow-down","icon")
 				.cat-head-toggle
-					.cat-head-toggle__el.cat-head-toggle__el--active
+					.cat-head-toggle__el.cat-head-toggle__el--active(data-type='squer')
 						+icon("sort-squer","icon")
-					.cat-head-toggle__el
+					.cat-head-toggle__el(data-type='line')
 						+icon("sorl-line","icon")
-			.cat-list
+			//catalog
+			.cat-list.cat-type.cat-type--open.cat-type--squer(data-type='squer')
 				- for (var i=0;i<12;i++)
 					.goods
 						.goods-sale
 							img(src="img/icon-sale.png", alt="")
+						.goods-sale-price -300 руб.
 						a(href="#" style="background-image:url('img/product.png')").goods-img
 						.goods-title AlphaLINE AGM 60.0 L2 (AX 560680/56020) обр
 
@@ -106,7 +228,65 @@ include block_html/_include.pug
 									+icon("chart","icon")
 								.goods-footer__cart
 									+icon("shopping-cart","icon")
+			.cat-list-line.cat-type(data-type='line')
+				- for (var i=0;i<12;i++)
+					.goods-line
+						.goods-line-head
+							.goods-line-sale
+								img(src="img/icon-sale.png", alt="")
+							.goods-line-sale-price -300 руб.
+							a(href="#" style="background-image:url('img/product.png')").goods-line-img
+						.goods-line-content
+							.goods-line-title X-treme CLASSIC 60B24R, Россия
+							.goods-line-about-wrap
+								.goods-line-about Производитель — Алькор,
+								.goods-line-about Страна производства — Россия
+							.goods-line-condition
+								//use class .goods-line-condition-icon--true .goods-line-condition-icon--false .goods-line-condition-icon--middle
+								.goods-line-condition-icon.goods-line-condition-icon--true
+									+icon("battery","icon")
+								.goods-line-condition-text В наличии
 
+							.goods-line-descr
+								.goods-line-descr-title Характеристики
+								- for (var j=0;j<2;j++)
+									.book-row
+										.book-row__title Емкость (А/ч)
+										.book-row__dot
+										.book-row__value 50
+									.book-row
+										.book-row__title Характеристики
+										.book-row__dot
+										.book-row__value 410
+						.goods-line-get
+							.goods-line-price
+								.goods-line-price__text
+									span Цена:
+									.goods-line-price__val 1 990 руб.
+									.goods-line-price__text-add * Цена при условии сдачи старого аккумулятора аналогичной ёмкости
+							.goods-line-footer__price
+								.goods-line-footer__price-false 2 550 руб.
+								.goods-line-footer__price-true 2 550 руб.
+							.goods-line-footer
+								.goods-line-footer__compare
+									+icon("chart","icon")
+								a(href="#").goods-line-footer__one Купить в 1 клик
+								.goods-line-footer__cart
+									+icon("shopping-cart","icon")
+			//pagination
+			.pagination
+				a(href="#").pagination-el.pagination-btn.pagination-back
+					+icon("arrow-left-simple","icon")
+					span Назад
+				a(href="#").pagination-el 1
+				a(href="#").pagination-el.pagination-el--active 2
+				a(href="#").pagination-el 3
+				a(href="#").pagination-el 4
+				a(href="#").pagination-el ...
+				a(href="#").pagination-el 29
+				a(href="#").pagination-el.pagination-btn.pagination-next
+					span вперед
+					+icon("arrow-right-simple","icon")
 +footer()
 
 include ./block_html/_script.pug

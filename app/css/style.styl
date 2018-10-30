@@ -1115,8 +1115,13 @@ body
 	padding: 10px
 
 .bread
+	+below(740px)
+		margin-top: 20px
+		margin-bottom: 10px
 	margin-bottom: 30px
 .bread__el
+	+below(740px)
+		font-size: 12px
 	color #54657e
 	display: inline-block
 	margin-right: 30px
@@ -1139,19 +1144,25 @@ body
 			display: none
 
 .toggle-type
+	+below(740px)
+		grid-gap 10px
+		grid-template-columns repeat(3,1fr)
+		margin-bottom: 20px
 	display: grid
 	grid-gap 20px
 	grid-template-columns repeat(6,1fr)
 	margin-bottom: 40px
-	margin-bottom: 40px
 
 .toggle-type__el
+	+below(640px)
+		padding: 5px
 	text-align: center
 	padding: 15px
 	border-radius 5px
 	border 1px solid #54657e
 	color $main-text
 	tr(all)
+	flex(mid)
 	&:hover
 		background: #54657e
 		color white
@@ -1161,6 +1172,8 @@ body
 	color white
 
 .cat-title
+	+below(640px)
+		margin-bottom: 20px
 	@extend .type--lg
 	font-weight: 500
 	margin-bottom: 35px
@@ -1169,21 +1182,33 @@ body
 	margin-bottom: 40px
 
 .cat
+	+below(740px)
+		fw()
 	f()
 	justify-content: space-between
 	align-items: flex-start
-.cat-nav
-	width 285px
+	margin-bottom: 40px
 
 //.cat-nav__el
 .cat-content
+	+below(1024px)
+		width calc(100% - 260px)
+	+below(740px)
+		width: 100%
 	width calc(100% - 305px)
 .cat-head
+	+below(740px)
+		margin-bottom: 20px
 	flex(between)
 	margin-bottom: 40px
 .cat-head-order
 	f()
 .cat-head-order__el
+	+below(960px)
+		margin-right: 10px
+		font-size: 12px
+	+below(480px)
+		font-size: 10px
 	margin-right: 20px
 	color $main-text
 	cp()
@@ -1191,7 +1216,14 @@ body
 	opacity:.8
 	&:hover
 		color black
+	&:last-child
+		margin-right: 0
 	.icon
+		+below(960px)
+			size 10px
+			margin-left: 5px
+		+below(480px)
+			size 8px
 		display: none
 		margin-left: 10px
 		size 12px
@@ -1201,20 +1233,18 @@ body
 	.icon
 		display: inline-block
 .cat-head-toggle
+	+below(740px)
+		display: none
 	f()
 	overflow: hidden
 .cat-head-toggle__el
 	&:first-child
 		border-radius 5px 0 0 5px
-		border: 1px solid $dark
 	&:nth-child(2)
 		border-radius 0 5px 5px 0
 		margin-left: -1px
 	&:hover
-		border: 1px solid #cad3df
-		background: darken(#eceff4,5)
-		.icon
-			fill #7e94aa
+		border: 1px solid darken(#cad3df,20)
 	tr(all)
 	cp()
 	border: 1px solid #cad3df
@@ -1227,6 +1257,7 @@ body
 		fill #7e94aa
 .cat-head-toggle__el--active
 	background: $dark
+	border-color $dark
 	.icon
 		fill white
 
@@ -1240,6 +1271,16 @@ body
 	position: absolute
 	top 0
 	left 10px
+
+.goods-sale-price
+	position: absolute
+	top 20px
+	right: 20px
+	br(5px)
+	padding: 5px
+	background: $red
+	color white
+	@extend .type--sm
 .goods-img
 	padding: 50% 20%
 	bg-full()
@@ -1251,6 +1292,8 @@ body
 .goods-price
 	margin-bottom: 20px
 .goods-price__text
+	+below(960px)
+		fw()
 	flex(mid)
 	color #54657e
 	font-size: 14px
@@ -1262,6 +1305,10 @@ body
 	font-weight:500
 	margin: 0 5px
 .goods-price__text-add
+	+below(960px)
+		width: 100%
+		display: block
+		text-align: center
 	color #7e94aa
 
 .goods-footer
@@ -1303,15 +1350,26 @@ body
 	background-color #2ac35a
 	&:hover
 		background-color lighten(#2ac35a,10)
-
 	.icon
 		size 18px
 		fill white
 
+.goods-descr
+	margin-bottom: 20px
+
+.goods-footer__price
+	+below(960px)
+		fl()
+		margin-top: -5px
+	flex(mid)
+
 .cat-list
+	+below(1200px)
+		grid-template-columns repeat(2,1fr);
 	display: grid
 	grid-gap 20px
 	grid-template-columns repeat(3,1fr);
+	margin-bottom: 40px
 
 .book-row
 	margin-bottom: 7px
@@ -1333,28 +1391,33 @@ body
 	font-weight: 500
 	@extend .type--xs
 
-.goods-descr
-	margin-bottom: 20px
-
-.goods-footer__price
-	flex(mid)
-
 .cat-nav
+	+below(1024px)
+		width:240px
+	+below(740px)
+		width: 100%
+		margin-bottom: 20px
+		display: none
 	border-radius 5px
 	border 1px solid #cad3df
 	background-color $gray
-	overflow: hidden
+	width 285px
 .cat-nav__el
-	padding: 25px 10px
-	border-bottom 1px solid #cad3df
 	cp()
+
+	border-bottom 1px solid #cad3df
 	margin-bottom: -1px
+	&:last-child
+		border-bottom 0
+
 .cat-nav__el-title
 	f()
 	align-items: center
+	padding: 25px 10px
 .cat-nav__el-icon
 	flex(mid)
 	round()
+	tr(all)
 	border 1px solid #cad3df
 	background-color #ffffff
 	size 25px
@@ -1362,6 +1425,8 @@ body
 	.icon
 		size 11px
 		fill #8493a8
+.cat-nav__el-icon--open
+	transform:rotate(180deg)
 
 .cat-nav__el-text
 	color $main-text
@@ -1400,4 +1465,425 @@ body
 //range-slider===end
 
 .cat-nav__el-content
-	padding-bottom: 25px
+	display: none
+	padding: 0 10px 45px 10px
+	.irs
+		margin-top: -20px
+
+.cat-nav__el-radio-wrap
+	f()
+	fw()
+	margin-bottom: -20px
+.cat-nav__el-radio
+	+below(768px)
+		width: 48%
+	margin-bottom: 10px
+	margin-right: 10px
+	flex-grow 1
+	max-width calc(50% - 10px)
+
+.nice-select
+	br(0)
+	display: block
+	color #8493a8
+	font-weight:300
+	font-size 14px
+	height: auto
+	line-height:auto
+	width: 100%
+	border-radius 5px
+	border 1px solid #cad3df
+	background-color #ffffff
+	.list
+		color #8493a8
+		font-weight:300
+		width: calc(100%)
+		left 0px
+		br(0)
+		border 0px solid $border-color
+		border-top 0
+		margin-top: 0
+
+select.select-beauty
+	display: none!important
+
+.element-select
+	padding: 20px 0
+
+.nice-select:active, .nice-select.open, .nice-select:focus
+	border 1px solid $border-color
+
+.cat-nav__el-select
+	min-height 40px
+
+.cat-nav__el-input
+	flex(between)
+	margin-bottom: 10px
+	.input
+		margin-bottom: 0
+	&:last-child
+		margin-bottom: 0
+.cat-nav__el-input-text
+	@extend .type--sm
+	width: 40%
+.cat-nav__el-input-el
+	width: 58%
+	.input
+		width: 100%
+
+.cat-nav__el-radio--full
+	max-width: 100%
+.pagination
+	+below(740px)
+		margin-top: 20px
+	f()
+.pagination-el
+	+below(740px)
+		&:nth-child(4)
+			display: none
+		&:nth-child(5)
+			display: none
+		&:nth-child(7)
+			display: none
+		size 40px
+	flex(mid)
+	@extend .type--sm
+	tr(all)
+	border-radius 5px
+	border 1px solid #cad3df
+	background-color #ffffff
+	color $main-text
+	size 50px
+	margin-right: 10px
+	&:hover
+		background: #293f65
+		border-color #293f65
+		color white
+	&:last-child
+		margin-right: 0
+.pagination-el--active
+	background: #293f65
+	border-color #293f65
+	color white
+.pagination-btn
+	+below(740px)
+		height: 40px
+	flex(mid)
+	width: 100px
+	height: 50px
+	up()
+	&:hover
+		.icon
+			fill white
+	.icon
+		size 16px
+		fill #4b6580
+.pagination-back
+	span
+		display: inline-block
+		margin-left: 5px
+//.icon
+.pagination-next
+	span
+		display: inline-block
+		margin-right: 5px
+
+.cat-nav-btn-wrap
+	padding: 25px 10px
+.cat-nav-btn
+	cp()
+	width: 100%
+	margin-bottom: 10px
+	&:last-child
+		margin-bottom: 0
+.cat-nav-btn--show
+	@extend .btn--md
+	@extend .btn--dark
+.cat-nav-btn--clear
+	@extend .btn--md
+	@extend .btn--light
+
+//goods-line
+
+.cat-list-line
+	+below(740px)
+		grid-template-columns 1fr 1fr;
+		display: grid!important
+	display: grid
+	grid-gap 10px
+	grid-template-columns 1fr;
+
+
+.goods-line
+	+below(960px)
+		fw()
+	+below(740px)
+		fl()
+		margin-bottom: 0
+	f()
+	align-items: stretch
+	position: relative
+	background: white
+	border-radius 5px
+	border 1px solid #cad3df
+	margin-bottom: 20px
+.goods-line-sale
+	+below(740px)
+		width: 30px
+	position: absolute
+	top 0
+	left 10px
+
+.goods-line-sale-price
+	+below(740px)
+		top 10px
+		right: 10px
+	position: absolute
+	top 20px
+	right: 20px
+	br(5px)
+	padding: 5px
+	background: $red
+	color white
+	@extend .type--sm
+.goods-line-img
+	+below(740px)
+		margin-bottom: 0
+	padding: 50% 20%
+	bg-full()
+	margin-bottom: 20px
+	display: block
+.goods-line-title
+	+below(740px)
+		margin-bottom: 0
+		text-align: center
+	+below(480px)
+		font-size: 12px
+	margin-bottom: 15px
+	font-weight:500
+
+.goods-line-about-wrap
+	margin-bottom: 15px
+	+below(740px)
+		display: none
+.goods-line-about
+	+below(740px)
+		display: none
+	@extend .type--sm
+	color #8493a8
+.goods-line-price
+	+below(960px)
+		margin-bottom: 0
+		width: 40%
+	+below(740px)
+		width: 100%
+		flex(mid)
+	margin-bottom: 20px
+.goods-line-price__text
+	+below(740px)
+		width: 100%
+		margin-bottom: 5px
+	+below(640px)
+		flex-wrap nowrap
+	flex(mid)
+	fw()
+	color #54657e
+	font-size: 14px
+	span
+		+below(740px)
+			display: block
+		+below(480px)
+			font-size: 10px
+		color #4b6580
+.goods-line-price__val
+	+below(960px)
+		font-size: 18px
+	+below(640px)
+		font-size: 14px
+	color #ff1820
+	font-weight:500
+	margin: 0 5px
+	@extend .type--lg
+
+.goods-line-price__text-add
+	+below(960px)
+		margin-top: 0
+		font-size: 12px
+	+below(740px)
+		display: none
+	width: 100%
+	display: block
+	text-align: center
+	color #7e94aa
+	margin-top: 15px
+	@extend .type--sm
+.goods-line-footer
+	+below(960px)
+		margin-top: 0
+	+below(740px)
+		display: none
+	flex(between)
+	margin-top: auto
+.goods-line-footer__price-false
+	+below(960px)
+		font-size: 12px
+	+below(480px)
+		font-size: 10px
+	color #8493a8
+	position: relative
+	margin: 4px
+	text-decoration: line-through
+	@extend .type--md
+.goods-line-footer__price-true
+	+below(960px)
+		font-size: 18px
+	+below(480px)
+		font-size: 14px
+	@extend .type--lg
+	font-weight 500
+.goods-line-footer__get
+	flex(between)
+	margin-left: auto
+.goods-line-footer__compare
+	margin-right: 10px
+	flex(mid)
+	cp()
+	tr(all)
+	size 40px
+	border-radius 5px
+	border 1px solid #8493a8
+	&:hover
+		background: darken(#8493a8,10)
+		border 1px solid darken(#8493a8,10)
+		.icon
+			fill white
+	.icon
+		tr(all)
+		size 14px
+		fill #8493a8
+.goods-line-footer__cart
+	margin-left: 10px
+	flex(mid)
+	cp()
+	tr(all)
+	size 40px
+	border-radius 5px
+	background-color #2ac35a
+	&:hover
+		background-color lighten(#2ac35a,10)
+	.icon
+		size 18px
+		fill white
+
+.goods-line-descr
+	+below(740px)
+		display: none
+	//margin-bottom: 20px
+
+.goods-line-footer__price
+	+below(1200px)
+		fw()
+	+below(960px)
+		fl()
+		margin-top: -5px
+	+below(640px)
+		flex-flow row
+	flex(mid)
+
+.goods-line-head
+	+below(960px)
+		width: 50%
+	+below(740px)
+		width: 100%
+		padding: 10px
+	width: 35%
+	position: relative
+	padding: 30px
+.goods-line-content
+	+below(1200px)
+		padding: 15px
+	+below(960px)
+		width: 50%
+		border-right 0px
+	+below(740px)
+		width: 100%
+		border 0
+		padding: 6px
+	width: 40%
+	padding: 20px
+	border-left 1px solid #cad3df
+	border-right 1px solid #cad3df
+.goods-line-get
+	+below(1200px)
+		padding: 30px 15px 15px 15px
+	+below(960px)
+		width: 100%
+		padding: 7px
+		border-top 1px solid #cad3df
+		flex-flow row
+		flex(between)
+	+below(740px)
+		fl()
+		border 0
+		padding-bottom: 20px
+	padding: 30px 20px 20px 20px
+	width: 35%
+	f()
+	fl()
+//goods-line === end
+
+.goods-line-condition
+	+below(740px)
+		display: none
+	f()
+	margin-bottom: 50px
+	.icon
+		size 30px
+		margin-right: 10px
+.goods-line-condition-text
+	@extend .type--sm
+	color #8493a8
+	margin-top: 7px
+	font-weight:300
+
+.goods-line-condition-icon--true
+	.icon
+		fill #2ac35a
+.goods-line-condition-icon--false
+	.icon
+		fill #e31e25
+
+.goods-line-condition-icon--middle
+	.icon
+		fill #f2bb46
+
+.goods-line-descr-title
+	margin-bottom: 15px
+	font-weight: 500
+
+.goods-line-footer__one
+	+below(1200px)
+		font-size:12px
+	@extend .btn--md
+	@extend .btn--green
+	padding: 2px 5px
+	text-transform: none
+	height: 40px
+	flex(mid)
+.cat-type
+	display: none
+
+.cat-type--open
+	display: grid
+
+.cat-type--squer
+	+below(740px)
+		display: none !important
+
+.cat-filter
+	+above(740px)
+		display: none
+	margin-bottom: 20px
+	width: 100%
+	@extend .btn--md
+	@extend .btn--light

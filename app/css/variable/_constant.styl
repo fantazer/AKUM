@@ -21,6 +21,7 @@ $red = #e31e25
 $dark = #344164
 $gray = #ebf1f5
 $blue = #006ac5
+$green = #2ac35a
 
 $main-text = #54657e
 $link-color = black
@@ -177,10 +178,10 @@ btnStyleLight(br-btn,color-btn)
 	background $dark
 	&:hover
 		color white!important
-		background-color darken($dark,5)
+		background-color darken($dark,10)
 	&:active
 		color white!important
-		background-color darken($dark,5)
+		background-color darken($dark,10)
 	input[type="submit"]
 		border 0
 
@@ -192,12 +193,23 @@ btnStyleLight(br-btn,color-btn)
 
 .btn--light
 	@extend .btn
-	border 1px solid $border-color
+	border 1px solid #8493a8
 	background-color #ffffff
+	color #8493a8
 	&:hover
-		border 1px solid $blue
-	.nav-icon
-		fill blue
+		border 1px solid #8493a8
+
+.btn--green
+	@extend .btn
+	border 1px solid $green
+	background-color #ffffff
+	color $green
+	&:hover
+		border 1px solid $green
+		background: $green
+		color white
+
+
 
 .btn--grey
 	@extend .btn
@@ -263,7 +275,7 @@ button
 
 .input,.textarea,.select
 	border 0px
-	padding 15px 20px
+	padding 12px 20px
 	border 1px solid $border-color
 	resize: none
 	outline: 0 !important
@@ -302,7 +314,7 @@ button
 		cp()
 		tr(all)
 		&:hover
-			border 1px solid #8d8d8d
+			border 1px solid $blue
 	.icon-check
 		display none
 	.sytle-input
@@ -320,13 +332,13 @@ button
 		top 0
 		left -9999px
 	.sytle-input-element
-		width 22px
-		height 22px
+		width 25px
+		height 25px
 		position relative
 		display inline-block
 		margin-right 10px
 		background white
-		border 1px solid #cfcfcf
+		border 1px solid #cad3df
 		round()
 		cp()
 	.icon-check
@@ -337,5 +349,5 @@ button
 			color white
 			.icon-radio
 				round()
-				size 14px
+				size 9px
 				background blue;

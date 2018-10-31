@@ -1,0 +1,105 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++header()
+
+.main-cont
+	.banner-panel
+		a(href="#").banner-panel-sm
+			.banner-panel-sm-img
+				img(src="img/a-service.png", alt="")
+			.banner-panel-sm-info
+				.banner-panel-sm-title Бесплатная
+				.banner-panel-sm-text зарядка и диагностика
+		a(href="#").banner-panel-lg
+			.banner-panel-lg-title подбор аккумулятора
+				span Специалистом
+			.banner-panel-lg-cont
+				.banner-panel-lg-cont-icon
+					+icon("phone-call","icon")
+				.banner-panel-lg-cont-numb 291-95-93
+	.bread
+		a(href="#").bread__el Главная
+		a(href="#").bread__el Каталог
+		a(href="#").bread__el Авто аккумуляторы
+		.bread__el Авто аккумуляторы
+
+	.cat-title Каталог
+
+	.cat-grid
+		.cat-grid__el.cat-grid__el--avto
+			a(href="#" style="background-image:url('img/img-3.jpg')").cat-grid__el-img
+				.cat-grid__el-img-filter
+				.cat-grid__el-img-title Авто аккумуляторы
+			.cat-grid-list
+				-
+					var items = [
+						'40-55 Ач',
+						'55-70 Ач',
+						'70-90 Ач',
+						'90-110 Ач',
+						'AGM',
+						'EFB'
+						];img-9
+				each item in items
+					a(href=" ").cat-grid-list-el #{item}
+		.cat-grid__el.cat-grid__el--gruz
+			a(href="#" style="background-image:url('img/img-10.jpg')").cat-grid__el-img
+				.cat-grid__el-img-filter
+				.cat-grid__el-img-title Грузовые АКБ
+			.cat-grid-list.cat-grid-list--long
+				-
+					var items = [
+					'90-125 Ач',
+					'125-140 Ач',
+					'140-190 Ач',
+					'190-230 Ач'
+					];
+				each item in items
+					a(href=" ").cat-grid-list-el #{item}
+		.cat-grid__el.cat-grid__el--list
+			a(href="#" style="background-image:url('img/img-4.jpg')").cat-grid__el-img.cat-grid__el-img--long
+				.cat-grid__el-img-filter
+				.cat-grid__el-img-title Мото <br> аккумуляторы
+			a(href="#" style="background-image:url('img/img-8.jpg')").cat-grid__el-img
+				.cat-grid__el-img-filter
+				.cat-grid__el-img-title Катерные <br> аккумуляторы
+			a(href="#" style="background-image:url('img/img-6.jpg')").cat-grid__el-img
+				.cat-grid__el-img-filter
+				.cat-grid__el-img-title Стационарные и промышненные акБ
+
+		.cat-grid__el.cat-grid-line
+			.cat-grid-line__el
+				a(href="#" style="background-image:url('img/img-7.jpg')").cat-grid__el-img
+					.cat-grid__el-img-filter
+					.cat-grid__el-img-title Товары <br> для АКБ
+				.cat-grid-list
+					-
+						var items = [
+						'Зарядные устройства',
+						'Клеммы',
+						'Оборудование для диагностики',
+						'Провода прикуривания',
+						];
+					each item in items
+						a(href=" ").cat-grid-list-el #{item}
+			.cat-grid-line__el
+				a(href="#" style="background-image:url('img/img-9.jpg')").cat-grid__el-img
+					.cat-grid__el-img-filter
+					.cat-grid__el-img-title Другие <br> товары
+				.cat-grid-list
+					-
+						var items = [
+						'Автоаксессуары',
+						'Автозапчати',
+						'Автохимия',
+						'Жидкости',
+						'Масла'
+						];
+					each item in items
+						a(href=" ").cat-grid-list-el #{item}
+
++footer()
+
+
+include ./block_html/_script.pug

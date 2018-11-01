@@ -85,6 +85,7 @@ include block_html/_include.pug
 				.tab-head__el.tab-head__el--active Где купить
 				.tab-head__el Описание товара
 				.tab-head__el.tab-head__el--question Задать вопрос
+		//tab location product
 		.content-tab-wrap
 			.main-cont
 				.content-tab.content-tab--active
@@ -105,6 +106,7 @@ include block_html/_include.pug
 													+icon("battery","icon")
 												.condition-text В наличии
 						.bay-location__map map
+			//tab description product
 			.content-tab
 				.main-cont
 					.product-decr
@@ -123,7 +125,36 @@ include block_html/_include.pug
 									.book-row__title Габариты (ДхШхВ)
 									.book-row__dot
 									.book-row__value 111 x 222 x 333  мм
-			.content-tab
+			//tab description product
+			.content-tab.content-tab--question
+				.main-cont
+					.product-form-text Вы можете задать любой интересующий вас вопрос по товару или работе магазина. <br> Наши квалифицированные специалисты обязательно вам помогут.
+					form(action="#" class="product-form")
+						.input-row-triple
+							.input-row
+								.input-row-title Ваше имя
+								input(type="text" placeholder="Введите Ваше имя" class="input")
+							.input-row
+								.input-row-title Ваше имя
+								input(type="text" placeholder="Введите Ваш телефон" class="input")
+							.input-row
+								.input-row-title Ваше email
+								input(type="text" placeholder="Введите Ваш email" class="input")
+						.product-form-msg
+							.product-form-msg-text
+								textarea(name="text", cols="30", rows="4" class="input" placeholder="Введите Ваш вопрос")
+							.product-form-msg-get
+								.product-form-get
+									.product-form-get-el.product-form-get__clear Сбросить
+									input(type="submit" value="отправить").product-form-get-el.product-form-get__btn
+								.product-form-confirm
+									.check-el
+										label.style-label.style-label--checkbox
+											input(type="checkbox").sytle-input
+											.sytle-input-element
+												+icon("checked","icon-check")
+											.sytle-input-text Настоящим подтверждаю, что я ознакомлен и согласен с
+												a(href="#") условиями политики конфиденциальности
 .main-cont
 	-
 		var items = [

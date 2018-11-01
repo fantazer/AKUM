@@ -198,6 +198,7 @@ btnStyleLight(br-btn,color-btn)
 	color #8493a8
 	&:hover
 		border 1px solid #8493a8
+		color #283c57
 
 .btn--green
 	@extend .btn
@@ -283,9 +284,11 @@ button
 	font-family $v-font
 	display block!important
 	margin-bottom 10px
-	placeholder(#888888)
-	background: #f7f7f8
+	placeholder(#8493a8)
+	background: white
 	tr(all)
+	@extend .type--sm
+	font-weight:300
 	&:focus
 		border 1px solid blue
 
@@ -351,3 +354,7 @@ button
 				round()
 				size 9px
 				background blue;
+
+.product-form-confirm
+	a
+		color $blue

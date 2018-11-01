@@ -388,6 +388,7 @@ body
 		width: 90%
 		margin-left: auto
 		margin-right: auto
+	position: relative
 .banner-panel-lg-cont
 	flex(between)
 .banner-panel-lg-cont-icon
@@ -523,6 +524,8 @@ body
 	width: 180px
 
 .section-title
+	+below(768px)
+		font-size: 18px
 	up()
 	text-align: center
 	font-size: 30px
@@ -727,7 +730,7 @@ body
 	border-color $gray
 .content-tab-wrap
 	+below(730px)
-		padding: 40px 0
+		padding: 30px 0
 	background: $gray
 	padding: 60px 0
 
@@ -977,18 +980,18 @@ body
 		size 20px
 
 .slider-control--left
-	+below(1200px)
-		left 0
+	+below(480px)
+		left -20px
 	left -30px
 .slider-control--right
-	+below(1200px)
-		right 0
+	+below(480px)
+		right -20px
 	right -30px
 
 .slick-slide
-		margin: 0 20px
+		margin: 0 10px
 .slick-list
-	margin: 0 -20px
+	margin: 0 -10px
 
 .slider-items-wrap
 	margin-bottom: 20px
@@ -1379,7 +1382,8 @@ body
 
 .book-row
 	margin-bottom: 7px
-	f()
+	display: table
+
 .book-row__title
 	display table-cell
 	white-space nowrap
@@ -1393,9 +1397,10 @@ body
 .book-row__value
 	display table-cell
 	white-space nowrap
-	max-width 100px
 	font-weight: 500
 	@extend .type--xs
+	a
+		color $blue
 
 .cat-nav
 	+below(1024px)
@@ -1817,6 +1822,9 @@ select.select-beauty
 		width: 100%
 		border 0
 		padding: 6px
+	.condition
+		+below(740px)
+			display: none
 	width: 40%
 	padding: 20px
 	border-left 1px solid #cad3df
@@ -1840,28 +1848,27 @@ select.select-beauty
 	fl()
 //goods-line === end
 
-.goods-line-condition
-	+below(740px)
-		display: none
+.condition
+
 	f()
 	margin-bottom: 50px
 	.icon
 		size 30px
 		margin-right: 10px
-.goods-line-condition-text
+.condition-text
 	@extend .type--sm
 	color #8493a8
 	margin-top: 7px
 	font-weight:300
 
-.goods-line-condition-icon--true
+.condition-icon--true
 	.icon
 		fill #2ac35a
-.goods-line-condition-icon--false
+.condition-icon--false
 	.icon
 		fill #e31e25
 
-.goods-line-condition-icon--middle
+.condition-icon--middle
 	.icon
 		fill #f2bb46
 
@@ -2108,4 +2115,332 @@ select.select-beauty
 .cat-grid__el--gruz
 	+below(960px)
 		order 2
+
+.same-slider-el
+	+below(760px)
+		margin-bottom: 20px
+	margin-bottom: 60px
+
+//start
+.product
+	+below(960px)
+		fw()
+		margin-bottom: 30px
+	+below(760px)
+		max-width 480px
+		margin-left: auto
+		margin-right: auto
+	f()
+	justify-content: space-between
+	margin-bottom: 60px
+.product-img
+	+below(960px)
+		width: 240px
+	+below(760px)
+		width: 100%
+		display: none
+	width: 30%
+.product-img-wrap
+	bg-full()
+	padding: 45% 10%
+.product-img--mobile
+	+above(768px)
+		display: none
+	display: block
+.product-info-head
+	f()
+	justify-content: space-between
+.product-info-head-img
+	+above(960px)
+		display: none
+	+below(768px)
+		display: none
+
+.product-info
+	+below(1024px)
+		width: calc(35% - 30px)
+	+below(960px)
+		width: calc(100% - 260px)
+	+below(760px)
+		width: 100%
+	width: calc(43% - 30px)
+	.condition
+
+		margin-bottom: 30px
+.product-info__title
+	@extend .type--lg
+	font-weight:500
+	margin-bottom: 10px
+
+.product-info__descr
+	+below(480px)
+		margin-bottom: 10px
+	@extend .type--sm
+	margin-bottom: 20px
+.product-info__descr-title
+	margin-bottom: 15px
+	font-weight: 500
+.product-get
+	+below(1024px)
+		width: 31%
+	+below(960px)
+		width: 100%
+	width: 25%
+.product-get-logo
+	+below(960px)
+		display: none
+	f()
+	img
+		margin-left: auto
+		display: inline-block
+		margin-bottom: 40px
+
+
+.product-cont-get
+	+below(1200px)
+		padding: 30px 15px 15px 15px
+	+below(960px)
+		padding: 7px
+		border-top 1px solid #cad3df
+		flex-flow row
+		flex(between)
+		margin-top: 20px
+	+below(740px)
+		fl()
+		padding: 20px
+	+below(480px)
+		margin-top: 10px
+	padding: 30px 20px 20px 20px
+	f()
+	fl()
+	border-radius: 5px;
+	border: 1px solid #cad3df;
+.product-cont-price
+	+below(960px)
+		margin-bottom: 0
+		width: 40%
+	+below(740px)
+		width: 100%
+		flex(mid)
+	margin-bottom: 20px
+.product-cont-price__text
+	+below(740px)
+		width: 100%
+		margin-bottom: 5px
+	flex(mid)
+	fw()
+	color #54657e
+	font-size: 14px
+	span
+		+below(740px)
+			display: block
+		+below(480px)
+			font-size: 10px
+		color #4b6580
+.product-cont-price__val
+	+below(960px)
+		font-size: 18px
+	+below(760px)
+		font-size: 24px
+	color #ff1820
+	font-weight:500
+	margin: 0 5px
+	@extend .type--lg
+
+.product-cont-price__text-add
+	+below(960px)
+		margin-top: 0
+		font-size: 12px
+	width: 100%
+	display: block
+	text-align: center
+	color #7e94aa
+	margin-top: 15px
+	@extend .type--sm
+.product-cont-footer
+	+below(960px)
+		margin-top: 0
+	+below(740px)
+		margin: 10px 0
+	flex(between)
+	margin-top: auto
+
+.product-cont-footer__price-false
+	+below(960px)
+		font-size: 12px
+	+below(480px)
+		font-size: 10px
+	color #8493a8
+	position: relative
+	margin: 4px
+	text-decoration: line-through
+	@extend .type--md
+.product-cont-footer__price-true
+	+below(960px)
+		font-size: 18px
+	+below(480px)
+		font-size: 13px
+	@extend .type--lg
+	font-weight 500
+.product-cont-footer__price
+	+below(960px)
+		margin-bottom: 0
+	flex(mid)
+	fl()
+	margin-bottom: 20px
+
+.product-cont-footer__get
+	flex(between)
+	margin-left: auto
+.product-cont-footer__compare
+	margin-right: 10px
+	flex(mid)
+	cp()
+	tr(all)
+	size 40px
+	border-radius 5px
+	border 1px solid #8493a8
+	&:hover
+		background: darken(#8493a8,10)
+		border 1px solid darken(#8493a8,10)
+		.icon
+			fill white
+	.icon
+		tr(all)
+		size 14px
+		fill #8493a8
+.product-cont-footer__cart
+	margin-left: 10px
+	flex(mid)
+	cp()
+	tr(all)
+	size 40px
+	border-radius 5px
+	background-color #2ac35a
+	&:hover
+		background-color lighten(#2ac35a,10)
+	.icon
+		size 18px
+		fill white
+
+.product-cont-footer__one
+	+below(1200px)
+		font-size:12px
+	@extend .btn--md
+	@extend .btn--green
+	padding: 2px 5px
+	text-transform: none
+	height: 40px
+	flex(mid)
+	flex-grow 1
+//end
+.product-cont-get-pass
+	+below(960px)
+		margin-top: 0
+	text-align: center
+	color #adb9ca
+	@extend .type--sm
+	font-weight 300
+	display: block
+	margin-top: 20px
+
+.product-tab
+	margin-bottom: 60px
+	@extend .filter
+	.tab-head__el
+		+below(760px)
+			width: 49%
+		width: 32.5%
+
+.bay-location
+	+below(960px)
+		fw()
+	f()
+	justify-content: space-between
+.bay-location__list-wrap
+	+below(960px)
+		width: 100%
+		margin-bottom: 10px
+	+below(640px)
+		height: 220px
+	background: white
+	border-radius 5px
+	height: 380px
+	width: 49%
+	padding: 20px 10px 20px 20px
+
+.bay-location__list
+	position: relative
+	height: 100%
+	padding-right: 30px
+.bay-location__list-title
+	color #4b6580
+	font-weight:500
+.bay-location__list-el
+	+below(760px)
+		fl()
+	flex(between)
+	border-bottom 1px solid #adb9ca
+	padding: 10px 0
+	&:last-child
+		border-bottom 0
+.bay-location-info
+	+below(760px)
+		width: 100%
+.bay-location-info-text
+	@extend .type--sm
+	color #8493a8
+	margin-bottom: 5px
+.bay-location-info-phone
+	color #8493a8
+	a
+		color $blue
+	span
+		@extend .type--sm
+		display: inline-block
+		margin-right: 3px
+
+.bay-location__map
+	+below(960px)
+		width: 100%
+		height: 380px
+	+below(640px)
+		height: 220px
+	background: #ccd7de
+	width: 49%
+
+.bay-location-condition
+	+below(760px)
+		width: 100%
+	.condition
+		margin-bottom: 0
+
+//visible scrollbar
+.ps__scrollbar-y-rail
+	background-color #eaeaea !important
+	opacity 1!important
+	right: 5px!important
+
+.ps > .ps__scrollbar-y-rail:hover > .ps__scrollbar-y, .ps > .ps__scrollbar-y-rail:active > .ps__scrollbar-y
+	width: 10px
+	background: #adb9ca
+.ps > .ps__scrollbar-y-rail
+	width: 10px
+	background-color #f6f6f6!important
+	opacity 1!important
+
+.product-decr__col
+	+below(760px)
+		grid-template-columns 1fr
+	display: grid
+	grid-gap 20px
+	grid-template-columns 1fr 1fr
+	.book-row__title
+		font-size: 14px
+	.book-row__value
+		font-size: 14px
+
+.tab-head__el--question
+	+below(760px)
+		display: none
 

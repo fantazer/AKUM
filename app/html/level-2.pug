@@ -241,12 +241,11 @@ include block_html/_include.pug
 							.goods-line-about-wrap
 								.goods-line-about Производитель — Алькор,
 								.goods-line-about Страна производства — Россия
-							.goods-line-condition
-								//use class .goods-line-condition-icon--true .goods-line-condition-icon--false .goods-line-condition-icon--middle
-								.goods-line-condition-icon.goods-line-condition-icon--true
+							.condition
+								//use class .condition-icon--true .condition-icon--false .condition-icon--middle
+								.condition-icon.condition-icon--true
 									+icon("battery","icon")
-								.goods-line-condition-text В наличии
-
+								.condition-text В наличии
 							.goods-line-descr
 								.goods-line-descr-title Характеристики
 								- for (var j=0;j<2;j++)

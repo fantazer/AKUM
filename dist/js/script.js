@@ -20,6 +20,12 @@ $(document).ready(function () {
 					settings: {
 						slidesToShow: 2
 					}
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 1
+					}
 				}
 			]
 		});
@@ -96,6 +102,10 @@ $(document).ready(function () {
 		});
 	});
 	//toggle catalog list type===end
+
+	//init scroll bar
+	$('.bay-location__list').perfectScrollbar();
+	//init scroll bar===end
 
 	function detectIE() {
 		var ua = window.navigator.userAgent;

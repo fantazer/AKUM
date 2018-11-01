@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "ion.rangeSlider": "ionrangeslider#^2.2.0",
-    "jquery-nice-select": "^1.1.0"
+    "jquery-nice-select": "^1.1.0",
+    "perfect-scrollbar": "^0.8.1"
   }
 }

@@ -985,11 +985,11 @@ body
 
 .slider-control--left
 	+below(480px)
-		left -20px
+		left -25px
 	left -30px
 .slider-control--right
 	+below(480px)
-		right -20px
+		right -25px
 	right -30px
 
 .slick-slide
@@ -2501,3 +2501,95 @@ select.select-beauty
 		@extend .type--xs
 	.style-label
 		align-items: flex-start
+
+.location-cat-title
+	text-align: center
+	color $dark
+	@extend .type--xl
+	font-weight 500
+	text-transform uppercase
+	margin-bottom: 60px
+
+.location-cat
+	flex(between)
+	fw()
+.location-cat__el
+	width: 30%
+	margin-bottom: 60px
+.location-cat-cont
+	f()
+	align-items: center
+.location-cat-cont__icon
+	.icon
+		size 40px
+		fill $red
+		margin: 0 15px 0 20px
+//.location-cat-cont__text
+
+.location-map
+	height: 380px
+	background: #f5f5f5
+	margin-bottom: 40px
+
+.location-list
+	padding: 10px
+	border-radius 5px
+	border 1px solid #adb9ca
+.location-item
+	f()
+	justify-content: space-between
+	border-bottom 1px solid #adb9ca
+	margin-bottom: 20px
+	padding-bottom: 20px
+	&:last-child
+		margin-bottom: 0
+.location-item__img-wrap
+	width: 40%
+.location-item__img
+	bg-full()
+	padding: 27% 10%
+.location-item-info
+	width: 58%
+	display: grid
+	grid-column-gap 30px
+	grid-row-gap 10px
+	grid-template-columns repeat(2,1fr);
+.location-item-row
+	a
+		color $blue
+.location-item-row-descr
+	f()
+.location-item-row-title
+	font-weight:500
+	margin-bottom: 15px
+	color #4b6580
+	font-size: 16px
+.location-item-icon
+	.icon
+		size 30px
+		fill $main-text
+		margin-right: 10px
+//.location-item-content
+.location-item-text
+	margin-bottom: 5px
+	font-weight 300
+	b
+		display: inline-block
+		margin-left: 5px
+.location-type
+	f()
+	.icon
+		size 30px
+		fill $red
+		margin-right: 15px
+
+.location-item-get
+	@extend .btn--md
+	@extend .btn--light
+	width: 100%
+	text-transform: none
+.location-item-get--show
+	display: none
+
+.location-item-row--get
+	flex(mid)

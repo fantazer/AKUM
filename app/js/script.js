@@ -107,6 +107,13 @@ $(document).ready(function () {
 	$('.bay-location__list').perfectScrollbar();
 	//init scroll bar===end
 
+
+	//toggle location list
+	$('.location-item-get').click(function(){
+		$(this).toggleClass('location-item-get--active');
+		$(this).closest('.location-item-wrap').find('.location-item-sub-wrap').slideToggle();
+	});
+	//toggle location list===end
 	function detectIE() {
 		var ua = window.navigator.userAgent;
 

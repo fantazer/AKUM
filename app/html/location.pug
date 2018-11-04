@@ -28,81 +28,101 @@ include block_html/_include.pug
 	.cat-title Магазины в Новосибирске
 	.location-cat-title А-сервис в магазине
 	.location-cat
-		- for (var i=0;i<6;i++)
-			.location-cat__el
-				.check-el
+
+			-
+				var items = [
+						{'icon':'tester', 'name':'Диагностика АКБ'},
+						{'icon':'akum', 'name':'Обслуживание АКБ'},
+						{'icon':'tools', 'name':'Диагностика электрооборудования автомобиля'},
+						{'icon':'batary', 'name':'Прием и обмен старых АКБ'},
+						{'icon':'free', 'name':'Бесплатная установка аккумулятора'},
+						{'icon':'oil', 'name':'Услуги автосервиса'}
+					];
+			each item in items
+				.location-cat__el
+					.check-el
 						label.style-label.style-label--checkbox
 							input(type="checkbox").sytle-input
 							.sytle-input-element
-								+icon("checked","icon-check")
+								+icon('checked',"icon-check")
 							.sytle-input-text
 								.location-cat-cont
 									.location-cat-cont__icon
-										+icon("tester","icon")
-									.location-cat-cont__text Диагностика АКБ
+										+icon(item.icon,"icon")
+									.location-cat-cont__text #{item.name}
+
 	.location-map
 	.location-list
 		- for (var j=0;j<4;j++)
-			.location-item
-				.location-item__img-wrap
-					.location-item__img(style="background-image:url('img/location.jpg')")
-				.location-item-info
-					.location-item-row
-						.location-item-row-title Адрес магазина
-						.location-item-row-descr
-							.location-item-icon
-								+icon("location","icon")
-							.location-item-content
-								.location-item-text
-									a(href="#") Б. Богаткова, 264
-					.location-item-row
-						.location-item-row-title Способ оплаты
-						.location-item-row-descr
-							.location-item-icon
-								+icon("payment","icon")
-							.location-item-content
-								.location-item-text Наличный расчет
-								.location-item-text Доступна оплата через терминал
-					.location-item-row
-						.location-item-row-title Контактная информация
-						.location-item-row-descr
-							.location-item-icon
-								+icon("phone-call","icon")
-							.location-item-content
-								.location-item-text Тел:
-									a(href="tel:+7 (3852) 60-45-77") +7 (3852) 60-45-77
-								.location-item-text Тел:
-									a(href="tel:+7 (910) 123-45-67 ") +7 (910) 123-45-67
-					.location-item-row
-						.location-item-row-title График работы
-						.location-item-row-descr
-							.location-item-icon
-								+icon("clock","icon")
-							.location-item-content
-								.location-item-text Пн - Пт
-									b 8:00 — 21:00
-								.location-item-text Сб - Вс
-									b 9:00 — 19:00
-					.location-item-row
-						.location-item-row-title Дополнительный сервис
-						.location-type
-							.location-type-el
-								+icon("tester","icon")
-							.location-type-el
-								+icon("akum","icon")
-							.location-type-el
-								+icon("tools","icon")
-							.location-type-el
-								+icon("batary","icon")
-							.location-type-el
-								+icon("free","icon")
-							.location-type-el
-								+icon("oil","icon")
-					.location-item-row.location-item-row--get
-						.location-item-get
-							.location-item-get--hide Проложить путь на карте
-							.location-item-get--show Свернуть карту
+			.location-item-wrap
+				.location-item
+					.location-item__img-wrap
+						.location-item__img(style="background-image:url('img/location.jpg')")
+					.location-item-info
+						.location-item-row
+							.location-item-row-title Адрес магазина
+							.location-item-row-descr
+								.location-item-icon
+									+icon("location-light","icon--md icon")
+								.location-item-content
+									.location-item-text
+										a(href="#") Б. Богаткова, 264
+						.location-item-row
+							.location-item-row-title Способ оплаты
+							.location-item-row-descr
+								.location-item-icon
+									+icon("payment","icon icon--lg")
+								.location-item-content
+									.location-item-text Наличный расчет
+									.location-item-text Доступна оплата через терминал
+						.location-item-row
+							.location-item-row-title Контактная информация
+							.location-item-row-descr
+								.location-item-icon
+									+icon("phone-call--light","icon")
+								.location-item-content
+									.location-item-text Тел:
+										a(href="tel:+7 (3852) 60-45-77") +7 (3852) 60-45-77
+									.location-item-text Тел:
+										a(href="tel:+7 (910) 123-45-67 ") +7 (910) 123-45-67
+						.location-item-row
+							.location-item-row-title График работы
+							.location-item-row-descr
+								.location-item-icon
+									+icon("clock","icon")
+								.location-item-content
+									.location-item-text Пн - Пт
+										b 8:00 — 21:00
+									.location-item-text Сб - Вс
+										b 9:00 — 19:00
+						.location-item-row
+							.location-item-row-title Дополнительный сервис
+							.location-type
+								.location-type-el
+									+icon("tester","icon")
+								.location-type-el
+									+icon("akum","icon")
+								.location-type-el
+									+icon("tools","icon")
+								.location-type-el
+									+icon("batary","icon")
+								.location-type-el
+									+icon("free","icon")
+								.location-type-el
+									+icon("oil","icon")
+						.location-item-row.location-item-row--get
+							.location-item-get
+								.location-item-get--hide Проложить путь на карте
+								.location-item-get--show Свернуть карту
 
+				.location-item-sub-wrap
+					.location-item-sub-map map
+					.location-item-sub
+						.location-item-sub-magazine(style="background-image:url('img/location.jpg')")
+						.location-item-sub__img
+							- for (var i=0;i<4;i++)
+								.location-item-sub__img-el(style="background-image:url('img/magazine.jpg')")
+						.location-item-sub__map  map
 
 +footer()
 include ./block_html/_script.pug

@@ -5642,6 +5642,7 @@ select.select-beauty {
   -webkit-border-radius: 5px;
           border-radius: 5px;
   border: 1px solid #adb9ca;
+  margin-bottom: 40px;
 }
 .location-item-wrap {
   border-bottom: 1px solid #adb9ca;

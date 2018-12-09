@@ -1,0 +1,173 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++headerlp()
+
+//head banner
+.lp-banner-wrap(style="background-image:url('img/bg-cloud.jpg')")
+	.main-cont
+		.lp-banner
+			.lp-banner__slogan
+				.lp-banner__slogan-top в поиске хорошего корейского аккумулятора?
+				.lp-banner__slogan-main Выбирайте лучший!
+				.lp-banner__img
+					img(src="img/row-accums.png", alt="")
+
+//row-get
+.lp-row-get
+	a(href="#").lp-row-get__btn Подберите АКБ для вашего автомобиля
+
+//advant
+.section-advant.section--gray
+	.main-cont
+		.section-title Корейские Аккумуляторы - Лучший выбор
+		.lp-advant
+			.lp-advant__el
+				.lp-advant__el-icon
+					+icon("sale","icon")
+				.lp-advant__el-text Дешевле на 20-30% европейских топовых марок
+			.lp-advant__el
+				.lp-advant__el-icon
+					+icon("shield-check","icon")
+				.lp-advant__el-text Высокое качество исполнения батарей
+			.lp-advant__el
+				.lp-advant__el-icon
+					+icon("temperature","icon")
+				.lp-advant__el-text Высокое качество исполнения батарей
+			.lp-advant__el
+				.lp-advant__el-icon
+					+icon("award-star","icon")
+				.lp-advant__el-text Признаны ведущими корейскими производителями
+
+//slider-items
+.section-lp
+	.main-cont
+		.section-title Мы рекомендуем
+		.items
+			- for (var i=0;i<4;i++)
+				.item
+					a(href="#" style="background-image:url('img/product.png')").item-img
+					.item-title AlphaLINE AGM 60.0 L2 (AX 560680/56020) обр
+					.item-price
+						.item-price__text Цена:
+							.item-price__val.item-price__val--gray 1 990 руб.
+					.item-get Купить
+
+//compare
+.section-lp.section--compare
+	.main-cont
+		.section-title Сравнение аналогичных товаров
+		.compare
+			.compare__el
+				.compare__el--img(style="background-image:url('img/item-akum-1.png')")
+				.compare__el--content
+					.compare__el-row
+						.compare__el-row-name Модель
+						.compare__el-row-val CENE (Корея)
+					.compare__el-row
+						.compare__el-row-name Емкость
+						.compare__el-row-val 65 А/ч
+					.compare__el-row
+						.compare__el-row-name Стартовый ток
+						.compare__el-row-val 650 А
+					.compare__el-row
+						.compare__el-row-name Габариты
+						.compare__el-row-val 242x175x190 мм
+					.compare__el-row
+						.compare__el-row-name Гарантия
+						.compare__el-row-val 48 месяцев
+			.compare__el
+				.compare__el--img(style="background-image:url('img/item-akum-2.png')")
+				.compare__el--content
+					.compare__el-row
+						.compare__el-row-name Модель
+						.compare__el-row-val Alfaline (Корея)
+					.compare__el-row
+						.compare__el-row-name Емкость
+						.compare__el-row-val 62 А/ч
+					.compare__el-row
+						.compare__el-row-name Стартовый ток
+						.compare__el-row-val ток 600 А
+					.compare__el-row
+						.compare__el-row-name Габариты
+						.compare__el-row-val 242x175x175 мм
+					.compare__el-row
+						.compare__el-row-name Гарантия
+						.compare__el-row-val 36 месяцев
+			.compare__el
+				.compare__el--img(style="background-image:url('img/item-akum-3.png')")
+				.compare__el--content
+					.compare__el-row
+						.compare__el-row-name Модель
+						.compare__el-row-val Joker (Корея)
+					.compare__el-row
+						.compare__el-row-name Емкость
+						.compare__el-row-val 65 А/ч
+					.compare__el-row
+						.compare__el-row-name Стартовый ток
+						.compare__el-row-val ток 580 А
+					.compare__el-row
+						.compare__el-row-name Габариты
+						.compare__el-row-val 232x173x225 мм
+					.compare__el-row
+						.compare__el-row-name Гарантия
+						.compare__el-row-val 18 месяцев
+			.compare__el
+				.compare__el--img(style="background-image:url('img/item-akum-4.png')")
+				.compare__el--content
+					.compare__el-row
+						.compare__el-row-name Модель
+						.compare__el-row-val Solite (Корея)
+					.compare__el-row
+						.compare__el-row-name Емкость
+						.compare__el-row-val 65 А/ч
+					.compare__el-row
+						.compare__el-row-name Стартовый ток
+						.compare__el-row-val ток 550 А
+					.compare__el-row
+						.compare__el-row-name Габариты
+						.compare__el-row-val 230x172x200 мм
+					.compare__el-row
+						.compare__el-row-name Гарантия
+						.compare__el-row-val 18 месяцев
+
+//services
+.section-lp.section-lp--sevices.section--gray
+	.main-cont
+		.service-title Ваш А-сервис
+		.service-title-sub
+			.service-title-sub__icon
+				+icon("star","icon")
+			.service-title-sub__text Услуги для наших покупателей БЕСПЛАТНО
+		.service
+			.service__el
+				.service-head
+					.service-head__icon
+						+icon("tester","icon")
+					.service-head__text Диагностика АКБ
+				.service-text Рекомендуем проходить  диагностику 2 раза в год
+				a(href="#").service-link Подробнее
+			.service__el
+				.service-head
+					.service-head__icon
+						+icon("akum","icon")
+					.service-head__text Обслуживание АКБ
+				.service-text Увеличим срок службы АКБ до 2 раз
+				a(href="#").service-link Подробнее
+			.service__el
+				.service-head
+					.service-head__icon
+						+icon("tools","icon")
+					.service-head__text Диагностика электрооборудования автомобиля
+				.service-text Используем высокоточное сертифицированное диагностическое оборудование
+				a(href="#").service-link Подробнее
+			.service__el
+				.service-head
+					.service-head__icon
+						+icon("batary","icon")
+					.service-head__text Прием и обмен старых АКБ
+				.service-text Новый вместо старого. Утилизируем старый АКБ правильно и выгодно
+				a(href="#").service-link Подробнее
++footer()
+
+include ./block_html/_script.pug

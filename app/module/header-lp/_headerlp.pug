@@ -1,0 +1,31 @@
+mixin headerlp()
+	//block header
+	.head.head--lp
+		.head-main-wrap
+			.main-cont
+				.head-main
+					a(href="/").logo
+						img(src="img/logo-main.svg", alt="")
+					.head-main-content
+						.head-main-nav
+							.head-main-nav-el.head-main-nav-el--sub.head-main-nav-cat-wrap
+								a(href="#").head-main-nav-cat Каталог
+									+icon("triangle","icon")
+								.head-main-nav-list
+									-
+										var items = [
+										'Авто аккумуляторы',
+										'Мото аккумуляторы',
+										'Катерные аккумуляторы',
+										'Стационарные и промышленные АКБ',
+										'Товары для АКБ',
+										'Другие товары'
+										];
+									each item in items
+										a(href="#").head-main-nav-list-el #{item}
+							a(href="#").head-main-nav-el Магазины
+						.header-phone
+							+icon("call-round","icon")
+							a(href="tel:291 95 93") 291 95 93
+
+//block header end

@@ -1,0 +1,195 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++headerlp()
+
+//head banner
+.lp-banner-wrap(style="background-image:url('img/bg-triangle.jpg')")
+	.main-cont
+		.lp-banner
+			.lp-banner__slogan
+				.lp-banner__slogan-top в поиске хорошего корейского аккумулятора?
+				.lp-banner__slogan-main Выбирайте лучший!
+				.lp-banner__img
+					img(src="img/akum-triple.png", alt="")
+
+//row-get
+.lp-row-get
+	a(href="#").lp-row-get__btn Подберите АКБ для вашего автомобиля
+
+//advant
+.section-advant.section--gray
+	.main-cont
+		.section-title Аккумуляторы Moll - Лучший выбор
+		.lp-advant
+			.lp-advant__el
+				.lp-advant__el-icon
+					+icon("shield-empty","icon")
+				.lp-advant__el-text Moll - это гарантия срока службы до 10 лет
+			.lp-advant__el
+				.lp-advant__el-icon
+					+icon("star-flash","icon")
+				.lp-advant__el-text Moll выбирают ведущие автоконцерны Audi, Volkswagen, Mersedes
+			.lp-advant__el
+				.lp-advant__el-icon
+					+icon("cup","icon")
+				.lp-advant__el-text Moll - это премиальное немецкое качество
+			.lp-advant__el
+				.lp-advant__el-icon
+					+icon("round-check","icon")
+				.lp-advant__el-text Moll - это ТОП-10 среди всех АКБ
+
+//slider-items
+.section-lp
+	.main-cont
+		.section-title Мы рекомендуем
+		.items
+			- for (var i=0;i<4;i++)
+				.item
+					a(href="#" style="background-image:url('img/product.png')").item-img
+					.item-title AlphaLINE AGM 60.0 L2 (AX 560680/56020) обр
+					.item-price
+						.item-price__text Цена:
+							.item-price__val.item-price__val--gray 1 990 руб.
+					.item-get Купить
+
+//compare
+.section-lp.section--compare
+	.main-cont
+		.section-title Сравнение аналогичных товаров
+		.compare--tree
+			.compare__el
+				.compare__el--img(style="background-image:url('img/item-akum-7.png')")
+				.compare__el--content
+					.compare__el-row
+						.compare__el-row-name Модель
+						.compare__el-row-val Bosch S5 Silver Plus
+					.compare__el-row
+						.compare__el-row-name Емкость
+						.compare__el-row-val 100 А/ч
+					.compare__el-row
+						.compare__el-row-name Стартовый ток
+						.compare__el-row-val 830 А
+					.compare__el-row
+						.compare__el-row-name Цикл жизни по отношению к стандартному аккумулятору
+						.compare__el-row-val 100%
+					.compare__el-row
+						.compare__el-row-name Гарантия
+						.compare__el-row-val 18 месяцев
+					.compare__el-row
+						.compare__el-row-name Ресурс АКБ. 60 циклов разрядки-зарядки
+						.compare__el-row-val 58%
+					.compare__el-row
+						.compare__el-row-name Применяемость
+						.compare__el-row-val Автомобили с дополнительными потребителями энергии, дизельные авто
+			.compare__el
+				.compare__el--img(style="background-image:url('img/item-akum-6.png')")
+				.compare__el--content
+					.compare__el-row
+						.compare__el-row-name Модель
+						.compare__el-row-val MOLL M3 plus 100
+					.compare__el-row
+						.compare__el-row-name Емкость
+						.compare__el-row-val 100 А/ч
+					.compare__el-row
+						.compare__el-row-name Стартовый ток
+						.compare__el-row-val 850 А
+					.compare__el-row
+						.compare__el-row-name Цикл жизни по отношению к стандартному аккумулятору
+						.compare__el-row-val 120%
+					.compare__el-row
+						.compare__el-row-name Гарантия
+						.compare__el-row-val 48 месяцев
+					.compare__el-row
+						.compare__el-row-name Ресурс АКБ. 60 циклов разрядки-зарядки
+						.compare__el-row-val 93%
+					.compare__el-row
+						.compare__el-row-name Применяемость
+						.compare__el-row-val Автомобили с дополнительными потребителями энергии, дизельные авто
+			.compare__el
+				.compare__el--img(style="background-image:url('img/item-akum-5.png')")
+				.compare__el--content
+					.compare__el-row
+						.compare__el-row-name Модель
+						.compare__el-row-val Varta Silver Dyn 100
+					.compare__el-row
+						.compare__el-row-name Емкость
+						.compare__el-row-val 100 А/ч
+					.compare__el-row
+						.compare__el-row-name Стартовый ток
+						.compare__el-row-val 830 А
+					.compare__el-row
+						.compare__el-row-name Цикл жизни по отношению к стандартному аккумулятору
+						.compare__el-row-val 100%
+					.compare__el-row
+						.compare__el-row-name Гарантия
+						.compare__el-row-val 18 месяцев
+					.compare__el-row
+						.compare__el-row-name Ресурс АКБ. 60 циклов разрядки-зарядки
+						.compare__el-row-val 64%
+					.compare__el-row
+						.compare__el-row-name Применяемость
+						.compare__el-row-val Автомобили с дополнительными потребителями энергии, дизельные авто
+
+//feature
+.section-lp.section--gray.section-lp--feature
+	.main-cont
+		.section-title Основные характеристики акБ MOLL
+		.feature
+			-
+				var items = [
+					'Гарантия качества первой сборки, оригинальные запчасти ',
+					'Система «Старт-Стоп»',
+					'Технология Nano Carbon',
+					'Большой ресурс АКБ',
+					'Быстрый запуск холодного двигателя',
+					'Возможность повторного использования',
+					'Высокая термическая нагрузка (устойчивость к высоким температурам)',
+					'Виброустойчивость',
+					'Оптимальная защита от утечки',
+					'Рассчитан на несколько устройств (климат-контроль, система навигации)'
+					];
+			each item,i in items
+				.feature__el
+					img(src="img/charact-"+(i+1)+".png", alt="").feature__el-img
+					.feature__el-text #{item}
+//services
+.section-lp.section-lp--sevices
+	.main-cont
+		.service-title Ваш А-сервис
+		.service-title-sub
+			.service-title-sub__icon
+				+icon("star","icon")
+			.service-title-sub__text Услуги для наших покупателей БЕСПЛАТНО
+		.service
+			.service__el
+				.service-head
+					.service-head__icon
+						+icon("tester","icon")
+					.service-head__text Диагностика АКБ
+				.service-text Рекомендуем проходить  диагностику 2 раза в год
+				a(href="#").service-link Подробнее
+			.service__el
+				.service-head
+					.service-head__icon
+						+icon("akum","icon")
+					.service-head__text Обслуживание АКБ
+				.service-text Увеличим срок службы АКБ до 2 раз
+				a(href="#").service-link Подробнее
+			.service__el
+				.service-head
+					.service-head__icon
+						+icon("tools","icon")
+					.service-head__text Диагностика электрооборудования автомобиля
+				.service-text Используем высокоточное сертифицированное диагностическое оборудование
+				a(href="#").service-link Подробнее
+			.service__el
+				.service-head
+					.service-head__icon
+						+icon("batary","icon")
+					.service-head__text Прием и обмен старых АКБ
+				.service-text Новый вместо старого. Утилизируем старый АКБ правильно и выгодно
+				a(href="#").service-link Подробнее
++footer()
+
+include ./block_html/_script.pug

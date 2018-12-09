@@ -1,0 +1,70 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++header()
+
+
+
+
+//services
+.main-cont
+	.service-title А-сервис
+	.service-title-sub
+		.service-title-sub__icon
+			+icon("star","icon")
+		.service-title-sub__text Услуги для наших покупателей БЕСПЛАТНО
+	.service
+		.service__el
+			.service-head
+				.service-head__icon
+					+icon("tester","icon")
+				.service-head__text Диагностика АКБ
+			.service-text Рекомендуем проходить  диагностику 2 раза в год
+			a(href="#").service-link Подробнее
+		.service__el
+			.service-head
+				.service-head__icon
+					+icon("akum","icon")
+				.service-head__text Обслуживание АКБ
+			.service-text Увеличим срок службы АКБ до 2 раз
+			a(href="#").service-link Подробнее
+		.service__el
+			.service-head
+				.service-head__icon
+					+icon("tools","icon")
+				.service-head__text Диагностика электрооборудования автомобиля
+			.service-text Используем высокоточное сертифицированное диагностическое оборудование
+			a(href="#").service-link Подробнее
+		.service__el
+			.service-head
+				.service-head__icon
+					+icon("batary","icon")
+				.service-head__text Прием и обмен старых АКБ
+			.service-text Новый вместо старого. Утилизируем старый АКБ правильно и выгодно
+			a(href="#").service-link Подробнее
+
+
+
+//slider-items
+
+.main-cont
+	.slider-item
+		- for (var i=0;i<4;i++)
+		.item
+			a(href="#" style="background-image:url('img/product.png')").item-img
+			.item-title AlphaLINE AGM 60.0 L2 (AX 560680/56020) обр
+			.item-price
+				.item-price__text Цена:
+					.item-price__val 1 990 руб.
+			.item-footer
+				.item-footer__price-false 2 550 руб.
+				.item-footer__get
+					.item-footer__compare
+						+icon("chart","icon")
+					.item-footer__cart
+						+icon("shopping-cart","icon")
+
+
++footer()
+
+include ./block_html/_script.pug

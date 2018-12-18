@@ -1,70 +1,241 @@
 include block_html/_style.pug
 include block_html/_include.pug
 
-+header()
++headerlp()
 
+//head banner
+.lp-banner-wrap(style="background-image:url('img/bg-triangle-blue.jpg')")
+	.main-cont
+		.lp-banner
+			.lp-banner__slogan
+				.lp-banner__slogan-top в поиске хорошего корейского аккумулятора?
+				.lp-banner__slogan-main Выбирайте лучший!
+				.lp-banner__slogan-sub Ежегодно завод TAB производит 4 500 000 млн. стартерных батарей под собственными марками Тopla, Vesna и ТАВ
+				.lp-banner__img
+					img(src="img/akum-triple-blue.png", alt="")
 
+//row-get
+.lp-row-get
+	a(href="#").lp-row-get__btn Подберите АКБ для вашего автомобиля
 
+//even
+.section-lp.section--even
+	.main-cont
+		.even-wrap
+			.even--tree
+				.even__el
+					.even__el--img(style="background-image:url('img/item-akum-13.png')")
+						.even__el-icon
+							+icon("equal","icon")
+					.even__el--content
+						.even__el-row
+							.even__el-row-name Модель
+							.even__el-row-val Topla Energy
+						.even__el-row
+							.even__el-row-name Высокие эксплуатационные показатели
+							.even__el-row-val 100%
+						.even__el-row
+							.even__el-row-name Герметичный корпус
+							.even__el-row-val 100%
+						.even__el-row
+							.even__el-row-name Система защиты от взрыва предотвращает воспламенение батареи
+							.even__el-row-val 100%
+						.even__el-row
+							.even__el-row-name Надежный запуск двигателя в экстремальных климатических условиях
+							.even__el-row-val 100%
+						.even__el-row
+							.even__el-row-name Повышенная устойчивость к глубоким разрядам
+							.even__el-row-val 100%
+				.even__el
+					.even__el--img(style="background-image:url('img/item-akum-11.png')")
+						.even__el-icon
+							+icon("equal","icon")
+					.even__el--content
+						.even__el-row
+							.even__el-row-name Модель
+							.even__el-row-val Vesna Power
+						.even__el-row
+							.even__el-row-name Высокие эксплуатационные показатели
+							.even__el-row-val 100%
+						.even__el-row
+							.even__el-row-name Герметичный корпус
+							.even__el-row-val 100%
+						.even__el-row
+							.even__el-row-name Система защиты от взрыва предотвращает воспламенение батареи
+							.even__el-row-val 100%
+						.even__el-row
+							.even__el-row-name Надежный запуск двигателя в экстремальных климатических условиях
+							.even__el-row-val 100%
+						.even__el-row
+							.even__el-row-name Повышенная устойчивость к глубоким разрядам
+							.even__el-row-val 100%
+				.even__el
+					.even__el--img(style="background-image:url('img/item-akum-12.png')")
+						.even__el-icon
+							+icon("equal","icon")
+					.even__el--content
+						.even__el-row
+							.even__el-row-name Модель
+							.even__el-row-val TAB Polar
+						.even__el-row
+							.even__el-row-name Высокие эксплуатационные показатели
+							.even__el-row-val 100%
+						.even__el-row
+							.even__el-row-name Герметичный корпус
+							.even__el-row-val 100%
+						.even__el-row
+							.even__el-row-name Система защиты от взрыва предотвращает воспламенение батареи
+							.even__el-row-val 100%
+						.even__el-row
+							.even__el-row-name Надежный запуск двигателя в экстремальных климатических условиях
+							.even__el-row-val 100%
+						.even__el-row
+							.even__el-row-name Повышенная устойчивость к глубоким разрядам
+							.even__el-row-val 100%
 
-//services
-.main-cont
-	.service-title А-сервис
-	.service-title-sub
-		.service-title-sub__icon
-			+icon("star","icon")
-		.service-title-sub__text Услуги для наших покупателей БЕСПЛАТНО
-	.service
-		.service__el
-			.service-head
-				.service-head__icon
-					+icon("tester","icon")
-				.service-head__text Диагностика АКБ
-			.service-text Рекомендуем проходить  диагностику 2 раза в год
-			a(href="#").service-link Подробнее
-		.service__el
-			.service-head
-				.service-head__icon
-					+icon("akum","icon")
-				.service-head__text Обслуживание АКБ
-			.service-text Увеличим срок службы АКБ до 2 раз
-			a(href="#").service-link Подробнее
-		.service__el
-			.service-head
-				.service-head__icon
-					+icon("tools","icon")
-				.service-head__text Диагностика электрооборудования автомобиля
-			.service-text Используем высокоточное сертифицированное диагностическое оборудование
-			a(href="#").service-link Подробнее
-		.service__el
-			.service-head
-				.service-head__icon
-					+icon("batary","icon")
-				.service-head__text Прием и обмен старых АКБ
-			.service-text Новый вместо старого. Утилизируем старый АКБ правильно и выгодно
-			a(href="#").service-link Подробнее
+			.even-cont
+				.even-cont__icon-wrap
+					.even-cont__icon
+						+icon("like-hand","icon")
+				.even-cont-info
+					.even-cont__title Topla Energy
+					.even-cont__title VESNA Power
+					.even-cont__title TAB Polar
+					.even-cont__text СТАРТЕРНЫЕ БАТАРЕИ эффективно, круглый год, сохраняют емкость, мощность, обеспечивают холодный пуск двигателя и отличаются исключительной надежностью. Батареи этого типа представляют собой высококачественный продукт для автомобилей любого класса.
+					.even-cont__made Сделано в Словении
 
+//even
+.section-lp.section--even
+	.main-cont
+		.even-wrap
+			.even--tree
+				.even__el
+					.even__el--img(style="background-image:url('img/item-akum-16.png')")
+						.even__el-icon
+							+icon("equal","icon")
+					.even__el--content
+						.even__el-row
+							.even__el-row-name Модель
+							.even__el-row-val Topla Top
+						.even__el-row
+							.even__el-row-name Большее количество пластин повышает эффективность при запуске на 30%
+							.even__el-row-val 100%
+						.even__el-row
+							.even__el-row-name Индикатор уровня электролита (MAGIC EYE) позволяет мгновенно проверить его уровень
+							.even__el-row-val 100%
+						.even__el-row
+							.even__el-row-name Система защиты от взрыва предотвращает воспламенение батареи
+							.even__el-row-val 100%
+				.even__el
+					.even__el--img(style="background-image:url('img/item-akum-14.png')")
+						.even__el-icon
+							+icon("equal","icon")
+					.even__el--content
+						.even__el-row
+							.even__el-row-name Модель
+							.even__el-row-val Vesna Premium
+						.even__el-row
+							.even__el-row-name Большее количество пластин повышает эффективность при запуске на 30%
+							.even__el-row-val 100%
+						.even__el-row
+							.even__el-row-name Индикатор уровня электролита (MAGIC EYE) позволяет мгновенно проверить его уровень
+							.even__el-row-val 100%
+						.even__el-row
+							.even__el-row-name Система защиты от взрыва предотвращает воспламенение батареи
+							.even__el-row-val 100%
+				.even__el
+					.even__el--img(style="background-image:url('img/item-akum-15.png')")
+						.even__el-icon
+							+icon("equal","icon")
+					.even__el--content
+						.even__el-row
+							.even__el-row-name Модель
+							.even__el-row-val TAB Magic
+						.even__el-row
+							.even__el-row-name Большее количество пластин повышает эффективность при запуске на 30%
+							.even__el-row-val 100%
+						.even__el-row
+							.even__el-row-name Индикатор уровня электролита (MAGIC EYE) позволяет мгновенно проверить его уровень
+							.even__el-row-val 100%
+						.even__el-row
+							.even__el-row-name Система защиты от взрыва предотвращает воспламенение батареи
+							.even__el-row-val 100%
+			.even-cont
+				.even-cont__icon-wrap
+					.even-cont__icon
+						+icon("like-hand","icon")
+				.even-cont-info
+					.even-cont__title Topla Top
+					.even-cont__title VESNA Premium
+					.even-cont__title TAB Magic
+					.even-cont__text ГЕРМЕТИЗИРОВАННЫЕ АККУМУЛЯТОРНЫЕ БАТАРЕИ С ГЛАЗКОМ используют инновационные технологии Ca/Ca, обеспечивающие высочайшую эффективность при холодном пуске и абсолютную  надежность, необходимую современным автомобилям с высоким потреблением электроэнергии.
+					.even-cont__made Сделано в Словении
 
 
 //slider-items
+.section-lp
+	.main-cont
+		.section-title Мы рекомендуем
+		.items
+			- for (var i=0;i<4;i++)
+				.item
+					a(href="#" style="background-image:url('img/product.png')").item-img
+					.item-title AlphaLINE AGM 60.0 L2 (AX 560680/56020) обр
+					.item-price
+						.item-price__text Цена:
+							.item-price__val.item-price__val--gray 1 990 руб.
+					.item-get Купить
 
-.main-cont
-	.slider-item
-		- for (var i=0;i<4;i++)
-		.item
-			a(href="#" style="background-image:url('img/product.png')").item-img
-			.item-title AlphaLINE AGM 60.0 L2 (AX 560680/56020) обр
-			.item-price
-				.item-price__text Цена:
-					.item-price__val 1 990 руб.
-			.item-footer
-				.item-footer__price-false 2 550 руб.
-				.item-footer__get
-					.item-footer__compare
-						+icon("chart","icon")
-					.item-footer__cart
-						+icon("shopping-cart","icon")
+//cutting
+.section-lp.section-lp--cutting
+	.main-cont
+		.section-title Преимущества Аккумуляторов Vesna
+		.cutting
+			.cutting-el.cutting-el--one Герметичная крышка гарантирует значительное сокращение расхода электролита
+			.cutting-el.cutting-el--two Индикатор уровня дает возможность быстрой проверки состояния батареи
+			.cutting-el.cutting-el--three Идеально подходит для автомобилей с большим количеством электрооборудования
+			.cutting-el.cutting-el--four Использование просечно-растяжной технологи дает лучшую защиту от корозии
+			.cutting-el.cutting-el--five Большее число пластин увеличивает на 30% пусковой ток
+			img(src="img/akum-cutting.png", alt="").cutting-img
+			
 
-
+//services
+.section-lp.section-lp--sevices
+	.main-cont
+		.service-title Ваш А-сервис
+		.service-title-sub
+			.service-title-sub__icon
+				+icon("star","icon")
+			.service-title-sub__text Услуги для наших покупателей БЕСПЛАТНО
+		.service
+			.service__el
+				.service-head
+					.service-head__icon
+						+icon("tester","icon")
+					.service-head__text Диагностика АКБ
+				.service-text Рекомендуем проходить  диагностику 2 раза в год
+				a(href="#").service-link Подробнее
+			.service__el
+				.service-head
+					.service-head__icon
+						+icon("akum","icon")
+					.service-head__text Обслуживание АКБ
+				.service-text Увеличим срок службы АКБ до 2 раз
+				a(href="#").service-link Подробнее
+			.service__el
+				.service-head
+					.service-head__icon
+						+icon("tools","icon")
+					.service-head__text Диагностика электрооборудования автомобиля
+				.service-text Используем высокоточное сертифицированное диагностическое оборудование
+				a(href="#").service-link Подробнее
+			.service__el
+				.service-head
+					.service-head__icon
+						+icon("batary","icon")
+					.service-head__text Прием и обмен старых АКБ
+				.service-text Новый вместо старого. Утилизируем старый АКБ правильно и выгодно
+				a(href="#").service-link Подробнее
 +footer()
 
 include ./block_html/_script.pug

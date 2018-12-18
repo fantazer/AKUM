@@ -2753,6 +2753,9 @@ select.select-beauty
 		.logo
 			min-width 100px
 			padding-right: 10px
+	+below(480px)
+		.logo
+			min-width 70px
 .header-phone
 	+below(640px)
 		margin-left: 10px
@@ -2762,9 +2765,10 @@ select.select-beauty
 			display: none
 		size 30px
 		margin-right: 30px
+		fill $blue
 	a
 		+below(640px)
-			font-size: 16px
+			font-size: 14px
 		color $blue
 		@extend .type--lg
 		font-weight: 700
@@ -2915,7 +2919,7 @@ select.select-beauty
 			+below(960px)
 				border-left 0
 .compare--tree
-	+below(960px)
+	+below(768px)
 		margin-top: 30px
 		max-width 640px
 		margin-left: auto
@@ -2998,3 +3002,197 @@ select.select-beauty
 
 .section-lp--feature
 	padding-bottom: 30px
+
+.lp-banner__slogan-sub
+	+below(1024px)
+		display: none
+	font-size: 24px
+	font-weight: 700
+	color black
+	max-width 800px
+	margin-left: auto
+	margin-right: auto
+	margin-top: -40px
+	margin-bottom: 40px
+
+
+.even--tree
+	+below(1200px)
+		width: 100%
+	f()
+	fw()
+	align-items: stretch
+	justify-content: space-between
+	width: 72%
+.even__el
+	+below(960px)
+		width: 100%
+		margin-bottom: 30px
+		max-width 640px
+		margin-left: auto
+		margin-right: auto
+	width: calc(100%/3)
+	&:last-child
+		.even__el-icon
+			+below(1200px)
+				display: none
+			right -45%
+	+below(768px)
+		align-items: flex-start
+		width: 100%
+		f()
+		fw()
+		flex-direction row
+		padding-bottom: 20px
+		margin-bottom: 20px
+		border-left 0
+
+.even__el--img
+	+below(960px)
+		padding: 15% 10%
+	margin-bottom: 30px
+	bg-full()
+	background-size: contain
+	padding: 35% 10%
+	width: 100%
+	max-width 200px
+	position: relative
+	margin-left: auto
+	margin-right: auto
+
+.even__el-icon
+	+below(1200px)
+		right: -50%
+	+below(1024px)
+		right: -45%
+	+below(960px)
+		display: none
+	position: absolute
+	right: -30%
+	.icon
+		size 40px
+		fill $red
+.even__el--content
+	width: 100%
+.even__el-row
+	f()
+	justify-content: space-between
+	font-size: 14px
+	padding: 15px 10px
+	&:nth-child(even)
+		background: #ececec
+	&:nth-child(odd)
+		background: #f8f8f8
+
+.even__el-row-name
+	color #8493a8
+	width: 65%
+.even__el-row-val
+	color $dark
+	width: 35%
+	text-align: right
+	font-weight: 700
+	font-size: 12px
+
+.even-wrap
+	+below(1200px)
+		fw()
+	f()
+
+.even-cont
+	+below(1200px)
+		background: #f8f8f8
+		width: 100%
+		flex-flow row
+	+below(480px)
+		fl()
+	f()
+	fl()
+	background: #f8f8f8
+	width: 27%
+	position: relative
+	padding: 20px
+	align-items: center
+.even-cont__icon
+	+below(480px)
+		size 50px
+		border 2px solid $red
+	flex(mid)
+	round()
+	size 120px
+	border 5px solid $red
+	.icon
+		+below(480px)
+			size 30px
+		size 60px
+		fill $red
+.even-cont__title
+	+below(1200px)
+		display: inline-block
+	+below(480px)
+		display: inline
+		font-size: 18px
+	font-size: 24px
+	color black
+	text-align: center
+
+.even-cont__text
+	margin-top: 20px
+	line-height: 1.4
+	margin-bottom: 30px
+	font-size: 14px
+.even-cont__made
+	font-weight: 700
+
+.even-cont-info
+	+below(480px)
+		width 100%
+.even-cont__icon-wrap
+	+below(1200px)
+		margin-right: 30px
+	+below(480px)
+		width: 100%
+		height: auto
+		justify-content: flex-start
+		margin:0 0 20px 10px
+	flex(mid)
+	size 200px
+
+.cutting
+	position: relative
+	flex(mid)
+	margin: 80px 0
+
+.cutting-el
+	position: absolute
+	width: 260px
+	border-radius 5px
+	background: #858da2
+	color white
+	padding: 15px
+	line-height: 1.2
+.cutting-el--one
+	top 0%
+	left 7%
+	text-align: right
+
+.cutting-el--two
+	top -6%
+	right 9%
+
+.cutting-el--three
+	right 9%
+	bottom 6%
+
+.cutting-el--four
+	right 45%
+	bottom -13%
+
+.cutting-el--five
+	left 9%
+	bottom 5%
+	text-align: right
+
+.section-lp--cutting
+	+below(1024px)
+		display: none

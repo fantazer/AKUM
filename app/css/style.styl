@@ -334,13 +334,12 @@ body
 		width: 49%
 	+below(730px)
 		width: 100%
+		height: auto
 		margin-bottom: 10px
-		height: 75px
+		border-radius 0
 	+below(640px)
 		height: auto
 		padding: 5px
-		margin-bottom: 0
-		border-radius 0
 	width: 32%
 	flex(between)
 	background: $red
@@ -3213,3 +3212,13 @@ select.select-beauty
 .section-lp--cutting
 	+below(1024px)
 		display: none
+
+.sticky-wrapper
+	margin-bottom: 20px
+.is-sticky
+	.banner-panel
+		z-index 10!important
+		top: 1em !important
+	.banner-panel-sm
+		+below(730px)
+			display: none

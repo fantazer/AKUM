@@ -1820,17 +1820,16 @@ body {
 @media only screen and (max-width: 730px) {
   .banner-panel-sm {
     width: 100%;
+    height: auto;
     margin-bottom: 10px;
-    height: 75px;
+    -webkit-border-radius: 0;
+            border-radius: 0;
   }
 }
 @media only screen and (max-width: 640px) {
   .banner-panel-sm {
     height: auto;
     padding: 5px;
-    margin-bottom: 0;
-    -webkit-border-radius: 0;
-            border-radius: 0;
   }
 }
 .banner-panel-sm-img {
@@ -7146,6 +7145,18 @@ select.select-beauty {
 }
 @media only screen and (max-width: 1024px) {
   .section-lp--cutting {
+    display: none;
+  }
+}
+.sticky-wrapper {
+  margin-bottom: 20px;
+}
+.is-sticky .banner-panel {
+  z-index: 10 !important;
+  top: 1em !important;
+}
+@media only screen and (max-width: 730px) {
+  .is-sticky .banner-panel-sm {
     display: none;
   }
 }

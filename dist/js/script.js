@@ -1,5 +1,9 @@
 $(document).ready(function () {
 
+	//stick panel
+	$(".banner-panel").sticky({topSpacing:0});
+	//stick panel===end
+
 	//slider
 	var slider = function() {
 		$('.slider-item').slick({

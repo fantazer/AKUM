@@ -321,6 +321,8 @@ body
 	width: 85%
 
 .banner-panel
+	+below(1024px)
+		top 0
 	+below(730px)
 		fw()
 		margin-bottom: 0
@@ -334,6 +336,11 @@ body
 		width: 100%
 		margin-bottom: 10px
 		height: 75px
+	+below(640px)
+		height: auto
+		padding: 5px
+		margin-bottom: 0
+		border-radius 0
 	width: 32%
 	flex(between)
 	background: $red
@@ -344,10 +351,14 @@ body
 	margin-right: 20px
 //.banner-panel-sm-info
 .banner-panel-sm-title
+	+below(768px)
+		font-size: 14px
 	up()
 	font-size: 24px
 	font-weight: 700
 .banner-panel-sm-text
+	+below(640px)
+		font-size: 8px
 	font-size: 12px
 	up()
 .banner-panel-lg
@@ -356,6 +367,9 @@ body
 		height: 75px
 	+below(730px)
 		width: 100%
+		height: auto
+		padding: 5px
+		border-radius 0
 
 	width: 66%
 	background: $dark
@@ -366,12 +380,13 @@ body
 .banner-panel-lg-title
 	+below(1200px)
 		font-size: 20px
+	+below(1024px)
+		font-size: 16px
 	+below(940px)
 		f()
 		fl()
 		font-size: 16px
 		span
-			font-size: 24px
 			margin-left: 0!important
 	+below(640px)
 		font-size: 12px
@@ -399,8 +414,10 @@ body
 		fill white
 		margin-right: 20px
 .banner-panel-lg-cont-numb
+	+below(1024px)
+		font-size:18px
 	+below(640px)
-		font-size: 18px
+		font-size: 14px
 	font-size: 24px
 	color white
 	font-weight:700

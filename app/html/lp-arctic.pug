@@ -1,0 +1,195 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++headerlp()
+
+//head banner
+.lp-banner-wrap(style="background-image:url('img/bg-triangle-gray.jpg')")
+	.main-cont
+		.lp-banner
+			.lp-banner__slogan
+				.lp-banner__slogan-top Ищешь хороший российский аккумулятор?
+				.lp-banner__slogan-main поможем с выбором!
+				.lp-banner__img.lp-banner__img--sm
+					img(src="img/arctic.png", alt="")
+
+//row-get
+.lp-row-get
+	a(href="#").lp-row-get__btn Подберите АКБ для вашего автомобиля
+
+//advant
+.section-advant.section--gray
+	.main-cont
+		.section-title выбери для себя лучшее
+		.lp-advant.lp-advant--treeple
+			.lp-advant-col
+				.lp-advant-col__img
+					img(src="img/racer.png", alt="")
+				.lp-advant-row
+					.lp-advant__el-img
+						img(src="img/arctic-1.png", alt="")
+					.lp-advant__el-text.lp-advant__el-text--mark Создана по технологии Ca/Ca, что увеличивает значение холодного пуска
+				.lp-advant-row
+					.lp-advant__el-img
+						img(src="img/arctic-2.png", alt="")
+					.lp-advant__el-text Подходит для автомобилей с большим количеством энергопотребителей
+				.lp-advant-row
+					.lp-advant__el-img
+						img(src="img/arctic-3.png", alt="")
+					.lp-advant__el-text Производится на самом крупном аккумуляторном заводе России АО «АКОМ»
+
+			.lp-advant-col
+				.lp-advant-col__img
+					img(src="img/xtreme.png", alt="")
+				.lp-advant-row
+					.lp-advant__el-img
+						img(src="img/arctic-4.png", alt="")
+					.lp-advant__el-text.lp-advant__el-text--mark Технология PUNCH Technology + Silver, увеличивает срок службы аккумулятора до 30%
+				.lp-advant-row
+					.lp-advant__el-img
+						img(src="img/arctic-5.png", alt="")
+					.lp-advant__el-text Эксплуатация в любых климатических условиях
+				.lp-advant-row
+					.lp-advant__el-img
+						img(src="img/arctic-6.png", alt="")
+					.lp-advant__el-text Высокая корозийная устойчивость
+
+			.lp-advant-col
+				.lp-advant-col__img
+					img(src="img/titan.png", alt="")
+				.lp-advant-row
+					.lp-advant__el-img
+						img(src="img/arctic-7.png", alt="")
+					.lp-advant__el-text.lp-advant__el-text--mark Создана по технологии Ca/Ca, что увеличивает значение холодного пуска
+				.lp-advant-row
+					.lp-advant__el-img
+						img(src="img/arctic-8.png", alt="")
+					.lp-advant__el-text Полностью необслуживаемая батарея
+				.lp-advant-row
+					.lp-advant__el-img
+						img(src="img/arctic-9.png", alt="")
+					.lp-advant__el-text Устойчивость к высоким и низким температурам
+
+//slider-items
+.section-lp
+	.main-cont
+		.section-title Мы рекомендуем
+		.items
+			- for (var i=0;i<4;i++)
+				.item
+					a(href="#" style="background-image:url('img/product.png')").item-img
+					.item-title AlphaLINE AGM 60.0 L2 (AX 560680/56020) обр
+					.item-price
+						.item-price__text Цена:
+							.item-price__val.item-price__val--gray 1 990 руб.
+					.item-get Купить
+
+//compare
+.section-lp.section--compare
+	.main-cont
+		.section-title Сравнение аналогичных товаров
+		.compare--tree
+			.compare__el
+				.compare__el--img(style="background-image:url('img/item-racer.png')")
+				.compare__el--content
+					.compare__el-row
+						.compare__el-row-name Модель
+						.compare__el-row-val RACER Grand Prix 62.0 обр
+					.compare__el-row
+						.compare__el-row-name Емкость
+						.compare__el-row-val 62 А/ч
+					.compare__el-row
+						.compare__el-row-name Стартовый ток
+						.compare__el-row-val 620 А
+					.compare__el-row
+						.compare__el-row-name Цикл жизни по отношению к стандартному аккумулятору
+						.compare__el-row-val 120%
+					.compare__el-row
+						.compare__el-row-name Габариты
+						.compare__el-row-val 242x175x190
+					.compare__el-row
+						.compare__el-row-name Производитель
+						.compare__el-row-val Аком
+			.compare__el
+				.compare__el--img(style="background-image:url('img/item-xtreme.png')")
+				.compare__el--content
+					.compare__el-row
+						.compare__el-row-name Модель
+						.compare__el-row-val X-treme Arctic 62.0 обр
+					.compare__el-row
+						.compare__el-row-name Емкость
+						.compare__el-row-val 62 А/ч
+					.compare__el-row
+						.compare__el-row-name Стартовый ток
+						.compare__el-row-val 640 А
+					.compare__el-row
+						.compare__el-row-name Цикл жизни по отношению к стандартному аккумулятору
+						.compare__el-row-val 120%
+					.compare__el-row
+						.compare__el-row-name Габариты
+						.compare__el-row-val 242x175x190
+					.compare__el-row
+						.compare__el-row-name Производитель
+						.compare__el-row-val Алькор
+			.compare__el
+				.compare__el--img(style="background-image:url('img/item-titan.png')")
+				.compare__el--content
+					.compare__el-row
+						.compare__el-row-name Модель
+						.compare__el-row-val Titan EUROSILVER 63.0 обр
+					.compare__el-row
+						.compare__el-row-name Емкость
+						.compare__el-row-val 63 А/ч
+					.compare__el-row
+						.compare__el-row-name Стартовый ток
+						.compare__el-row-val 630 А
+					.compare__el-row
+						.compare__el-row-name Цикл жизни по отношению к стандартному аккумулятору
+						.compare__el-row-val 100%
+					.compare__el-row
+						.compare__el-row-name Габариты
+						.compare__el-row-val 242x175x190
+					.compare__el-row
+						.compare__el-row-name Производитель
+						.compare__el-row-val Тубор
+
+//services
+.section-lp.section-lp--sevices
+	.main-cont
+		.service-title Ваш А-сервис
+		.service-title-sub
+			.service-title-sub__icon
+				+icon("star","icon")
+			.service-title-sub__text Услуги для наших покупателей БЕСПЛАТНО
+		.service
+			.service__el
+				.service-head
+					.service-head__icon
+						+icon("tester","icon")
+					.service-head__text Диагностика АКБ
+				.service-text Рекомендуем проходить  диагностику 2 раза в год
+				a(href="#").service-link Подробнее
+			.service__el
+				.service-head
+					.service-head__icon
+						+icon("akum","icon")
+					.service-head__text Обслуживание АКБ
+				.service-text Увеличим срок службы АКБ до 2 раз
+				a(href="#").service-link Подробнее
+			.service__el
+				.service-head
+					.service-head__icon
+						+icon("tools","icon")
+					.service-head__text Диагностика электрооборудования автомобиля
+				.service-text Используем высокоточное сертифицированное диагностическое оборудование
+				a(href="#").service-link Подробнее
+			.service__el
+				.service-head
+					.service-head__icon
+						+icon("batary","icon")
+					.service-head__text Прием и обмен старых АКБ
+				.service-text Новый вместо старого. Утилизируем старый АКБ правильно и выгодно
+				a(href="#").service-link Подробнее
++footer()
+
+include ./block_html/_script.pug

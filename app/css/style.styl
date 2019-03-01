@@ -2845,9 +2845,12 @@ select.select-beauty
 		margin-top: 40px
 	+below(640px)
 		margin-top: 30px
-	flex(between)
+	f()
 	fw()
+	justify-content: space-between
+	align-items: flex-start
 	margin-top: 80px
+
 .lp-advant__el
 	+below(960px)
 		width: 48%
@@ -3234,6 +3237,19 @@ select.select-beauty
 		&:last-child
 			margin-bottom: 0
 	width: 48%
+
+.lp-advant--treeple
+	+below(768px)
+		center(540px,0)
+
+	.lp-advant-col
+		+below(768px)
+			margin-bottom: 30px
+			width: 100%
+			&:last-child
+				margin-bottom: 0
+		width: 32%
+
 .lp-advant-col__img
 	margin-bottom: 30px
 .lp-advant-row

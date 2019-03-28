@@ -444,6 +444,103 @@
 				</div>
 			</div>
 		</div>
+		<div class="modal-layer">
+			<div class="modal-filter"></div>
+			<div class="modal-wrap">
+				<div class="modal" data-modal="order">
+					<div class="modal-content">
+						<div class="modal-close">
+							<svg class="icon">
+								<use xlink:href="#close"></use>
+							</svg>
+						</div>
+						<div class="modal-title">Запись в А-Сервис</div>
+						<form class="order" action="#">
+							<div class="input-row-two">
+								<div class="input-row">
+									<div class="input-row-title">Ваше имя</div>
+									<input class="input" type="text" placeholder="Введите Ваше имя" />
+								</div>
+								<div class="input-row">
+									<div class="input-row-title">Ваше телефон</div>
+									<input class="input" type="text" placeholder="Введите Ваш телефон" />
+								</div>
+							</div>
+							<div class="input-row-two">
+								<div class="input-row">
+									<div class="input-row-title">Марка автомобиля</div>
+									<select class="select-beauty">
+										<option data-display="Веберите из списка">не выбрано</option>
+										<option>вариант 1</option>
+										<option>вариант 2</option>
+										<option>вариант 3</option>
+									</select>
+								</div>
+								<div class="input-row">
+									<div class="input-row-title">Модель Автомобиля</div>
+									<select class="select-beauty">
+										<option data-display="Веберите из списка">не выбрано</option>
+										<option>вариант 1</option>
+										<option>вариант 2</option>
+										<option>вариант 3</option>
+									</select>
+								</div>
+							</div>
+							<div class="input-row-two">
+								<div class="input-row">
+									<div class="input-row-title">Желаемая дата</div>
+									<select class="select-beauty">
+										<option data-display="Веберите дату">не выбрано</option>
+										<option>вариант 1</option>
+										<option>вариант 2</option>
+										<option>вариант 3</option>
+									</select>
+								</div>
+								<div class="input-row">
+									<div class="input-row-title">Желаемое время</div>
+									<select class="select-beauty">
+										<option data-display="Веберите время">не выбрано</option>
+										<option>вариант 1</option>
+										<option>вариант 2</option>
+										<option>вариант 3</option>
+									</select>
+								</div>
+							</div>
+							<div class="input-row">
+								<div class="input-row-title">Комментарий
+									<textarea class="input" name="text" cols="30" rows="5" placeholder="Введите Ваш вопрос"></textarea>
+								</div>
+							</div>
+							<div class="order-confirm">
+								<div class="check-el">
+									<label class="style-label style-label--checkbox">
+										<input class="sytle-input" type="checkbox" />
+										<div class="sytle-input-element">
+											<svg class="icon-check">
+												<use xlink:href="#checked"></use>
+											</svg>
+										</div>
+										<div class="sytle-input-text">Я даю согласие на<a href="#">обработку персональных данных.</a></div>
+									</label>
+								</div>
+								<div class="order-get">
+									<input class="order-get-el order-get__btn modal-send" type="submit" value="Запись в автосервис " />
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<!--success message-->
+				<div class="modal" data-modal="truemessage">
+					<div class="modal-content modal-content--true">
+						<svg class="icon">
+							<use xlink:href="#interface"></use>
+						</svg>
+						<div class="modal-text-true">Ваша заявка принята</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<!--block footer end-->
 		<script src="js/jquery.js"></script>
 		<script src="js/combined.js"></script>

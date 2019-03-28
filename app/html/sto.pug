@@ -1,0 +1,236 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++header()
+
+//main-banner
+.main-cont
+	.banner-panel
+		a(href="#").banner-panel-sm
+			.banner-panel-sm-img
+				img(src="img/a-service.png", alt="")
+			.banner-panel-sm-info
+				.banner-panel-sm-title Бесплатная
+				.banner-panel-sm-text зарядка и диагностика
+		div(data-modal="order").banner-panel-lg.modal-get
+			.banner-panel-lg-title.banner-panel-lg-title--center Записаться в автосервис
+	.bread
+		a(href="#").bread__el Главная
+		a(href="#").bread__el Каталог
+		a(href="#").bread__el Авто аккумуляторы
+		.bread__el Авто аккумуляторы
+
+	//section sto-banner
+	.sto-banner
+		.sto-banner__title Бесплатная замена
+		.sto-banner-list
+			.sto-banner-list__el
+				.sto-banner-list__el-icon
+					+icon("engine-oil","icon")
+				.sto-banner-list__el-text Моторное <br> масло
+			.sto-banner-divider
+				+icon("plus-fat","icon")
+			.sto-banner-list__el
+				.sto-banner-list__el-icon
+					+icon("oil-filter","icon")
+				.sto-banner-list__el-text Масляной <br> фильтр
+			.sto-banner-divider
+				+icon("plus-fat","icon")
+			.sto-banner-list__el
+				.sto-banner-list__el-icon
+					+icon("ink","icon")
+				.sto-banner-list__el-text Промывка <br> двигателя
+	.lp-row-get
+		div(data-modal="order").modal-get.lp-row-get__btn Запись в автосервис
+	//section sto-banner === end
+
+	//section sto-content
+	.sto-content
+		.sto-content__title А-Сервис — официальная СТО компании «Автомотив»
+		.sto-content__text Сеть магазинов «Автомотив» предоставляет своим клиентам не только широкий ассортимент аккумуляторов от проверенных поставщиков,но и бесплатный и надежный А-сервис на протяжении всего срока эксплуатации АКБ. Профессиональное диагностическое и зарядное оборудование от лучших отечественных и зарубежных производителей.
+
+		.sto-content__list
+			-
+				var items = [
+						{
+							"icon":"support",
+							"title":"Качество",
+							"text":"Тщательно следим за качеством выполнения работ и ценим ваше мнение"
+						},
+
+						{
+							"icon":"sale-tag",
+							"title":"Лучшая цена",
+							"text":"Предоставляем гибкую систему скидок"
+						},
+						{
+							"icon":"award-star",
+							"title":"Гарантия",
+							"text":"Даем гарантию на работы и оборудование до 5 лет"
+						},
+						{
+							"icon":"worker",
+							"title":"Профессионалы",
+							"text":"Мастера с опытом работы более 5 лет"
+						},
+						{
+							"icon":"teams",
+							"title":"Все честно и открыто",
+							"text":"У нас можно присутствовать при ремонте"
+						},
+						{
+							"icon":"card-check",
+							"title":"Удобные способы оплаты",
+							"text":"Наличные, VISA, MasterCard, оплата через банк по счету"
+						},
+						{
+							"icon":"cont",
+							"title":"Бухгалтерские документы",
+							"text":"Предоставим все необходимые документы для бухгалтерии"
+						},
+						{
+							"icon":"wi-fi",
+							"title":"Комната ожидания",
+							"text":"Горячие напитки и WiFi — БЕСПЛАТНО"
+						}
+					];
+			each item in items
+				.sto-content__el
+					.sto-content__el-icon
+						+icon(item.icon,"icon")
+					.sto-content__el-title #{item.title}
+					.sto-content__el-text #{item.text}
+	//section sto-content === end
+
+//section form order
+.section.section--gray
+	.main-cont
+		.section-title.section-title--mid.section-title--low Запись в А-Сервис
+		.sto-order
+			form(action="#" class="order")
+				.input-row-four
+					.input-row
+						.input-row-title Ваше имя
+						input(type="text" placeholder="Введите Ваше имя" class="input")
+					.input-row
+						.input-row-title Ваше телефон
+						input(type="text" placeholder="Введите Ваш телефон" class="input")
+					.input-row
+						.input-row-title Марка автомобиля
+						select.select-beauty
+							option(data-display="Веберите из списка") не выбрано
+							option вариант 1
+							option вариант 2
+							option вариант 3
+					.input-row
+						.input-row-title Модель Автомобиля
+						select.select-beauty
+							option(data-display="Веберите из списка") не выбрано
+							option вариант 1
+							option вариант 2
+							option вариант 3
+				.order-msg
+					.order-msg-text
+						.input-row-title Комментарий
+						textarea(name="text", cols="30", rows="5" class="input" placeholder="Введите Ваш вопрос")
+					.order-msg-get
+						.order-msg-select
+							.input-row-two
+								.input-row
+									.input-row-title Желаемая дата
+									select.select-beauty
+										option(data-display="Веберите дату") не выбрано
+										option вариант 1
+										option вариант 2
+										option вариант 3
+								.input-row
+									.input-row-title Желаемое время
+									select.select-beauty
+										option(data-display="Веберите время") не выбрано
+										option вариант 1
+										option вариант 2
+										option вариант 3
+						.order-confirm
+							.check-el
+								label.style-label.style-label--checkbox
+									input(type="checkbox").sytle-input
+									.sytle-input-element
+										+icon("checked","icon-check")
+									.sytle-input-text Я даю согласие на
+										a(href="#") обработку персональных данных.
+							.order-get
+								input(type="submit" value="Запись в автосервис ").order-get-el.order-get__btn
+//section form order === end
+
+//section price
+.section
+	.main-cont
+		.section-title.section-title--mid.section-title--low Прайс-лист на услуги А-сервиса
+		.sto-price-wrap
+			- for (var i=0;i<10;i++)
+				.sto-price__el(class=i===0?'sto-price__el--open':'')
+					.sto-price__el-head
+						.sto-price__el-head-text Двигатель
+						.sto-price__el-head-icon
+							+icon("arrow-down","icon")
+					.sto-price(class=i===0?'sto-price--open':'')
+						.sto-price-head
+							.sto-price-head__el Наименование услуги
+							.sto-price-head__el Оценка времени
+							.sto-price-head__el Цена услуги
+						- for (var j=0;j<10;j++)
+							.sto-price-row
+								.sto-price-row__el Воздушный фильтр - замена
+								.sto-price-row__el 5 мин
+								.sto-price-row__el 100 руб
+//section price === end
+
+//section service-grid
+.main-cont
+	.sto-grid
+		.sto-grid-el.sto-grid-el--diag(style="background-image:url('img/g-diagnostick.jpg')")
+			.sto-grid-el-filter
+			.sto-grid-el__info
+				.sto-grid-el__title Диагностика
+		.sto-grid-el.sto-grid-el--braker(style="background-image:url('img/g-braker.jpg')")
+			.sto-grid-el-filter
+			.sto-grid-el__info
+				.sto-grid-el__title Тормозная система
+		.sto-grid-el.sto-grid-el--transmition(style="background-image:url('img/g-transmition.jpg')")
+			.sto-grid-el-filter
+			.sto-grid-el__info
+				.sto-grid-el__title Трансмиссия
+		.sto-grid-el.sto-grid-el--body(style="background-image:url('img/g-body.jpg')")
+			.sto-grid-el-filter
+			.sto-grid-el__info
+				.sto-grid-el__title Кузовной ремонт
+		.sto-grid-el.sto-grid-el--engine(style="background-image:url('img/g-engine.jpg')")
+			.sto-grid-el-filter
+			.sto-grid-el__info
+				.sto-grid-el__title Двигатель
+		.sto-grid-el.sto-grid-el--suspension(style="background-image:url('img/g-suspension.jpg')")
+			.sto-grid-el-filter
+			.sto-grid-el__info
+				.sto-grid-el__title Подвеска
+		.sto-grid-el.sto-grid-el--climat(style="background-image:url('img/g-climat.jpg')")
+			.sto-grid-el-filter
+			.sto-grid-el__info
+				.sto-grid-el__title Климатическая система
+		.sto-grid-el.sto-grid-el--electric(style="background-image:url('img/g-electric.jpg')")
+			.sto-grid-el-filter
+			.sto-grid-el__info
+				.sto-grid-el__title Автоэлектрика
+//section service-grid === end
+
+//section brand
+.section
+	.main-cont
+		.section-title.section-title--mid.section-title--low Бренды, с которыми мы работаем
+		.brand-img
+			img(src="img/brand-group-1.png", alt="")
+			img(src="img/brand-group-2.png", alt="")
+//section brand === end
+
+
++footer()
+include ./block_html/_script.pug

@@ -125,6 +125,71 @@ mixin footer()
 								+icon("ok--color","icon")
 							a(href="#").footer-bottom-soc-list__el
 								+icon("youtube--color","icon")
+	.modal-layer
+		.modal-filter
+		.modal-wrap
+			.modal(data-modal="order")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-title Запись в А-Сервис
+
+					form(action="#" class="order")
+						.input-row-two
+							.input-row
+								.input-row-title Ваше имя
+								input(type="text" placeholder="Введите Ваше имя" class="input")
+							.input-row
+								.input-row-title Ваше телефон
+								input(type="text" placeholder="Введите Ваш телефон" class="input")
+						.input-row-two
+							.input-row
+								.input-row-title Марка автомобиля
+								select.select-beauty
+									option(data-display="Веберите из списка") не выбрано
+									option вариант 1
+									option вариант 2
+									option вариант 3
+							.input-row
+								.input-row-title Модель Автомобиля
+								select.select-beauty
+									option(data-display="Веберите из списка") не выбрано
+									option вариант 1
+									option вариант 2
+									option вариант 3
+						.input-row-two
+							.input-row
+								.input-row-title Желаемая дата
+								select.select-beauty
+									option(data-display="Веберите дату") не выбрано
+									option вариант 1
+									option вариант 2
+									option вариант 3
+							.input-row
+								.input-row-title Желаемое время
+								select.select-beauty
+									option(data-display="Веберите время") не выбрано
+									option вариант 1
+									option вариант 2
+									option вариант 3
+						.input-row
+							.input-row-title Комментарий
+								textarea(name="text", cols="30", rows="5" class="input" placeholder="Введите Ваш вопрос")
+						.order-confirm
+							.check-el
+								label.style-label.style-label--checkbox
+									input(type="checkbox").sytle-input
+									.sytle-input-element
+										+icon("checked","icon-check")
+									.sytle-input-text Я даю согласие на
+										a(href="#") обработку персональных данных.
+							.order-get
+								input(type="submit" value="Запись в автосервис ").order-get-el.order-get__btn.modal-send
+			//success message
+			.modal(data-modal="truemessage")
+				.modal-content.modal-content--true
+					+icon("interface","icon")
+					.modal-text-true Ваша заявка принята
 	//block footer end
 
 

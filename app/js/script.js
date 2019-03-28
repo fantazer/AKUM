@@ -118,6 +118,77 @@ $(document).ready(function () {
 		$(this).closest('.location-item-wrap').find('.location-item-sub-wrap').slideToggle();
 	});
 	//toggle location list===end
+
+	//toggle sto-price
+	$('.sto-price__el-head').click(function(){
+		$(this).closest('.sto-price__el').toggleClass('sto-price__el--open');
+		$(this).closest('.sto-price__el').find('.sto-price').slideToggle();
+	});
+	//toggle sto-price === end
+
+	//closeModal() - закрыть окна
+//initModal('data-name-attr') - Открыть нужное окно
+
+
+	//modals
+	var modalState = {
+		"isModalShow": false, //state show modal
+		"scrollPos": 0
+	};
+	$('.modal-content').click(function (event) {
+		event.stopPropagation();
+	});
+
+	var openModal = function () {
+		if (!$('.modal-layer').hasClass('modal-layer-show')) {
+			$('.modal-layer').addClass('modal-layer-show');
+			modalState.scrollPos = $(window).scrollTop();
+			$('body').css({
+				overflow: 'hidden',
+				position: 'fixed',
+				overflowY: 'scroll',
+				top: -modalState.scrollPos,
+				width: '100%'
+			});
+		}
+		modalState.isModalShow = true;
+	};
+	var closeModal = function () {
+		$('.modal-layer').removeClass('modal-layer-show');
+		$('body').css({
+			overflow: '',
+			position: '',
+			top: modalState.scrollPos
+		});
+		$(window).scrollTop(modalState.scrollPos);
+		$('.modal').removeClass('modal__show');
+		modalState.isModalShow = false;
+	};
+
+	var initModal = function (el) {
+		openModal();
+		$('.modal').each(function () {
+			if ($(this).data('modal') === el) {
+				$(this).addClass('modal__show')
+			} else {
+				$(this).removeClass('modal__show')
+			}
+		});
+		var modalHeightCont = $(window).height();
+		$('.modal-filter').height(modalHeightCont);
+
+	};
+
+	$('.modal-get').click(function () {
+		var currentModal = $(this).data("modal");
+		initModal(currentModal);
+	});
+
+	$('.modal-layer , .modal-close').click(function () {
+		closeModal();
+	});
+	//modals===end
+
 	function detectIE() {
 		var ua = window.navigator.userAgent;
 

@@ -135,9 +135,9 @@ $(document).ready(function () {
 		"isModalShow": false, //state show modal
 		"scrollPos": 0
 	};
-	$('.modal-content').click(function (event) {
+	/*$('.modal-content').click(function (event) {
 		event.stopPropagation();
-	});
+	});*/
 
 	var openModal = function () {
 		if (!$('.modal-layer').hasClass('modal-layer-show')) {
@@ -184,7 +184,7 @@ $(document).ready(function () {
 		initModal(currentModal);
 	});
 
-	$('.modal-layer , .modal-close').click(function () {
+	$(' .modal-close').click(function () {
 		closeModal();
 	});
 	//modals===end
